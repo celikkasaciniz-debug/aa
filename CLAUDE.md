@@ -28,3 +28,7 @@ Credentials come from environment variables (set them in the cloud environment s
 - `GOOGLE_CLOUD_PROJECT` — optional, defaults to the project `able-balm-510520-v4` in `.mcp.json`
 
 Accounts: ad account **Çelik Kasacı `2404786286`** (TRY, Europe/Istanbul) for celikkasaci.com; manager account `2307077449` has no linked clients.
+
+## Kling AI MCP
+
+`.mcp.json` also registers `kling` (remote HTTP server at `https://kling.ai/mcp`). The cloud environment's network policy must allow `kling.ai` for it to connect; authorize it with `/mcp` → `kling` → Authenticate.

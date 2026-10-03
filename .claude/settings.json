@@ -12,6 +12,7 @@
     ]
   },
   "enabledMcpjsonServers": [
-    "google-ads"
+    "google-ads",
+    "kling"
   ]
 }
