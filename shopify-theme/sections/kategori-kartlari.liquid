@@ -1,0 +1,125 @@
+{% comment %}
+  MR — Koleksiyon Listesi (Kategori Kartları)
+  Block bazlı manuel görsel (collection.featured_image DEĞİL), koyu overlay,
+  köşe perçin detayı (marka imza motifi), ürün sayısı gerçek Shopify verisi.
+  Native collection-list.liquid'e DOKUNULMAZ — bu ayrı, bağımsız bir section.
+  Kart görsel oranı ayarı: square / portrait / tall / adapt (orijinal).
+{% endcomment %}
+{{ 'component-kategori-kartlari.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="collection-list color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="collection-list__heading">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+
+    <div class="collection-list__grid">
+      {%- for block in section.blocks -%}
+        {%- assign collection = block.settings.collection -%}
+        {%- if collection != blank -%}
+          {%- liquid
+            assign card_ratio = ''
+            if section.settings.image_ratio == 'adapt' and block.settings.image != blank
+              assign w = block.settings.image.width
+              assign h = block.settings.image.height
+              assign card_ratio = w | append: ' / ' | append: h
+            endif
+          -%}
+          <a
+            href="{{ collection.url }}"
+            class="cat-card cat-card--ratio-{{ section.settings.image_ratio | default: 'portrait' }}"
+            {% if card_ratio != blank %}style="aspect-ratio: {{ card_ratio }};"{% endif %}
+            {{ block.shopify_attributes }}
+          >
+            <div class="cat-card__media">
+              {%- if block.settings.image != blank -%}
+                {{
+                  block.settings.image
+                  | image_url: width: 1100
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '350, 500, 700, 900, 1100',
+                    sizes: '(min-width: 990px) 25vw, 50vw',
+                    alt: block.settings.image.alt | default: collection.title,
+                    class: 'cat-card__image'
+                }}
+              {%- else -%}
+                <div class="cat-card__placeholder"></div>
+              {%- endif -%}
+              <div class="cat-card__overlay"></div>
+            </div>
+
+            <div class="cat-card__content">
+              <span class="cat-card__count">{{ collection.products_count }} Ürün</span>
+              <div class="cat-card__name">
+                <span>{{ block.settings.title | default: collection.title | escape }}</span>
+                {% render 'icon-arrow-right' %}
+              </div>
+            </div>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Kategori Kartları",
+  "class": "kategori-kartlari-section",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Renk şeması", "default": "scheme-1" },
+    { "type": "text", "id": "heading", "label": "Başlık", "default": "Kategorilere Göre Keşfet" },
+    {
+      "type": "select", "id": "image_ratio", "label": "Kart görsel oranı",
+      "info": "Orijinal — her kart, görselin kendi en-boy oranını kullanır",
+      "options": [
+        { "value": "square", "label": "Kare (1:1)" },
+        { "value": "portrait", "label": "Dikey (3:4)" },
+        { "value": "tall", "label": "Uzun (9:16)" },
+        { "value": "adapt", "label": "Orijinal (görsele göre)" }
+      ],
+      "default": "portrait"
+    },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Üst boşluk", "default": 56 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Alt boşluk", "default": 56 }
+  ],
+  "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "Kategori Kartı",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Koleksiyon" },
+        { "type": "image_picker", "id": "image", "label": "Kart görseli", "info": "Manuel — koleksiyonun kendi görseli kullanılmaz" },
+        { "type": "text", "id": "title", "label": "Görünen başlık", "info": "Boşsa koleksiyon adı kullanılır" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Kategori Kartları",
+      "blocks": [
+        { "type": "featured_collection", "settings": { "title": "Ev & Ofis Kasası" } },
+        { "type": "featured_collection", "settings": { "title": "Premium Seri" } },
+        { "type": "featured_collection", "settings": { "title": "Zırhlı Kasa" } },
+        { "type": "featured_collection", "settings": { "title": "Kuyumcu Kasası" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

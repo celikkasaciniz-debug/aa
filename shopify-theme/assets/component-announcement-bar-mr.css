@@ -1,0 +1,89 @@
+/* MR — Announcement Bar (Topbar) */
+/* Mobile-first: varsayılan stiller <750px için. */
+/* Not: Dawn native .announcement-bar / .announcement-bar__announcement / .slider */
+/* yapısı korunur; sadece topbar'a özgü görsel katman eklenir. */
+
+/* Topbar hiçbir koşulda yatay taşma yapmasın (sayfayı kaydırmasın) */
+.announcement-bar-section,
+.announcement-bar-section .announcement-bar,
+.announcement-bar-section .announcement-bar-slider {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Icon + metin hizası (native slider slide'ı içinde) — ORTALI, TAŞMASIZ */
+.announcement-bar-section .announcement-bar__announcement {
+  gap: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  text-align: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  overflow: hidden;
+}
+.announcement-bar-section .announcement-bar-slider .slideshow__slide,
+.announcement-bar-section .announcement-bar-slider .slider__slide {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.announcement-bar__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
+}
+
+.announcement-bar__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Topbar tipografisi — sadece scheme-topbar aktifken bu section içinde */
+.announcement-bar-section .announcement-bar__message {
+  font-family: var(--font-topbar-family, var(--font-heading-family, sans-serif));
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0; /* flex item küçülebilsin → taşmayı önler */
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.announcement-bar-section .announcement-bar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Tablet ve üzeri: 750px+ — segmentler yan yana, ayraçlı */
+@media screen and (min-width: 750px) {
+  .announcement-bar-section .announcement-bar__message {
+    font-size: 1.3rem;
+  }
+}
+
+/* Masaüstü büyük ekran: telefon segmenti (mono) */
+@media screen and (min-width: 990px) {
+  .announcement-bar-section .announcement-bar__announcement--phone .announcement-bar__message {
+    font-family: var(--font-mono-family, ui-monospace, monospace);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+}

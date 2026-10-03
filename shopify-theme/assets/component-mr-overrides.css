@@ -1,0 +1,61 @@
+/* MR — Global / Marka Override Katmanı
+   Not: Renkler Dawn'ın native color-scheme değişkenlerinden (--color-button, --color-badge-*)
+   gelmeye devam eder — hardcode edilmez ki tema editörü ve koyu/açık şemalar bozulmasın.
+   Burada sadece tipografi, hover ve kenarlık gibi "marka izi" katmanı var. */
+
+/* MR — Global / Yatay taşma koruması: hiçbir section sayfayı sağa kaydırmasın (mobil) */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* 2.1 — Butonlar: endüstriyel tipografi + hover hareketi (renk native scheme'den) */
+.button,
+.shopify-payment-button__button {
+  font-family: var(--font-subhead-family, var(--font-heading-family, sans-serif));
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.button:not([disabled]):hover {
+  transform: translateY(-1px);
+  transition: transform 0.1s ease, box-shadow var(--duration-short) ease;
+}
+
+/* 2.3 — Kartlar: pirinç kenar + hover gölge (radius zaten 0, dokunmuyoruz) */
+.card-wrapper .card {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.card-wrapper:hover .card {
+  border-color: var(--brand-brass, #B8925A);
+  box-shadow: 0 12px 28px rgba(27, 32, 54, 0.1);
+}
+.card__heading {
+  font-family: var(--font-subhead-family, var(--font-heading-family, sans-serif));
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* 2.4 — Fiyat: teknik/mono his */
+.price {
+  font-family: var(--font-mono-family, ui-monospace, monospace);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.price--on-sale .price-item--sale,
+.price--on-sale .price__sale {
+  color: var(--brand-seal, #D44518);
+}
+.price__compare-at,
+.price-item--regular s {
+  color: var(--brand-steel, #8A8F96);
+}
+
+/* 2.6 — Form elemanları: turuncu focus (marka vurgusu) */
+.field__input:focus,
+.select__select:focus,
+.customer .field input:focus {
+  border-color: var(--brand-seal, #D44518);
+  box-shadow: 0 0 0 1px var(--brand-seal, #D44518);
+}

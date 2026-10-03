@@ -1,0 +1,266 @@
+{% comment %}
+  MR — Hero Slider
+  Masaüstü 1920×720, mobil 988×1098 oranlı, video destekli, güvenlik plakası rozetli,
+  trust strip'li hero. Dawn'ın native slideshow-component'i (autoplay/dots/oklar) korunuyor.
+  Native slideshow.liquid'e DOKUNULMAZ — bu ayrı, bağımsız bir section.
+{% endcomment %}
+{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-hero-slider.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign slide_blocks = section.blocks | where: 'type', 'slide'
+  assign trust_blocks = section.blocks | where: 'type', 'trust_item'
+-%}
+
+<div class="hero-slideshow color-{{ section.settings.color_scheme }} gradient">
+  <slideshow-component class="slider-mobile-gutter">
+    <div
+      id="Slider-{{ section.id }}"
+      class="hero-slideshow__slider slider slider--everywhere"
+      role="list"
+      aria-live="polite"
+      aria-atomic="true"
+      data-autoplay="{{ section.settings.auto_rotate }}"
+      data-speed="{{ section.settings.change_slides_speed }}"
+    >
+      {%- for block in slide_blocks -%}
+        {%- liquid
+          if forloop.first
+            assign img_loading = 'eager'
+            assign img_priority = 'high'
+          else
+            assign img_loading = 'lazy'
+            assign img_priority = 'auto'
+          endif
+        -%}
+        <div
+          id="Slide-{{ section.id }}-{{ forloop.index }}"
+          class="hero-slideshow__slide slideshow__slide slider__slide hero-content--v-{{ block.settings.content_position_vertical | default: 'bottom' }} hero-content--h-{{ block.settings.content_position_horizontal | default: 'left' }} hero-content--m-v-{{ block.settings.content_position_vertical_mobile | default: 'bottom' }} hero-content--m-h-{{ block.settings.content_position_horizontal_mobile | default: 'left' }}"
+          role="group"
+          aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+          aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+          tabindex="-1"
+          {{ block.shopify_attributes }}
+        >
+          <div class="hero-slideshow__media">
+            {%- if block.settings.video != blank -%}
+              <video
+                class="hero-slideshow__video"
+                autoplay
+                muted
+                loop
+                playsinline
+                poster="{{ block.settings.image | image_url: width: 1920 }}"
+                aria-hidden="true"
+              >
+                <source src="{{ block.settings.video.sources.last.url }}" type="video/mp4">
+              </video>
+            {%- elsif block.settings.image != blank -%}
+              {{
+                block.settings.image
+                | image_url: width: 1920
+                | image_tag:
+                  class: 'hero-slideshow__image hero-slideshow__image--desktop',
+                  loading: img_loading,
+                  fetchpriority: img_priority,
+                  widths: '750, 1100, 1500, 1920',
+                  sizes: '100vw',
+                  alt: block.settings.image.alt | default: ''
+              }}
+            {%- else -%}
+              <div class="hero-slideshow__placeholder">
+                {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.mobile_image != blank -%}
+              {{
+                block.settings.mobile_image
+                | image_url: width: 988
+                | image_tag:
+                  class: 'hero-slideshow__image hero-slideshow__image--mobile',
+                  loading: img_loading,
+                  fetchpriority: img_priority,
+                  widths: '494, 988',
+                  sizes: '100vw',
+                  alt: block.settings.image.alt | default: ''
+              }}
+            {%- endif -%}
+            <div class="hero-slideshow__overlay"></div>
+          </div>
+
+          {%- if forloop.first and section.settings.show_trust_plate -%}
+            <div class="hero-slideshow__trust-plate">
+              <span class="num">{{ section.settings.trust_plate_number | escape }}</span>
+              <span class="cap">{{ section.settings.trust_plate_caption | escape }}</span>
+            </div>
+          {%- endif -%}
+
+          <div class="hero-slideshow__content">
+            {%- if block.settings.eyebrow != blank -%}
+              <p class="hero-slideshow__eyebrow">{{ block.settings.eyebrow | escape }}</p>
+            {%- endif -%}
+            {%- if block.settings.heading != blank -%}
+              <h2 class="hero-slideshow__heading">{{ block.settings.heading | escape }}</h2>
+            {%- endif -%}
+            {%- if block.settings.subheading != blank -%}
+              <p class="hero-slideshow__subheading">{{ block.settings.subheading | escape }}</p>
+            {%- endif -%}
+
+            {%- if block.settings.button_label != blank or block.settings.button_label_2 != blank -%}
+              <div class="hero-slideshow__cta-row">
+                {%- if block.settings.button_label != blank -%}
+                  <a href="{{ block.settings.button_link | default: '#' }}" class="button button--primary">
+                    {{ block.settings.button_label | escape }}
+                  </a>
+                {%- endif -%}
+                {%- if block.settings.button_label_2 != blank -%}
+                  <a href="{{ block.settings.button_link_2 | default: '#' }}" class="button button--secondary">
+                    {% render 'icon-phone-topbar' %} {{ block.settings.button_label_2 | escape }}
+                  </a>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+            {%- if trust_blocks.size > 0 -%}
+              <div class="hero-slideshow__trust-strip">
+                {%- for trust_block in trust_blocks -%}
+                  <div class="seg" {{ trust_block.shopify_attributes }}>
+                    <span class="icon" aria-hidden="true">{% render 'icon-vault-tier', tier: '1' %}</span>
+                    {{ trust_block.settings.text | escape }}
+                  </div>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if slide_blocks.size > 1 -%}
+      <div class="hero-slideshow__controls slideshow__controls slider-buttons">
+        <button
+          type="button"
+          class="slider-button slider-button--prev"
+          name="previous"
+          aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
+          aria-controls="Slider-{{ section.id }}"
+        >
+          <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+        </button>
+        <div class="slider-counter slider-counter--dots">
+          <div class="slideshow__control-wrapper">
+            {%- for block in slide_blocks -%}
+              <button
+                class="slider-counter__link slider-counter__link--dots link"
+                aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                aria-controls="Slider-{{ section.id }}"
+              >
+                <span class="dot"></span>
+              </button>
+            {%- endfor -%}
+          </div>
+        </div>
+        <button
+          type="button"
+          class="slider-button slider-button--next"
+          name="next"
+          aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
+          aria-controls="Slider-{{ section.id }}"
+        >
+          <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+        </button>
+      </div>
+    {%- endif -%}
+  </slideshow-component>
+</div>
+
+{% schema %}
+{
+  "name": "Hero Slider",
+  "class": "hero-slideshow-section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Renk şeması", "default": "scheme-7" },
+    { "type": "checkbox", "id": "show_trust_plate", "label": "Güvenlik plakası rozetini göster (yalnız masaüstü)", "default": true },
+    { "type": "text", "id": "trust_plate_number", "label": "Plaka — sayı", "default": "15+" },
+    { "type": "text", "id": "trust_plate_caption", "label": "Plaka — açıklama", "default": "Yıl Üretim Tecrübesi" },
+    { "type": "checkbox", "id": "auto_rotate", "label": "Otomatik geçiş", "default": true },
+    { "type": "range", "id": "change_slides_speed", "min": 4, "max": 12, "step": 1, "unit": "s", "default": 6, "label": "Geçiş hızı" }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slayt",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Masaüstü görsel (1920×720)", "info": "Video varsa poster olarak kullanılır" },
+        { "type": "image_picker", "id": "mobile_image", "label": "Mobil görsel (988×1098)" },
+        { "type": "video", "id": "video", "label": "Video (opsiyonel)", "info": "Girilirse görselin yerine oynar" },
+        {
+          "type": "select", "id": "content_position_vertical", "label": "İçerik konumu — dikey",
+          "options": [
+            { "value": "top", "label": "Üst" },
+            { "value": "center", "label": "Orta" },
+            { "value": "bottom", "label": "Alt" }
+          ],
+          "default": "bottom"
+        },
+        {
+          "type": "select", "id": "content_position_horizontal", "label": "İçerik konumu — yatay",
+          "options": [
+            { "value": "left", "label": "Sol" },
+            { "value": "center", "label": "Orta" },
+            { "value": "right", "label": "Sağ" }
+          ],
+          "default": "left"
+        },
+        { "type": "header", "content": "Mobil içerik konumu", "info": "Telefonda metin ve butonların nereye hizalanacağını ayrı belirleyin" },
+        {
+          "type": "select", "id": "content_position_vertical_mobile", "label": "Mobil — dikey",
+          "options": [
+            { "value": "top", "label": "Üst" },
+            { "value": "center", "label": "Orta" },
+            { "value": "bottom", "label": "Alt" }
+          ],
+          "default": "bottom"
+        },
+        {
+          "type": "select", "id": "content_position_horizontal_mobile", "label": "Mobil — yatay",
+          "options": [
+            { "value": "left", "label": "Sol" },
+            { "value": "center", "label": "Orta" },
+            { "value": "right", "label": "Sağ" }
+          ],
+          "default": "left"
+        },
+        { "type": "text", "id": "eyebrow", "label": "Üst etiket", "default": "İstanbul · Kendi Üretim Tesisimiz" },
+        { "type": "text", "id": "heading", "label": "Başlık", "default": "Değerli Olan Her Şeyi Çelik Güvencesiyle Koruyun" },
+        { "type": "textarea", "id": "subheading", "label": "Alt metin" },
+        { "type": "text", "id": "button_label", "label": "Birincil CTA metni", "default": "Ürünleri Keşfet" },
+        { "type": "url", "id": "button_link", "label": "Birincil CTA link" },
+        { "type": "text", "id": "button_label_2", "label": "İkincil CTA metni", "default": "Hemen Ara" },
+        { "type": "text", "id": "button_link_2", "label": "İkincil CTA link", "default": "tel:+905414451548", "info": "Telefon için tel:+905414451548 yazın" }
+      ]
+    },
+    {
+      "type": "trust_item",
+      "name": "Trust Strip Mesajı",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Metin", "default": "%100 Memnuniyet Garantisi" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Slider",
+      "blocks": [
+        { "type": "slide" },
+        { "type": "trust_item", "settings": { "text": "%100 Memnuniyet Garantisi" } },
+        { "type": "trust_item", "settings": { "text": "Ücretsiz Kurulum" } },
+        { "type": "trust_item", "settings": { "text": "Kendi Üretim Tesisimiz" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

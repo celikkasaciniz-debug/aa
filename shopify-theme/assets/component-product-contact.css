@@ -1,0 +1,55 @@
+/* MR — Ürün Sayfası Hızlı İletişim (Telefon + WhatsApp) */
+
+.mr-pcontact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.mr-pcontact__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 4.6rem;
+  padding: 0 1.4rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: var(--font-subhead-family);
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+.mr-pcontact__btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(14,17,32,0.18); }
+
+.mr-pcontact__icon { flex-shrink: 0; width: 22px; height: 22px; display: inline-flex; }
+.mr-pcontact__icon svg { width: 100%; height: 100%; }
+
+/* Telefon — marka çizgili (outline), premium his */
+.mr-pcontact__btn--phone {
+  background: transparent;
+  color: var(--brand-charcoal, #1B2036);
+  border: 1.5px solid var(--brand-brass, #B8925A);
+}
+.mr-pcontact__btn--phone:hover {
+  background: var(--brand-charcoal, #1B2036);
+  color: var(--brand-bone, #FAF9F5);
+  border-color: var(--brand-charcoal, #1B2036);
+}
+
+/* WhatsApp — resmi yeşil dolgu */
+.mr-pcontact__btn--wa {
+  background: #25D366;
+  color: #fff;
+  border: 1.5px solid #25D366;
+}
+.mr-pcontact__btn--wa:hover { background: #1EBE5A; border-color: #1EBE5A; }
+
+/* Mobilde alt alta (dar ekranda yan yana sığmaz) */
+@media screen and (max-width: 480px) {
+  .mr-pcontact { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,28 @@
+{%- comment -%}
+  MR — Header / Kısa Menü Etiketi
+  Kullanım: {%- render 'nav-short-label', title: link.title -%}
+  section.settings.nav_short_labels içinde her satır: "Uzun Ad | Kısa Ad"
+  Eşleşme bulunursa kısa adı, yoksa uzun adı (title) basar.
+  Not: tema editöründen yönetilir, navigation'a dokunulmaz.
+{%- endcomment -%}
+{%- liquid
+  assign short = title
+  assign map = section.settings.nav_short_labels
+  if map != blank
+    assign rows = map | newline_to_br | split: '<br />'
+    for row in rows
+      assign pair = row | strip | split: '|'
+      if pair.size == 2
+        assign long_name = pair[0] | strip
+        assign short_name = pair[1] | strip
+        assign t_norm = title | strip | downcase
+        assign l_norm = long_name | downcase
+        if t_norm == l_norm
+          assign short = short_name
+          break
+        endif
+      endif
+    endfor
+  endif
+-%}
+{{- short | escape -}}

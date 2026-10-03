@@ -1,0 +1,75 @@
+/* MR — Sıkça Sorulan Sorular */
+/* Mobile-first: <750px için varsayılan */
+
+.faq-premium__heading {
+  font-family: var(--font-display-family);
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: var(--brand-charcoal);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.faq-premium__list { display: flex; flex-direction: column; }
+
+.faq-premium__item {
+  border-bottom: 1px solid #E2DDCF;
+}
+.faq-premium__item[open] {
+  border-bottom-color: var(--brand-brass);
+}
+
+.faq-premium__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 4px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-subhead-family);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--brand-charcoal);
+  transition: color 0.15s ease;
+}
+.faq-premium__question::-webkit-details-marker { display: none; }
+.faq-premium__item[open] .faq-premium__question { color: var(--brand-seal); }
+
+.faq-premium__toggle {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--brand-steel);
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.faq-premium__toggle svg { width: 11px; height: 11px; }
+.faq-premium__toggle svg .v { transition: transform 0.2s ease, opacity 0.2s ease; transform-origin: center; }
+
+.faq-premium__item[open] .faq-premium__toggle {
+  background: var(--brand-seal);
+  border-color: var(--brand-seal);
+  color: var(--brand-bone);
+}
+.faq-premium__item[open] .faq-premium__toggle svg .v {
+  opacity: 0; /* dikey çizgi kaybolur, sadece yatay kalır → "+" haline gelir "−" */
+}
+
+.faq-premium__answer {
+  padding: 0 4px 18px;
+  font-family: var(--font-body-family, sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #3A4148;
+}
+.faq-premium__answer p + p { margin-top: 10px; }
+
+/* ===== TABLET + MASAÜSTÜ: 750px+ ===== */
+@media screen and (min-width: 750px) {
+  .faq-premium__heading { font-size: 3rem; margin-bottom: 36px; }
+  .faq-premium__question { padding: 22px 6px; font-size: 1.3rem; }
+  .faq-premium__toggle { width: 26px; height: 26px; }
+  .faq-premium__toggle svg { width: 13px; height: 13px; }
+  .faq-premium__answer { padding: 0 6px 24px; font-size: 1.1rem; max-width: 680px; }
+}

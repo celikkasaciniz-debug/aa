@@ -1,0 +1,117 @@
+/* MR — Koleksiyon Listesi (Dawn native collection-list markalaştırma)
+   Sadece .mr-collection-brand wrapper'ına scope'lanır — native card-collection
+   snippet'i başka sayfalarda da kullanıldığı için oralara sızmaz. */
+
+/* Kart öğesi konumlama bağlamı (rozet + CTA butonu için) */
+.mr-collection-brand .collection-list__item { position: relative; }
+.mr-collection-brand .card { position: relative; }
+
+/* Kart çerçevesi + çelik kasa dokusu */
+.mr-collection-brand .card-wrapper {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #E2DDCF;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+.mr-collection-brand .card-wrapper:hover {
+  border-color: var(--brand-brass);
+}
+@media screen and (min-width: 990px) {
+  .mr-collection-brand .card-wrapper:hover { transform: translateY(-4px); }
+}
+
+/* Köşe perçin detayı — hero/kategori kartlarıyla aynı imza motif */
+.mr-collection-brand .card-wrapper::before,
+.mr-collection-brand .card-wrapper::after {
+  content: ''; position: absolute; width: 5px; height: 5px; border-radius: 50%; z-index: 4;
+  background: radial-gradient(circle at 35% 30%, #E6CE9E, var(--brand-brass) 55%, #8A6C36 100%);
+  top: 10px; pointer-events: none;
+}
+.mr-collection-brand .card-wrapper::before { left: 10px; }
+.mr-collection-brand .card-wrapper::after { right: 10px; }
+
+/* Görsel: hover zoom */
+.mr-collection-brand .card__media .media img {
+  transition: transform 0.35s ease;
+}
+.mr-collection-brand .card-wrapper:hover .card__media .media img {
+  transform: scale(1.04);
+}
+
+/* Koyu overlay — başlık/CTA okunur olsun (native'de yok) */
+.mr-collection-brand .card--media .card__inner::after {
+  content: '';
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(14,17,32,0.05) 0%, rgba(14,17,32,0.30) 45%, rgba(14,17,32,0.90) 100%);
+}
+
+/* card__inner İÇİNDEKİ başlık bloğunu gizle — dıştaki (card-wrapper altı) kullanılır,
+   yoksa başlık iki kez çıkar. */
+.mr-collection-brand .card__inner .card__content { display: none; }
+
+/* Native başlık bloğunu (card > card__content, card__inner dışı) overlay üstüne taşı */
+.mr-collection-brand .card > .card__content {
+  position: absolute; left: 0; right: 0; bottom: 46px; z-index: 3;
+  padding: 0 18px;
+}
+.mr-collection-brand .card__heading {
+  margin: 0;
+  font-family: var(--font-display-family);
+  font-weight: 800;
+  line-height: 1.05;
+}
+.mr-collection-brand .card__heading a,
+.mr-collection-brand .card__heading .full-unstyled-link {
+  color: var(--brand-bone);
+}
+/* Native başlık ok ikonunu gizle — kendi CTA'mız var */
+.mr-collection-brand .card__heading .icon-wrap { display: none; }
+
+/* Başlık üstü brass çizgi — marka aksanı */
+.mr-collection-brand .card__heading::before {
+  content: ''; display: block; width: 26px; height: 2px;
+  background: var(--brand-brass-bright); margin-bottom: 10px;
+}
+
+/* Her koleksiyona CTA butonu */
+.mr-collection-brand__cta-btn {
+  position: absolute; left: 18px; bottom: 16px; z-index: 4;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono-family);
+  font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--brand-bone);
+  background: rgba(27, 32, 54, 0.55);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(184, 146, 90, 0.55);
+  padding: 9px 16px; border-radius: 3px;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, gap 0.2s ease;
+}
+.mr-collection-brand .card-wrapper:hover .mr-collection-brand__cta-btn {
+  background: var(--brand-brass);
+  border-color: var(--brand-brass);
+  color: #10131F;
+  gap: 12px;
+}
+.mr-collection-brand__cta-btn svg {
+  width: 14px; height: 14px; flex-shrink: 0;
+}
+
+/* Ürün sayısı rozeti — sol üst */
+.mr-collection-brand__count {
+  position: absolute; top: 10px; left: 24px; z-index: 4;
+  font-family: var(--font-mono-family);
+  font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--brand-brass-bright);
+  background: rgba(14,17,32,0.55);
+  backdrop-filter: blur(4px);
+  padding: 4px 9px; border-radius: 2px;
+}
+
+/* Section başlığı — marka tipografisi */
+.mr-collection-brand .collection-list-title {
+  font-family: var(--font-display-family);
+  font-weight: 800;
+  color: var(--brand-charcoal);
+}

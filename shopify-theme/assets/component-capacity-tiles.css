@@ -1,0 +1,147 @@
+/* MR — Kapasite Sınıfına Göre Keşfet */
+/* Mobile-first: <750px için varsayılan */
+/* Not: dikey boşluk section-{id}-padding (schema padding_top/bottom) ile yönetilir,
+   burada padding-block tekrar tanımlanmaz — çift boşluk olmaması için. */
+
+.capacity-tiles__heading {
+  font-family: var(--font-display-family);
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: var(--brand-charcoal);
+  margin-bottom: 4px;
+}
+.capacity-tiles__subheading {
+  font-family: var(--font-body-family, sans-serif);
+  font-size: 1.3rem;
+  color: var(--brand-steel);
+  margin-bottom: 20px;
+}
+
+/* Mobil: 2 sütun, kompakt dikey kart */
+.capacity-tiles__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.capacity-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.18s ease;
+}
+.capacity-tile:hover { transform: translateY(-2px); }
+
+.capacity-tile__icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+.capacity-tile__icon svg,
+.capacity-tile__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.capacity-tile__text { display: flex; flex-direction: column; gap: 2px; }
+.capacity-tile__weight {
+  font-family: var(--font-display-family);
+  font-weight: 800;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+.capacity-tile__category {
+  font-family: var(--font-subhead-family);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.capacity-tile__cap {
+  display: none; /* mobilde yer kısıtı — 750px üzerinde gösterilir */
+  font-family: var(--font-mono-family);
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  opacity: 0.75;
+}
+
+/* Tier renkleri — kademeli yoğunlaşma */
+.capacity-tile--tier-1 { background: #EFEDE6; border: 1px solid #DCD7C8; }
+.capacity-tile--tier-1 .capacity-tile__weight,
+.capacity-tile--tier-1 .capacity-tile__category { color: var(--brand-charcoal); }
+.capacity-tile--tier-1 .capacity-tile__cap { color: var(--brand-steel); }
+.capacity-tile--tier-1 .capacity-tile__icon { color: var(--brand-steel); }
+
+.capacity-tile--tier-2 { background: #F1E8DA; border: 1px solid #E2D2B4; }
+.capacity-tile--tier-2 .capacity-tile__weight,
+.capacity-tile--tier-2 .capacity-tile__category { color: var(--brand-charcoal); }
+.capacity-tile--tier-2 .capacity-tile__cap { color: #8A6C36; }
+.capacity-tile--tier-2 .capacity-tile__icon { color: var(--brand-brass); }
+
+.capacity-tile--tier-3 { background: #F3DCCB; border: 1px solid #E9BE9E; }
+.capacity-tile--tier-3 .capacity-tile__weight,
+.capacity-tile--tier-3 .capacity-tile__category { color: #7A2E0D; }
+.capacity-tile--tier-3 .capacity-tile__cap { color: #A2481F; }
+.capacity-tile--tier-3 .capacity-tile__icon { color: #B94A1F; }
+
+.capacity-tile--tier-4 {
+  background: var(--brand-seal);
+  border: 1px solid var(--brand-seal);
+  position: relative;
+}
+.capacity-tile--tier-4 .capacity-tile__weight,
+.capacity-tile--tier-4 .capacity-tile__category { color: var(--brand-bone); }
+.capacity-tile--tier-4 .capacity-tile__cap { color: rgba(245, 243, 237, 0.8); }
+.capacity-tile--tier-4 .capacity-tile__icon { color: var(--brand-bone); }
+
+/* ===== TABLET: 750–1100px — 2 sütun, geniş kart ===== */
+@media screen and (min-width: 750px) and (max-width: 1099px) {
+  .capacity-tiles__heading { font-size: 2.8rem; }
+  .capacity-tiles__grid { gap: 14px; }
+  .capacity-tile {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 16px;
+  }
+  .capacity-tile__icon { width: 48px; height: 48px; }
+  .capacity-tile__weight { font-size: 2.3rem; }
+  .capacity-tile__cap { display: block; }
+}
+
+/* ===== MASAÜSTÜ: 1100px+ — 4 sütun ===== */
+@media screen and (min-width: 1100px) {
+  .capacity-tiles__heading { font-size: 3rem; }
+  .capacity-tiles__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .capacity-tile {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 18px;
+  }
+  .capacity-tile__icon { width: 56px; height: 56px; }
+  .capacity-tile__weight { font-size: 2.6rem; }
+  .capacity-tile__cap { display: block; font-size: 1rem; }
+}
+
+/* tier-4 rozet — sadece 750px üzeri, mobilde yer yok */
+@media screen and (min-width: 750px) {
+  .capacity-tile--tier-4::after {
+    content: 'MAKSİMUM KORUMA';
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-family: var(--font-mono-family);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: rgba(245, 243, 237, 0.65);
+  }
+}

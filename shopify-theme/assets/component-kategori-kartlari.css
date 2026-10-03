@@ -1,0 +1,108 @@
+/* MR — Koleksiyon Listesi (Kategori Kartları) */
+/* Mobile-first: <750px için varsayılan */
+/* Tüm selector'ler .kategori-kartlari-section'a scope'lanır — native collection-list'e sızmaması için. */
+
+.kategori-kartlari-section .collection-list__heading {
+  font-family: var(--font-display-family);
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: var(--brand-charcoal);
+  margin-bottom: 20px;
+}
+
+.kategori-kartlari-section .collection-list__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  /* "Orijinal" oranda kartlar farklı yükseklikte olabilir; hücreler birbirini gererek
+     görseli kırpmasın diye üstten hizala. */
+  align-items: start;
+}
+
+.kategori-kartlari-section .cat-card {
+  position: relative;
+  aspect-ratio: 3 / 4; /* varsayılan; modifier ile ezilir */
+  overflow: hidden;
+  border-radius: 3px;
+  display: block;
+  text-decoration: none;
+  border: 1px solid #E2DDCF;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.kategori-kartlari-section .cat-card:hover { border-color: var(--brand-brass); }
+
+/* Kart görsel oranı — section ayarı */
+.kategori-kartlari-section .cat-card--ratio-square { aspect-ratio: 1 / 1; }
+.kategori-kartlari-section .cat-card--ratio-portrait { aspect-ratio: 3 / 4; }
+.kategori-kartlari-section .cat-card--ratio-tall { aspect-ratio: 9 / 16; }
+/* Orijinal: inline style ile görselin kendi oranı basılır.
+   Görsel yoksa (placeholder) çökmesin diye makul bir taban oran ver. */
+.kategori-kartlari-section .cat-card--ratio-adapt { aspect-ratio: 3 / 4; }
+/* Orijinal oranda görselin oranı inline aspect-ratio ile basılır; max-height KOYMA
+   (yükseklik kısılırsa cover görseli kırpar). Görsel yoksa çökmesin diye taban min-height. */
+.kategori-kartlari-section .cat-card--ratio-adapt:not([style]) { min-height: 180px; }
+
+.kategori-kartlari-section .cat-card__media { position: absolute; inset: 0; }
+.kategori-kartlari-section .cat-card__image {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.kategori-kartlari-section .cat-card:hover .cat-card__image { transform: scale(1.04); }
+
+.kategori-kartlari-section .cat-card__placeholder {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 25%, var(--brand-gunmetal) 0%, var(--brand-charcoal) 60%, #10131F 100%);
+}
+
+.kategori-kartlari-section .cat-card__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(14,17,32,0.1) 0%, rgba(14,17,32,0.25) 45%, rgba(14,17,32,0.92) 100%);
+}
+
+/* Köşe perçin detayı — hero/header ile aynı imza motif */
+.kategori-kartlari-section .cat-card::before,
+.kategori-kartlari-section .cat-card::after {
+  content: ''; position: absolute; width: 4px; height: 4px; border-radius: 50%; z-index: 3;
+  background: radial-gradient(circle at 35% 30%, #E6CE9E, var(--brand-brass) 55%, #8A6C36 100%);
+  top: 7px;
+}
+.kategori-kartlari-section .cat-card::before { left: 7px; }
+.kategori-kartlari-section .cat-card::after { right: 7px; }
+
+.kategori-kartlari-section .cat-card__content { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 12px; }
+.kategori-kartlari-section .cat-card__count {
+  font-family: var(--font-mono-family);
+  font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--brand-brass-bright); margin-bottom: 4px; display: block;
+}
+.kategori-kartlari-section .cat-card__name {
+  font-family: var(--font-display-family);
+  font-weight: 800; font-size: 1.4rem; line-height: 1.05;
+  color: var(--brand-bone);
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+}
+.kategori-kartlari-section .cat-card__name svg {
+  width: 14px; height: 14px; flex-shrink: 0; color: var(--brand-seal);
+  transition: transform 0.2s ease;
+}
+.kategori-kartlari-section .cat-card:hover .cat-card__name svg { transform: translateX(4px); }
+
+/* ===== TABLET + MASAÜSTÜ: 750px+ ===== */
+@media screen and (min-width: 750px) {
+  .kategori-kartlari-section .collection-list__heading { font-size: 3rem; margin-bottom: 32px; }
+  .kategori-kartlari-section .collection-list__grid { gap: 20px; }
+  .kategori-kartlari-section .cat-card::before,
+  .kategori-kartlari-section .cat-card::after { width: 5px; height: 5px; top: 10px; }
+  .kategori-kartlari-section .cat-card::before { left: 10px; }
+  .kategori-kartlari-section .cat-card::after { right: 10px; }
+  .kategori-kartlari-section .cat-card__content { padding: 20px; }
+  .kategori-kartlari-section .cat-card__count { font-size: 1.05rem; }
+  .kategori-kartlari-section .cat-card__name { font-size: 2.2rem; }
+  .kategori-kartlari-section .cat-card__name svg { width: 18px; height: 18px; }
+}
+
+/* ===== MASAÜSTÜ: 1100px+ — 4 sütun ===== */
+@media screen and (min-width: 1100px) {
+  .kategori-kartlari-section .collection-list__grid { grid-template-columns: repeat(4, 1fr); }
+  .kategori-kartlari-section .cat-card:hover { transform: translateY(-4px); }
+}

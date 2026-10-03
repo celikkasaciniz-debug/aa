@@ -1,0 +1,78 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list_3PXahH": {
+          "type": "link_list",
+          "settings": {
+            "heading": "KATEGORİLER",
+            "menu": "collection"
+          }
+        },
+        "link_list_V6b7xh": {
+          "type": "link_list",
+          "settings": {
+            "heading": "KURUMSAL",
+            "menu": "footer"
+          }
+        },
+        "link_list_FLDE3g": {
+          "type": "link_list",
+          "settings": {
+            "heading": "HESABIM",
+            "menu": "customer-account-main-menu"
+          }
+        },
+        "link_list_GpiHxt": {
+          "type": "link_list",
+          "settings": {
+            "heading": "YARDIM",
+            "menu": "footer-mr-help"
+          }
+        },
+        "brand_information_FzNKCK": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        }
+      },
+      "block_order": [
+        "link_list_3PXahH",
+        "link_list_V6b7xh",
+        "link_list_FLDE3g",
+        "link_list_GpiHxt",
+        "brand_information_FzNKCK"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "newsletter_enable": true,
+        "newsletter_heading": "Yüksek Güvenlikten Haberdar Olun",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": true,
+        "margin_top": 20,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

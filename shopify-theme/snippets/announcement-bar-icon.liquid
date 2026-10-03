@@ -1,0 +1,13 @@
+{% comment %}
+  MR — Announcement Bar (Topbar) / İkon dispatcher
+  Kullanım: {%- render 'announcement-bar-icon', icon: block.settings.icon -%}
+{% endcomment %}
+{%- if icon != blank -%}
+  <span class="announcement-bar__icon" aria-hidden="true">
+    {%- case icon -%}
+      {%- when 'shield' -%}{%- render 'icon-shield-topbar' -%}
+      {%- when 'truck' -%}{%- render 'icon-truck-topbar' -%}
+      {%- when 'phone' -%}{%- render 'icon-phone-topbar' -%}
+    {%- endcase -%}
+  </span>
+{%- endif -%}

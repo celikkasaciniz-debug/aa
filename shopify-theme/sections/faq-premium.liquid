@@ -1,0 +1,108 @@
+{% comment %}
+  MR — Sıkça Sorulan Sorular
+  Native <details>/<summary> accordion (SEO: içerik her zaman DOM'da) + FAQPage JSON-LD (AEO/GEO).
+{% endcomment %}
+{{ 'component-faq-premium.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="faq-premium color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width page-width--narrow">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="faq-premium__heading">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+
+    <div class="faq-premium__list">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'question' -%}
+          <details class="faq-premium__item" {{ block.shopify_attributes }}>
+            <summary class="faq-premium__question">
+              <span>{{ block.settings.question | escape }}</span>
+              <span class="faq-premium__toggle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><line x1="12" y1="5" x2="12" y2="19" class="v"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </summary>
+            <div class="faq-premium__answer">
+              {{ block.settings.answer }}
+            </div>
+          </details>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{%- comment -%} MR — Sıkça Sorulan Sorular / FAQPage JSON-LD (AEO + GEO) {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'question' -%}
+        {
+          "@type": "Question",
+          "name": {{ block.settings.question | strip_html | json }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ block.settings.answer | strip_html | json }}
+          }
+        }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+
+{% schema %}
+{
+  "name": "SSS",
+  "class": "faq-premium-section",
+  "max_blocks": 20,
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Renk şeması", "default": "scheme-1" },
+    { "type": "text", "id": "heading", "label": "Başlık", "default": "Sıkça Sorulan Sorular" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Üst boşluk", "default": 56 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Alt boşluk", "default": 56 }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Soru",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Soru" },
+        { "type": "richtext", "id": "answer", "label": "Cevap" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SSS",
+      "blocks": [
+        { "type": "question", "settings": { "question": "Kasalar nasıl teslim ediliyor, kurulum dahil mi?", "answer": "<p>Evet, tüm kasalarımız İstanbul içi ücretsiz teslimat ve kurulum ile gönderilir. Kurulum ekibimiz kasayı belirlediğiniz noktaya taşır, sabitler ve kullanım eğitimi verir.</p>" } },
+        { "type": "question", "settings": { "question": "İstanbul dışına teslimat yapıyor musunuz?", "answer": "<p>Evet, Türkiye geneline teslimat yapıyoruz. İstanbul dışı teslimat ve kurulum ücretleri bölgeye göre değişiklik gösterebilir, sipariş öncesi bizi arayarak netleştirebilirsiniz.</p>" } },
+        { "type": "question", "settings": { "question": "Kasa şifresini unutursam ne olur?", "answer": "<p>Şifrenizi unutmanız durumunda yetkili servisimiz kimlik doğrulaması sonrası kasanızı açar ve şifrenizi sıfırlar. Kullanıcı kaynaklı unutma durumunda bu hizmet ücretlidir; kilit arızasından kaynaklanan durumlarda garanti kapsamındadır.</p>" } },
+        { "type": "question", "settings": { "question": "Kasalarınız yangına dayanıklı mı?", "answer": "<p>Ürün serimize göre değişir — Premium ve Zırhlı seri modellerimiz yangına dayanıklı sertifikalıdır. Her ürün sayfasında yangın dayanım süresi belirtilir.</p>" } },
+        { "type": "question", "settings": { "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?", "answer": "<p>Kredi kartı (taksitli), havale/EFT ve kapıda ödeme seçenekleri sunuyoruz.</p>" } },
+        { "type": "question", "settings": { "question": "Garanti süresi ne kadar?", "answer": "<p>Tüm kasalarımız 2 yıl garanti kapsamındadır; kilit mekanizması ve gövde kaynaklarını kapsar.</p>" } },
+        { "type": "question", "settings": { "question": "İade/değişim yapabilir miyim?", "answer": "<p>Detaylı bilgi için İade ve İptal Politikası sayfamızı inceleyebilirsiniz.</p>" } },
+        { "type": "question", "settings": { "question": "Kasa çok ağır, taşıma/montaj nasıl yapılıyor?", "answer": "<p>Kurulum ekibimiz gerekli ekipmanla kasayı güvenli şekilde taşır ve yerleştirir — siz hiçbir fiziksel işlem yapmazsınız.</p>" } },
+        { "type": "question", "settings": { "question": "Kasaları kendiniz mi üretiyorsunuz?", "answer": "<p>Evet, İstanbul Avcılar'daki kendi tesisimizde, 15 yılı aşkın tecrübeyle üretim yapıyoruz.</p>" } },
+        { "type": "question", "settings": { "question": "Toplu/kurumsal alımlarda indirim var mı?", "answer": "<p>Ofis, banka, kuyumcu gibi kurumsal toplu alımlarda özel fiyatlandırma sunuyoruz — 0541 445 15 48'den bize ulaşabilirsiniz.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

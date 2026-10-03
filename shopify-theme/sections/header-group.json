@@ -1,0 +1,82 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "%100 Memnuniyet Garantisi",
+            "icon": "shield",
+            "link": ""
+          }
+        },
+        "announcement-bar-1": {
+          "type": "announcement",
+          "settings": {
+            "text": "İstanbul Geneli Ücretsiz Teslimat & Kurulum",
+            "icon": "truck",
+            "link": ""
+          }
+        },
+        "announcement-bar-2": {
+          "type": "announcement",
+          "settings": {
+            "text": "0541 445 15 48",
+            "icon": "phone",
+            "link": "tel:+905414451548"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "announcement-bar-1",
+        "announcement-bar-2"
+      ],
+      "settings": {
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-6",
+        "show_line_separator": true,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-left",
+        "mobile_logo_position": "center",
+        "menu": "heder-men-mr",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "color_scheme": "scheme-7",
+        "menu_color_scheme": "scheme-7",
+        "phone_number": "0541 445 15 48",
+        "nav_short_labels": "Asansörlü Kuyumcu Vitrin Kasası | Kuyumcu Vitrin\nBüyük Boy Profesyonel Güvenlik Kasası | Profesyonel Kasa\nDosya, Evrak Kasası | Dosya & Evrak\nEv Tipi Şifreli Güvenlik Kasası | Ev Tipi Kasa\nEv ve Ofis Tipi Çelik Kasaları | Ev & Ofis\nKompakt Para ve Belge Kasası | Para & Belge\nKuyumcu Kasası | Kuyumcu\nParmak İzli ve Şifreli Çelik Kasa | Parmak İzli",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "margin_bottom": 4,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

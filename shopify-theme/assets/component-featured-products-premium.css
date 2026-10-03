@@ -1,0 +1,122 @@
+/* MR — Öne Çıkan Ürünler / Premium Kart */
+/* Global .card/.badge/.price sistemine EKLEME yapar, onu tekrar tanımlamaz. */
+
+.featured-products-premium__heading {
+  font-family: var(--font-display-family);
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: var(--brand-charcoal);
+  margin-bottom: 24px;
+}
+
+.featured-products-premium__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.card-media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: #F2F0E9;
+  display: block;
+  overflow: hidden;
+}
+.card-media img { width: 100%; height: 100%; object-fit: contain; padding: 14px; }
+
+/* Rozet varyantları — global .badge temel stiline ek modifier'lar */
+.badge--new { background: var(--brand-charcoal); color: var(--brand-bone); }
+.badge--low-stock { background: #5E6166; color: var(--brand-bone); } /* AA: 5.9:1 (brand-steel 3.09 kalıyordu) */
+.badge--sale { background: var(--brand-seal); color: var(--brand-bone); }
+.featured-products-premium .badge {
+  position: absolute; top: 10px; left: 10px; z-index: 2;
+}
+
+.spec-chip {
+  position: absolute; top: 10px; right: 10px; z-index: 2;
+  background: rgba(27, 32, 54, 0.85);
+  backdrop-filter: blur(3px);
+  color: var(--brand-brass-bright);
+  font-family: var(--font-mono-family);
+  font-size: 1rem; font-weight: 500; letter-spacing: 0.04em;
+  padding: 5px 8px; border-radius: 1px;
+  border: 1px solid rgba(184, 146, 90, 0.4);
+}
+
+.quick-add {
+  position: absolute; bottom: 10px; right: 10px; z-index: 2;
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--brand-seal); color: var(--brand-bone);
+  border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.quick-add svg { width: 13px; height: 13px; }
+.quick-add[aria-busy='true'] { opacity: 0.6; pointer-events: none; }
+
+.card-body { padding: 12px 12px 14px; display: flex; flex-direction: column; gap: 4px; }
+.card-title {
+  font-family: var(--font-subhead-family);
+  font-weight: 600; font-size: 1.15rem; line-height: 1.3;
+  color: var(--brand-charcoal); text-decoration: none;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.card-spec-line {
+  font-family: var(--font-mono-family);
+  font-size: 0.9rem; letter-spacing: 0.03em; text-transform: uppercase;
+  color: #66696E; /* WCAG AA: bone zemin üstünde 5.23:1 (brand-steel 3.09 kalıyordu) */
+}
+
+.price-row { display: flex; align-items: baseline; gap: 8px; margin-top: 6px; }
+.price-current {
+  font-family: var(--font-mono-family); font-weight: 600;
+  color: var(--brand-charcoal);
+}
+.price-current.on-sale { color: var(--brand-seal); }
+.price-compare {
+  font-family: var(--font-mono-family);
+  color: #66696E; text-decoration: line-through; font-size: 0.9em; /* AA 5.23:1 */
+}
+
+.cart-discount {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid var(--brand-seal);
+  background: rgba(212, 69, 24, 0.06);
+  border-radius: 2px;
+  padding: 5px 6px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  white-space: nowrap; overflow: hidden;
+}
+.cart-discount svg { width: 9px; height: 9px; color: var(--brand-seal); flex-shrink: 0; }
+.cart-discount span {
+  font-family: var(--font-mono-family);
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.01em;
+  color: #B93A14; text-transform: uppercase; /* WCAG AA: bone zemin üstünde 5.42:1 */
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+/* ===== TABLET + MASAÜSTÜ: 750px+ ===== */
+@media screen and (min-width: 750px) {
+  .featured-products-premium__heading { font-size: 3rem; margin-bottom: 32px; }
+  .featured-products-premium__grid { gap: 22px; }
+  .quick-add {
+    width: 36px; height: 36px;
+    opacity: 0; transform: translateY(6px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+  }
+  .quick-add svg { width: 15px; height: 15px; }
+  .card:hover .quick-add { opacity: 1; transform: translateY(0); }
+  .card:focus-within .quick-add { opacity: 1; transform: translateY(0); }
+  .card-body { padding: 16px 16px 18px; gap: 6px; }
+  .card-title { font-size: 1.5rem; }
+  .card-spec-line { font-size: 1.05rem; }
+  .spec-chip { font-size: 1rem; padding: 5px 8px; }
+  .cart-discount { padding: 7px 10px; gap: 7px; }
+  .cart-discount svg { width: 12px; height: 12px; }
+  .cart-discount span { font-size: 1.05rem; }
+}
+
+/* ===== MASAÜSTÜ: 1100px+ — 4 sütun ===== */
+@media screen and (min-width: 1100px) {
+  .featured-products-premium__grid { grid-template-columns: repeat(4, 1fr); }
+}

@@ -1,0 +1,70 @@
+/* MR — Sabit İletişim Butonları (WhatsApp + Telefon) */
+
+.mr-fcontact {
+  position: fixed;
+  right: 16px;
+  bottom: 96px; /* Google Review widget'ına altta yer aç — ölçülü yukarı */
+  z-index: 998; /* cart drawer/popup altında ama içerik üstünde */
+  display: flex;
+  flex-direction: column; /* telefon üstte, whatsapp altta */
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.mr-fcontact__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  height: 54px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(14, 17, 32, 0.28);
+  overflow: hidden;
+  transition: gap 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease, padding 0.2s ease;
+  padding: 0;
+}
+.mr-fcontact__btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(14,17,32,0.34); }
+
+.mr-fcontact__icon {
+  flex-shrink: 0;
+  width: 54px; height: 54px;
+  display: flex; align-items: center; justify-content: center;
+}
+.mr-fcontact__icon svg { width: 26px; height: 26px; }
+
+/* Etiket — masaüstünde görünür, mobilde gizli (sadece ikon) */
+.mr-fcontact__label {
+  font-family: var(--font-subhead-family);
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-width 0.25s ease, opacity 0.2s ease, padding 0.2s ease;
+}
+
+/* WhatsApp — resmi yeşil */
+.mr-fcontact__btn--wa { background: #25D366; }
+.mr-fcontact__btn--wa:hover { background: #1EBE5A; }
+
+/* Telefon — marka seal (turuncu) */
+.mr-fcontact__btn--phone { background: var(--brand-seal, #D44518); }
+.mr-fcontact__btn--phone:hover { background: #B8360F; }
+
+/* ===== MASAÜSTÜ: etiketleri göster (hover'da genişleyen pill) ===== */
+@media screen and (min-width: 750px) {
+  .mr-fcontact { right: 24px; bottom: 100px; gap: 14px; }
+  .mr-fcontact__btn { padding-right: 4px; }
+  .mr-fcontact__label {
+    max-width: 220px;
+    opacity: 1;
+    padding-right: 20px;
+  }
+}
+
+/* Erişilebilirlik: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .mr-fcontact__btn, .mr-fcontact__label { transition: none; }
+}

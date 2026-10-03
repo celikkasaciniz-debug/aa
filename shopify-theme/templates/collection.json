@@ -1,0 +1,95 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "1787339005d169104e": {
+      "type": "apps",
+      "blocks": {
+        "loovly_review_review_carousel_yB4cAL": {
+          "type": "shopify://apps/loovly-review/blocks/review-carousel/019ebfb3-a4a0-788b-b71d-1d94155380e9",
+          "disabled": true,
+          "settings": {
+            "heading": "Customers are saying",
+            "full_width": true,
+            "max_width": 1100,
+            "card_border_color": "#D44518",
+            "card_border_width": 1,
+            "card_radius": 12,
+            "card_padding": 20,
+            "star_color": "#D44518",
+            "review_count": 12,
+            "min_rating": 4,
+            "photos_only": false,
+            "show_summary_line": true,
+            "show_date": false
+          }
+        },
+        "loovly_review_review_carousel_8tRjci": {
+          "type": "shopify://apps/loovly-review/blocks/review-carousel/019ebfb3-a4a0-788b-b71d-1d94155380e9",
+          "settings": {
+            "heading": "MÜŞTERİ YORUMLARIMIZ",
+            "full_width": true,
+            "max_width": 1100,
+            "card_border_color": "#D44518",
+            "card_border_width": 1,
+            "card_radius": 12,
+            "card_padding": 20,
+            "star_color": "#D44518",
+            "review_count": 12,
+            "min_rating": 4,
+            "photos_only": false,
+            "show_summary_line": true,
+            "show_date": false
+          }
+        }
+      },
+      "block_order": [
+        "loovly_review_review_carousel_yB4cAL",
+        "loovly_review_review_carousel_8tRjci"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "1787339005d169104e"
+  ]
+}

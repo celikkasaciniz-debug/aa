@@ -1,0 +1,178 @@
+/* MR — Footer (marka override) */
+/* Native section-footer.css üzerine; sadece footer'a scope'lu. */
+
+/* 1) Minimal yükseklik — üst içerik daha derli toplu */
+.footer .footer__content-top {
+  padding-bottom: 18px;
+  gap: 24px;
+}
+.footer .footer__content-bottom { padding-top: 14px; }
+
+/* 2) Başlıklar — premium + minimal boyut */
+.footer .footer-block__heading {
+  font-family: var(--font-subhead-family);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-brass-bright);
+  margin-bottom: 14px;
+}
+
+/* Menü linkleri — sade, ince */
+.footer .footer-block__details-content .list-menu__item--link,
+.footer .footer-block__details-content a {
+  font-family: var(--font-body-family, sans-serif);
+  font-size: 0.95rem;
+  padding: 4px 0;
+}
+
+/* Bloklar sola hizalı (hem mobil hem masaüstü — tutarlı, derli toplu) */
+.footer .footer-block {
+  text-align: left;
+  align-items: flex-start;
+}
+.footer .footer-block__details-content { align-items: flex-start; }
+
+/* 4) Mobilde bloklar 2'şerli — CSS multi-column (içeriğe göre sıkışır, dev boşluk olmaz) */
+@media screen and (max-width: 749px) {
+  .footer .footer__blocks-wrapper {
+    display: block;          /* grid'i iptal et — grid satır boşluğu sorunu buradaydı */
+    columns: 2;
+    column-gap: 20px;
+    text-align: left;
+  }
+  .footer .footer-block {
+    display: inline-block;   /* kolon içinde blok bütünlüğü */
+    width: 100%;
+    break-inside: avoid;     /* blok iki kolona bölünmesin */
+    text-align: left;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0 0 22px;        /* bloklar arası dikey aralık — fazla boşluk yok */
+    vertical-align: top;
+  }
+  .footer .footer-block__heading { margin-bottom: 10px; }
+  .footer .footer-block__details-content li { text-align: left; }
+  .footer .footer-block__details-content a { padding: 3px 0; }
+
+  /* Marka bilgisi bloğu (logo + açıklama) tam genişlik, en üstte, sola */
+  .footer .footer-block:has(.footer-block__brand-info) {
+    column-span: all;        /* iki kolonu birden kapla */
+    text-align: left;
+    align-items: flex-start;
+    margin-bottom: 26px;
+  }
+  .footer .footer-block__brand-info { align-items: flex-start; text-align: left; }
+  .footer .footer-block__image-wrapper { margin-left: 0; }
+}
+
+/* 1. sütun (marka bilgisi) — diğer sütunlarla aynı premium his */
+.footer .footer-block__brand-info .footer-block__heading {
+  font-family: var(--font-subhead-family);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-brass-bright);
+  margin-top: 14px;
+  margin-bottom: 12px;
+}
+.footer .footer-block__brand-info .rte,
+.footer .footer-block__brand-info .rte p {
+  font-family: var(--font-body-family, sans-serif);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4A5058;
+}
+
+/* Footer newsletter'ı gizle (bülten popup + üst banner zaten topluyor) */
+.footer .footer-block--newsletter,
+.footer .footer__follow-on-shop { display: none; }
+
+/* 5) Alt bar: telif + imza + ödeme ikonları — hizalı, minimal */
+.footer .footer__content-bottom-wrapper {
+  align-items: center;
+  gap: 14px;
+}
+
+/* İmza linki */
+.footer .mr-footer__signature { opacity: 0.9; }
+.footer .mr-footer__signlink {
+  color: var(--brand-brass-bright);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.footer .mr-footer__signlink:hover { color: var(--brand-seal); text-decoration: underline; }
+
+/* Ödeme ikonları */
+.footer .mr-pay {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  list-style: none; margin: 0; padding: 0;
+  align-items: center; justify-content: center;
+}
+.footer .mr-pay__item {
+  width: 42px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+}
+.footer .mr-pay__item svg { width: 100%; height: 100%; display: block; }
+
+/* PayTR — beyaz logo olduğu için koyu zemin + çerçeve */
+.footer .mr-pay__item--paytr {
+  background: var(--brand-charcoal, #1B2036);
+  border-radius: 4px;
+  padding: 5px 6px;
+}
+.footer .mr-pay__item--paytr img {
+  width: 100%; height: 100%; object-fit: contain; display: block;
+}
+
+/* Alt bar iki wrapper'ı tek görsel satırda topla:
+   1. wrapper = ödeme ikonları, 2. wrapper = telif + imza. */
+.footer .footer__content-bottom {
+  display: flex;
+  flex-direction: column-reverse; /* telif+imza üstte, ödeme altta değil → görsel denge */
+  gap: 10px;
+  align-items: center;
+}
+
+/* Masaüstü: telif+imza solda, ödeme ikonları sağda — aynı hizada */
+@media screen and (min-width: 750px) {
+  .footer .footer__content-bottom {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-left: 5rem; padding-right: 5rem;
+  }
+  .footer .footer__content-bottom-wrapper { width: auto; padding: 0; margin: 0; }
+  .footer .footer__content-bottom-wrapper--center { margin: 0; }
+  .footer .footer__copyright { justify-content: flex-start; }
+  .footer .mr-pay { justify-content: flex-end; }
+  .footer .footer__localization:empty { display: none; }
+}
+
+/* Mobilde alt bar: dikey, ortalı, derli toplu (imza tek satırda düzgün sarsın) */
+@media screen and (max-width: 749px) {
+  .footer .footer__content-bottom { gap: 16px; padding-bottom: 4px; }
+  .footer .footer__content-bottom-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 6px;
+  }
+  .footer .mr-pay { justify-content: center; gap: 8px; }
+  .footer .footer__copyright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4px 10px;
+    text-align: center;
+    line-height: 1.7;
+  }
+  /* Telif + imza satırı bir arada, kelime kelime kırılmasın */
+  .footer .footer__copyright .copyright__content { display: inline; white-space: normal; }
+  .footer .mr-footer__signature { white-space: nowrap; }
+  /* Politika linkleri tek satıra sığmazsa düzgün sarsın, • ile ayrık dursun */
+  .footer .policies { justify-content: center; }
+}
