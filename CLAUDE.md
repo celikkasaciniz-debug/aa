@@ -24,5 +24,7 @@ Credentials come from environment variables (set them in the cloud environment s
 
 - `GOOGLE_ADS_DEVELOPER_TOKEN` — optional; Google no longer requires one and API access levels are managed in Google Cloud Console. The account's existing token is Test Account level only, so leave it unset
 - `GOOGLE_ADS_ADC_JSON` — contents of an `authorized_user` ADC file with the `adwords` scope; the launcher writes it to `~/.config/gcloud/application_default_credentials.json`
-- `GOOGLE_ADS_LOGIN_CUSTOMER_ID` — manager (MCC) account ID when access goes through it; the manager account is `2307077449`
+- `GOOGLE_ADS_LOGIN_CUSTOMER_ID` — leave unset: the ad account is accessed directly, not through the manager account `2307077449`
 - `GOOGLE_CLOUD_PROJECT` — optional, defaults to the project `able-balm-510520-v4` in `.mcp.json`
+
+Accounts: ad account **Çelik Kasacı `2404786286`** (TRY, Europe/Istanbul) for celikkasaci.com; manager account `2307077449` has no linked clients.
