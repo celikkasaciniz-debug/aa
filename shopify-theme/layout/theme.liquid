@@ -17,9 +17,9 @@
 
     <title>
       {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- if current_tags %} | {{ current_tags | join: ', ' }}{% endif -%}
+      {%- if current_page != 1 %} | Sayfa {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} | {{ shop.name }}{% endunless -%}
     </title>
 
     {% if page_description %}
@@ -281,6 +281,8 @@
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {% comment %} MR — Global / Marka override katmanı (base.css'ten sonra yüklenmeli) {% endcomment %}
     {{ 'component-mr-overrides.css' | asset_url | stylesheet_tag }}
+    {% comment %} Kasa plakası tokens (docs/design-system.md) {% endcomment %}
+    {{ 'kasa-tokens.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -302,39 +304,6 @@
       {% comment %}theme-check-enable AssetPreload{% endcomment %}
     {%- endunless -%}
 
-    {% comment %} MR — Announcement Bar (Topbar) / Font: Archivo 700 (kurumsal & sağlam, latin + latin-ext) {% endcomment %}
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="https://fonts.gstatic.com/s/archivo/v25/k3k6o8UDI-1M0wlSV9XAw6lQkqWY8Q82sJaRE-NWIDdgffTT0zRZ9xdp.woff2"
-      crossorigin
-    >
-    <style>
-      /* MR — Announcement Bar (Topbar) / Font-face: yalnız ağırlık 700, swap */
-      @font-face {
-        font-family: 'Archivo';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        /* latin — ı, temel Türkçe */
-        src: url('https://fonts.gstatic.com/s/archivo/v25/k3k6o8UDI-1M0wlSV9XAw6lQkqWY8Q82sJaRE-NWIDdgffTT0zRZ9xdp.woff2') format('woff2');
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+FEFF, U+FFFD;
-      }
-      @font-face {
-        font-family: 'Archivo';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        /* latin-ext — İ (U+0130), Ş Ğ Ç vb. */
-        src: url('https://fonts.gstatic.com/s/archivo/v25/k3k6o8UDI-1M0wlSV9XAw6lQkqWY8Q82sJaRE-NWIDdgffTT0zRZ-RdpF0s.woff2') format('woff2');
-        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-      }
-      :root {
-        --font-topbar-family: 'Archivo', sans-serif;
-      }
-    </style>
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
       {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}

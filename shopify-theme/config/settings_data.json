@@ -12,33 +12,33 @@
     "logo": "shopify://shop_images/Adsiz_tasarim_73.png",
     "logo_width": 140,
     "favicon": "shopify://shop_images/Celik_Kasaci_favicon.png",
-    "type_header_font": "archivo_n6",
-    "heading_scale": 100,
-    "type_body_font": "archivo_n4",
+    "type_header_font": "ibm_plex_sans_condensed_n6",
+    "heading_scale": 110,
+    "type_body_font": "ibm_plex_sans_n4",
     "body_scale": 100,
     "page_width": 1600,
     "spacing_sections": 12,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
-    "animations_reveal_on_scroll": true,
+    "animations_reveal_on_scroll": false,
     "animations_hover_elements": "none",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
-    "buttons_radius": 0,
+    "buttons_radius": 2,
     "buttons_shadow_opacity": 0,
     "buttons_shadow_horizontal_offset": 0,
     "buttons_shadow_vertical_offset": 4,
     "buttons_shadow_blur": 5,
     "variant_pills_border_thickness": 1,
     "variant_pills_border_opacity": 55,
-    "variant_pills_radius": 40,
+    "variant_pills_radius": 2,
     "variant_pills_shadow_opacity": 0,
     "variant_pills_shadow_horizontal_offset": 0,
     "variant_pills_shadow_vertical_offset": 4,
     "variant_pills_shadow_blur": 5,
     "inputs_border_thickness": 1,
     "inputs_border_opacity": 55,
-    "inputs_radius": 0,
+    "inputs_radius": 2,
     "inputs_shadow_opacity": 0,
     "inputs_shadow_horizontal_offset": 0,
     "inputs_shadow_vertical_offset": 4,
@@ -107,7 +107,7 @@
     "drawer_shadow_vertical_offset": 4,
     "drawer_shadow_blur": 5,
     "badge_position": "bottom left",
-    "badge_corner_radius": 40,
+    "badge_corner_radius": 2,
     "sale_badge_color_scheme": "scheme-6",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "Çelik Kasacı, Avcılar",
@@ -192,7 +192,7 @@
         "settings": {
           "enable_card_ratings": true,
           "badge_position": "below_title",
-          "star_color": "#D44518"
+          "star_color": "#9C7A3C"
         }
       },
       "6159598353363395418": {
@@ -235,79 +235,79 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#faf9f5",
+          "background": "#e8ebed",
           "background_gradient": "",
-          "text": "#1b2036",
-          "button": "#d44518",
-          "button_label": "#faf9f5",
-          "secondary_button_label": "#1b2036",
-          "shadow": "#e2ddcf"
+          "text": "#2a2e33",
+          "button": "#2a2e33",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#2a2e33",
+          "shadow": "#2a2e33"
         }
       },
       "scheme-2": {
         "settings": {
-          "background": "#f3f3f3",
+          "background": "#ffffff",
           "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
-          "button_label": "#f3f3f3",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "text": "#2a2e33",
+          "button": "#2a2e33",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#2a2e33",
+          "shadow": "#2a2e33"
         }
       },
       "scheme-3": {
         "settings": {
-          "background": "#242833",
+          "background": "#2a2e33",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#000000",
+          "button_label": "#2a2e33",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#121417"
         }
       },
       "scheme-4": {
         "settings": {
-          "background": "#121212",
+          "background": "#2a2e33",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#121212",
+          "button_label": "#2a2e33",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#121417"
         }
       },
       "scheme-5": {
         "settings": {
-          "background": "#334fb4",
+          "background": "#d9dde0",
           "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#334fb4",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "text": "#2a2e33",
+          "button": "#2a2e33",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#2a2e33",
+          "shadow": "#2a2e33"
         }
       },
       "scheme-6": {
         "settings": {
-          "background": "#d44518",
+          "background": "#7a5e2a",
           "background_gradient": "",
-          "text": "#f5f3ed",
-          "button": "#1b2036",
-          "button_label": "#f5f3ed",
-          "secondary_button_label": "#f5f3ed",
-          "shadow": "#1b2036"
+          "text": "#ffffff",
+          "button": "#2a2e33",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#2a2e33"
         }
       },
       "scheme-7": {
         "settings": {
-          "background": "#1b2036",
+          "background": "#2a2e33",
           "background_gradient": "",
-          "text": "#f5f3ed",
-          "button": "#d44518",
-          "button_label": "#f5f3ed",
-          "secondary_button_label": "#f5f3ed",
-          "shadow": "#0e1120"
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#2a2e33",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#121417"
         }
       }
     }

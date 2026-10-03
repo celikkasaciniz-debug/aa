@@ -1,0 +1,152 @@
+{% comment %}
+  Kasa özellikleri: spec plate, scale drawing, spec table, neighbouring models
+  and the mobile sticky bar (docs/design-system.md, direction A).
+  Everything comes from product.metafields.kasa; a missing value hides its
+  element (MASTER_PROMPT 0.4.4). Nothing is shown with placeholder data.
+{% endcomment %}
+{{ 'kasa-ozellikleri.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign k = product.metafields.kasa
+  assign agirlik = k.agirlik_kg.value
+  assign yukseklik = k.dis_yukseklik_cm.value
+  assign genislik = k.dis_genislik_cm.value
+  assign derinlik = k.dis_derinlik_cm.value
+  assign govde = k.govde_sac_mm.value
+  assign kapi = k.kapi_sac_mm.value
+  assign kilit = k.kilit_tipi.value | join: ', '
+  assign variant = product.selected_or_first_available_variant
+  assign wa_text = 'Merhaba, ' | append: product.title | append: ' hakkında bilgi almak istiyorum.' | url_encode
+-%}
+
+<div class="kasa-ozellik page-width section-{{ section.id }}-padding">
+  {%- if agirlik != blank or yukseklik != blank or govde != blank -%}
+    <div class="kasa-ozellik__ust">
+      <div class="kasa-plaka" role="group" aria-label="Temel özellikler">
+        <span class="kasa-plaka__percin kasa-plaka__percin--1" aria-hidden="true"></span>
+        <span class="kasa-plaka__percin kasa-plaka__percin--2" aria-hidden="true"></span>
+        <span class="kasa-plaka__percin kasa-plaka__percin--3" aria-hidden="true"></span>
+        <span class="kasa-plaka__percin kasa-plaka__percin--4" aria-hidden="true"></span>
+        {%- if k.model_kodu.value != blank -%}
+          <p class="kasa-plaka__kod">{{ k.model_kodu.value | escape }}</p>
+        {%- endif -%}
+        <dl class="kasa-plaka__degerler">
+          {%- if agirlik != blank -%}
+            <div><dt>Ağırlık</dt><dd>{{ agirlik }}&nbsp;<span>kg</span></dd></div>
+          {%- endif -%}
+          {%- if yukseklik != blank -%}
+            <div><dt>Yükseklik</dt><dd>{{ yukseklik }}&nbsp;<span>cm</span></dd></div>
+          {%- endif -%}
+          {%- if govde != blank -%}
+            <div><dt>Gövde sacı</dt><dd>{{ govde | replace: '.', ',' }}&nbsp;<span>mm</span></dd></div>
+          {%- endif -%}
+        </dl>
+      </div>
+
+      {%- if yukseklik != blank and genislik != blank -%}
+        {%- liquid
+          assign olcek_cm = 175
+          if yukseklik > olcek_cm
+            assign olcek_cm = yukseklik
+          endif
+          assign birim = 200.0 | divided_by: olcek_cm
+          assign kasa_h = yukseklik | times: birim
+          assign kasa_w = genislik | times: birim
+          assign kisi_h = 175 | times: birim
+          assign kisi_w = 45 | times: birim
+          assign kasa_x = kisi_w | plus: 24
+          assign svg_w = kasa_x | plus: kasa_w | plus: 4
+          assign kasa_y = 204 | minus: kasa_h
+          assign kisi_y = 204 | minus: kisi_h
+        -%}
+        <figure class="kasa-olcek">
+          <svg viewBox="0 0 {{ svg_w | ceil }} 210" role="img" aria-labelledby="KasaOlcek-{{ section.id }}">
+            <title id="KasaOlcek-{{ section.id }}">{{ yukseklik }} cm yüksekliğindeki kasa, 175 cm boyunda bir kişinin yanında</title>
+            <g class="kasa-olcek__kisi" transform="translate(2 {{ kisi_y }})">
+              <circle cx="{{ kisi_w | divided_by: 2 }}" cy="{{ kisi_h | times: 0.065 }}" r="{{ kisi_h | times: 0.065 }}"/>
+              <rect x="{{ kisi_w | times: 0.15 }}" y="{{ kisi_h | times: 0.14 }}" width="{{ kisi_w | times: 0.7 }}" height="{{ kisi_h | times: 0.86 }}" rx="2"/>
+            </g>
+            <rect class="kasa-olcek__kasa" x="{{ kasa_x }}" y="{{ kasa_y }}" width="{{ kasa_w }}" height="{{ kasa_h }}"/>
+            <line class="kasa-olcek__zemin" x1="0" y1="204.5" x2="{{ svg_w | ceil }}" y2="204.5"/>
+          </svg>
+          <figcaption>{{ yukseklik }}&nbsp;cm kasa, 175&nbsp;cm kişi</figcaption>
+        </figure>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  {%- capture satirlar -%}
+    {%- if yukseklik != blank and genislik != blank and derinlik != blank -%}
+      <tr><th scope="row">Dış ölçü (Y x G x D)</th><td>{{ yukseklik }} x {{ genislik }} x {{ derinlik }}&nbsp;cm</td></tr>
+    {%- endif -%}
+    {%- if k.ic_yukseklik_cm.value != blank and k.ic_genislik_cm.value != blank and k.ic_derinlik_cm.value != blank -%}
+      <tr><th scope="row">İç ölçü (Y x G x D)</th><td>{{ k.ic_yukseklik_cm.value }} x {{ k.ic_genislik_cm.value }} x {{ k.ic_derinlik_cm.value }}&nbsp;cm</td></tr>
+    {%- endif -%}
+    {%- if agirlik != blank -%}<tr><th scope="row">Ağırlık</th><td>{{ agirlik }}&nbsp;kg</td></tr>{%- endif -%}
+    {%- if govde != blank -%}<tr><th scope="row">Gövde sacı</th><td>{{ govde | replace: '.', ',' }}&nbsp;mm</td></tr>{%- endif -%}
+    {%- if kapi != blank -%}<tr><th scope="row">Kapı sacı</th><td>{{ kapi | replace: '.', ',' }}&nbsp;mm</td></tr>{%- endif -%}
+    {%- if k.dolgu.value != blank -%}<tr><th scope="row">Dolgu</th><td>{{ k.dolgu.value | escape }}</td></tr>{%- endif -%}
+    {%- if kilit != blank -%}<tr><th scope="row">Kilit</th><td>{{ kilit | escape }}{% if k.kilit_marka.value != blank %} ({{ k.kilit_marka.value | escape }}){% endif %}</td></tr>{%- endif -%}
+    {%- if k.surgu_adet.value != blank -%}<tr><th scope="row">Sürgü</th><td>{{ k.surgu_adet.value }} adet{% if k.surgu_cap_mm.value != blank %}, {{ k.surgu_cap_mm.value }}&nbsp;mm çap{% endif %}</td></tr>{%- endif -%}
+    {%- if k.raf_adet.value != blank -%}<tr><th scope="row">Raf</th><td>{{ k.raf_adet.value }} adet</td></tr>{%- endif -%}
+    {%- if k.sabitleme.value != blank -%}<tr><th scope="row">Sabitleme</th><td>{{ k.sabitleme.value | escape }}</td></tr>{%- endif -%}
+    {%- if k.yangin_sertifikasi.value != blank -%}
+      <tr><th scope="row">Yangın sertifikası</th><td>{{ k.yangin_sertifikasi.value | escape }}{% if k.yangin_belgesi.value != blank %}, <a href="{{ k.yangin_belgesi.value.url }}">belgeyi gör</a>{% endif %}</td></tr>
+    {%- endif -%}
+    {%- if k.hirsizlik_sinifi.value != blank -%}
+      <tr><th scope="row">Hırsızlık sınıfı</th><td>{{ k.hirsizlik_sinifi.value | escape }}{% if k.hirsizlik_belgesi.value != blank %}, <a href="{{ k.hirsizlik_belgesi.value.url }}">belgeyi gör</a>{% endif %}</td></tr>
+    {%- endif -%}
+    {%- if k.garanti_yil.value != blank -%}<tr><th scope="row">Garanti</th><td>{{ k.garanti_yil.value }} yıl</td></tr>{%- endif -%}
+    {%- if k.uretim_yeri.value != blank -%}<tr><th scope="row">Üretim yeri</th><td>{{ k.uretim_yeri.value | escape }}</td></tr>{%- endif -%}
+    {%- if k.teslim_suresi_gun.value != blank -%}
+      <tr><th scope="row">Teslim (İstanbul)</th><td>{% if k.teslim_suresi_gun.value == 0 %}Aynı gün{% else %}{{ k.teslim_suresi_gun.value }} gün{% endif %}</td></tr>
+    {%- endif -%}
+  {%- endcapture -%}
+
+  {%- if satirlar != blank -%}
+    <h2 class="kasa-ozellik__baslik h3">Teknik özellikler</h2>
+    <table class="kasa-tablo">
+      <tbody>{{ satirlar }}</tbody>
+    </table>
+  {%- endif -%}
+
+  {%- assign ucuz = k.komsu_ucuz.value -%}
+  {%- assign guclu = k.komsu_guclu.value -%}
+  {%- if ucuz != blank or guclu != blank -%}
+    <h2 class="kasa-ozellik__baslik h3">Hangisini seçmeliyim?</h2>
+    <ul class="kasa-komsu">
+      {%- if ucuz != blank -%}
+        <li><span>Daha uygun</span> <a href="{{ ucuz.url }}">{{ ucuz.title | escape }}</a>, {{ ucuz.price | money }}</li>
+      {%- endif -%}
+      {%- if guclu != blank -%}
+        <li><span>Daha güçlü</span> <a href="{{ guclu.url }}">{{ guclu.title | escape }}</a>, {{ guclu.price | money }}</li>
+      {%- endif -%}
+    </ul>
+  {%- endif -%}
+</div>
+
+<div class="kasa-sticky" aria-label="Hızlı sipariş ve iletişim">
+  <p class="kasa-sticky__fiyat">{{ variant.price | money }}</p>
+  <a class="kasa-sticky__btn kasa-sticky__btn--wa" href="https://wa.me/905414451548?text={{ wa_text }}" target="_blank" rel="noopener" data-contact-event="whatsapp_click">WhatsApp'tan sor</a>
+  <a class="kasa-sticky__btn kasa-sticky__btn--tel" href="tel:+905414451548" data-contact-event="tel_click">Ara</a>
+</div>
+
+{% schema %}
+{
+  "name": "Kasa özellikleri",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "range", "id": "padding_top", "min": 0, "max": 60, "step": 4, "unit": "px", "label": "Üst boşluk", "default": 24 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 60, "step": 4, "unit": "px", "label": "Alt boşluk", "default": 24 }
+  ],
+  "enabled_on": { "templates": ["product"] },
+  "presets": [{ "name": "Kasa özellikleri" }]
+}
+{% endschema %}

@@ -1,0 +1,85 @@
+/*
+  Kasa plakası design tokens (docs/design-system.md, direction A).
+  Loaded after base.css and component-mr-overrides.css. Redefines the old MR
+  brand variables (cream, terracotta, Archivo) so existing components follow
+  the new palette without editing every file.
+*/
+:root {
+  --grafit: #2A2E33;
+  --celik: #5E666E;
+  --galvaniz: #E8EBED;
+  --beyaz: #FFFFFF;
+  --pirinc: #9C7A3C;
+  --pirinc-koyu: #7A5E2A;
+  --pirinc-acik: #D6BD8A;
+  --whatsapp: #25D366;
+  --whatsapp-metin: #0B3D2E;
+  --hata: #B42318;
+
+  --brand-charcoal: var(--grafit);
+  --brand-gunmetal: #3A4048;
+  --brand-bone: var(--beyaz);
+  --brand-brass: var(--pirinc);
+  --brand-brass-bright: var(--pirinc-acik);
+  --brand-steel: var(--celik);
+  --brand-seal: var(--grafit);
+
+  --font-mono-family: var(--font-body-family);
+  --font-display-family: var(--font-heading-family);
+  --font-subhead-family: var(--font-heading-family);
+  --font-topbar-family: var(--font-heading-family);
+}
+
+:focus-visible {
+  outline: 2px solid var(--pirinc);
+  outline-offset: 2px;
+}
+
+a:not(.button):not([class*='card']):not([class*='mr-']):hover {
+  color: var(--pirinc-koyu);
+}
+
+/* Sentence case everywhere (MASTER_PROMPT 3.3) */
+.badge,
+[class*='mr-'],
+[class*='capacity-tile'],
+.card__heading,
+.header__menu-item,
+.footer-block__heading {
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+/* Contact buttons */
+.mr-fcontact__btn--phone:hover,
+.mr-fcontact__btn--phone:focus-visible {
+  background: #1E2125;
+}
+.mr-fcontact__btn--wa,
+.mr-fcontact__btn--wa:hover {
+  background: var(--whatsapp);
+  color: var(--whatsapp-metin);
+}
+.menu-drawer__call-link {
+  background: var(--grafit);
+  color: var(--beyaz);
+}
+
+/* Capacity tiles: cool steel steps instead of cream and terracotta */
+.capacity-tile--tier-1 { background: #F4F5F6; border: 1px solid #D3D7DA; }
+.capacity-tile--tier-2 { background: var(--beyaz); border: 1px solid #C4C9CD; }
+.capacity-tile--tier-2 .capacity-tile__cap { color: var(--celik); }
+.capacity-tile--tier-3 { background: #DDE1E4; border: 1px solid #B5BBC0; }
+.capacity-tile--tier-3 .capacity-tile__weight,
+.capacity-tile--tier-3 .capacity-tile__category { color: var(--grafit); }
+.capacity-tile--tier-3 .capacity-tile__cap,
+.capacity-tile--tier-3 .capacity-tile__icon { color: var(--pirinc-koyu); }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

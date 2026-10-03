@@ -14,3 +14,6 @@
 | 2026-10-03 | ads-03 follows MASTER_PROMPT 9.2: phone and WhatsApp taps become secondary instead of getting a value | Owner via prompt | Re-evaluate when offline lead import exists |
 | 2026-10-03 | Development theme is now 142814871752; the old working copy 142814806216 is live | Owner published | CLAUDE.md updated |
 | 2026-10-03 | Design tokens adjusted for contrast: `--celik` #5E666E (was #6B737B, 4,0:1), new `--pirinc-koyu` #7A5E2A for link text, WhatsApp label #0B3D2E | Claude | Brief's values failed WCAG AA for text; see design-system.md |
+| 2026-10-03 | Google Ads work moves to the end; the site is finished first | Owner ("google ads en sona kalsın") | ads-01/02/03 stay in manual-steps.md; the Ads rebuild waits until the site phases are done |
+| 2026-10-03 | Direction A "Kasa plakası" is built on the development theme | Claude, per owner "do what is better and recommended" | Recommended in design-system.md. Publishing is the owner's step |
+| 2026-10-03 | IBM Plex Sans Condensed SemiBold replaces Barlow Condensed for plate numerals and headings | Claude | Both IBM Plex families are in Shopify's font library (served from Shopify's CDN, Turkish glyphs included); Barlow Condensed is not, so it would need self-hosting. Keeps the site at one type family |
