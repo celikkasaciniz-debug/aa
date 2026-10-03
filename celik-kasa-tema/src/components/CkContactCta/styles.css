@@ -1,0 +1,122 @@
+.ck-cta {
+  background: var(--kombos-white);
+  padding: 3rem 0;
+}
+
+.ck-cta__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 2rem 1.5rem;
+  border-radius: var(--ck-radius-lg);
+  background: var(--ck-steel-gradient);
+  color: var(--kombos-white);
+  overflow: hidden;
+}
+
+.ck-cta__box::after {
+  content: "";
+  position: absolute;
+  right: -6rem;
+  top: -6rem;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 187, 134, 0.22) 0%, rgba(217, 187, 134, 0) 70%);
+  pointer-events: none;
+}
+
+.ck-cta__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 40rem;
+}
+
+.ck-cta__title {
+  margin: 0;
+  color: var(--kombos-white);
+  letter-spacing: -0.01em;
+}
+
+.ck-cta__text {
+  margin: 0;
+  color: var(--ck-steel-light);
+}
+
+.ck-cta__actions {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ck-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--ck-radius);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.ck-cta__btn:hover {
+  transform: translateY(-1px);
+}
+
+.ck-cta__btn:focus-visible {
+  outline: 2px solid var(--ck-brass-light);
+  outline-offset: 2px;
+}
+
+.ck-cta__btn--phone {
+  background: var(--ck-brass-gradient);
+  color: var(--ck-anthracite);
+}
+
+.ck-cta__btn--wa {
+  background: var(--ck-whatsapp);
+  color: var(--kombos-white);
+}
+
+.ck-cta__icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.ck-cta__btn-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.ck-cta__btn-sub {
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .ck-cta__actions {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ck-cta {
+    padding: 4rem 0;
+  }
+
+  .ck-cta__box {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 3.5rem;
+  }
+
+  .ck-cta__actions {
+    flex-shrink: 0;
+  }
+}

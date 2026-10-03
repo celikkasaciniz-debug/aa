@@ -1,0 +1,7 @@
+.kombos-announcement {
+  display: block;
+  text-align: center;
+  /* wrap instead of overflowing on narrow phones */
+  white-space: normal;
+  overflow-wrap: anywhere;
+}

@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR/celik-kasa-tema\" && [ -d node_modules/@ikas/component-cli ] || npm ci --no-audit --no-fund"
+          }
+        ]
+      }
+    ]
+  }
+}

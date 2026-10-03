@@ -1,0 +1,368 @@
+/* ===== Category List Section ===== */
+.kombos-category-list {
+  width: 100%;
+}
+
+.kombos-category-list__prev-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Top: Breadcrumb + Title */
+.kombos-category-list__top {
+  padding-top: 1rem;
+}
+
+.kombos-category-list__breadcrumb {
+  margin-bottom: 0;
+}
+
+/* Main layout */
+.kombos-category-list__main {
+  display: flex;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+/* Sidebar — hidden on mobile */
+.kombos-category-list__sidebar {
+  display: none;
+}
+
+/* Grid area */
+.kombos-category-list__grid-area {
+  flex: 1;
+  min-width: 0;
+}
+
+.kombos-category-list__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.kombos-category-list__empty {
+  color: var(--kombos-gray-900);
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.kombos-category-list__pagination {
+  margin-top: 2rem;
+}
+
+.kombos-category-list__card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.kombos-category-list__card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Sentinel for IntersectionObserver (infinite scroll) */
+.kombos-category-list__sentinel {
+  height: 1px;
+}
+
+/* ===== Tablet (>= 768px) ===== */
+@media (min-width: 768px) {
+  .kombos-category-list__grid {
+    gap: 1.5rem;
+  }
+}
+
+/* ===== Desktop (>= 1024px) ===== */
+@media (min-width: 1024px) {
+  .kombos-category-list__top {
+    padding-top: 1.5rem;
+  }
+
+  .kombos-category-list__main {
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Show sidebar — sticky so it stays visible while scrolling */
+  .kombos-category-list__sidebar {
+    width: 15rem;
+    display: block;
+    position: sticky;
+    top: 0.75rem;
+    max-height: calc(100vh - 2.5rem);
+    overflow-y: auto;
+  }
+
+  /* Grid columns — default 4 on desktop */
+  .kombos-category-list__grid--cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .kombos-category-list__grid--cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== Category SEO description (Çelik Kasa Merkezi) ===== */
+.ck-category-about {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 56rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--kombos-gray-200);
+}
+
+.ck-category-about__body {
+  position: relative;
+  overflow: hidden;
+}
+
+.ck-category-about__body--collapsed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 90%);
+  pointer-events: none;
+}
+
+.ck-category-about__content {
+  color: var(--kombos-gray-600);
+  line-height: 1.7;
+}
+
+.ck-category-about__content p + p,
+.ck-category-about__content p + h2,
+.ck-category-about__content p + h3,
+.ck-category-about__content ul + h2,
+.ck-category-about__content ul + h3 {
+  margin-top: 0.875rem;
+}
+
+.ck-category-about__content h2,
+.ck-category-about__content h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.375rem;
+  color: var(--kombos-gray-900);
+}
+
+.ck-category-about__content ul {
+  margin-top: 0.5rem;
+}
+
+.ck-category-about__content a {
+  color: var(--ck-brass-dark);
+  text-decoration: underline;
+}
+
+.ck-category-about__toggle {
+  align-self: flex-start;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--ck-brass-dark);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ck-category-about__toggle:focus-visible {
+  outline: 2px solid var(--ck-brass);
+  outline-offset: 2px;
+}
+
+/* ===== Rich product description typography (Çelik Kasa Merkezi) ===== */
+.kombos-pd-desc__body.kombos-richtext,
+.ck-category-about__content.kombos-richtext {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--kombos-gray-700);
+}
+
+.kombos-pd-desc__body > p,
+.ck-category-about__content > p {
+  margin: 0 0 1rem;
+}
+
+.kombos-pd-desc__body strong,
+.ck-category-about__content strong {
+  color: var(--kombos-gray-900);
+  font-weight: 600;
+}
+
+.kombos-pd-desc__body h2,
+.ck-category-about__content h2 {
+  position: relative;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--kombos-gray-900);
+  letter-spacing: -0.01em;
+}
+
+.kombos-pd-desc__body h2::after,
+.ck-category-about__content h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2.5rem;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--ck-brass-gradient);
+}
+
+.kombos-pd-desc__body h2:first-child,
+.ck-category-about__content h2:first-child {
+  margin-top: 0;
+}
+
+.kombos-pd-desc__body h3,
+.ck-category-about__content h3 {
+  margin: 1.25rem 0 0.375rem;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--kombos-gray-900);
+}
+
+/* Feature lists: brass check marks instead of bullets */
+.kombos-pd-desc__body ul,
+.ck-category-about__content ul {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.kombos-pd-desc__body ul li,
+.ck-category-about__content ul li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.kombos-pd-desc__body ul li::before,
+.ck-category-about__content ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: var(--ck-brass-tint)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238f6c3b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E")
+    center / 0.75rem no-repeat;
+}
+
+/* Spec table */
+.kombos-pd-desc__body table,
+.ck-category-about__content table {
+  width: 100%;
+  margin: 0 0 1.5rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--kombos-gray-200);
+  border-radius: var(--ck-radius);
+  overflow: hidden;
+  font-size: 0.9375rem;
+}
+
+.kombos-pd-desc__body th,
+.kombos-pd-desc__body td,
+.ck-category-about__content th,
+.ck-category-about__content td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--kombos-gray-200);
+}
+
+.kombos-pd-desc__body tr:last-child th,
+.kombos-pd-desc__body tr:last-child td,
+.ck-category-about__content tr:last-child th,
+.ck-category-about__content tr:last-child td {
+  border-bottom: none;
+}
+
+.kombos-pd-desc__body th,
+.ck-category-about__content th {
+  width: 40%;
+  font-weight: 600;
+  color: var(--kombos-gray-900);
+  background: var(--kombos-gray-50);
+}
+
+.kombos-pd-desc__body tr:nth-child(even) td,
+.ck-category-about__content tr:nth-child(even) td {
+  background: var(--kombos-gray-50);
+}
+
+.kombos-pd-desc__body a,
+.ck-category-about__content a {
+  color: var(--ck-brass-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.kombos-pd-desc__body a:hover,
+.ck-category-about__content a:hover {
+  color: var(--kombos-gray-900);
+}
+
+@media (min-width: 768px) {
+  .kombos-pd-desc__body th,
+  .ck-category-about__content th {
+    width: 32%;
+  }
+}
+
+/* ikas base CSS applies `all: unset` to headings/lists (inline) — restore block layout */
+.ck-category-about__content h2,
+.ck-category-about__content h3,
+.ck-category-about__content p,
+.ck-category-about__content ul,
+.ck-category-about__content li,
+.ck-category-about__content table {
+  display: block; /* ikas base resets */
+}
+
+.ck-category-about__content ul {
+  display: grid;
+}
+
+.ck-category-about__content table {
+  display: table;
+}
+
+/* Category lead paragraph above the grid */
+.ck-category-intro {
+  max-width: 56rem;
+  margin: 0 0 1.25rem;
+  color: var(--kombos-gray-600);
+  line-height: 1.6;
+}
+
+.ck-category-intro p {
+  display: block;
+  margin: 0;
+}
+
+.ck-category-intro strong {
+  color: var(--kombos-gray-900);
+  font-weight: 600;
+}

@@ -1,0 +1,189 @@
+/* ===== ProductDetailDescription ===== */
+
+.kombos-pd-desc {
+  margin-top: var(--mobile-mt);
+  margin-bottom: var(--mobile-mb);
+  border-top: 1px solid var(--kombos-gray-200);
+}
+
+.kombos-pd-desc__body {
+  color: var(--kombos-gray-700);
+  max-height: 500px;
+  overflow: auto;
+}
+
+/* ===== Desktop (>=1024px) ===== */
+@media (min-width: 1024px) {
+  .kombos-pd-desc {
+    margin-top: var(--desktop-mt, var(--mobile-mt));
+    margin-bottom: var(--desktop-mb, var(--mobile-mb));
+  }
+}
+
+/* ===== Rich product description typography (Çelik Kasa Merkezi) ===== */
+.kombos-pd-desc__body.kombos-richtext,
+.ck-category-about__content.kombos-richtext {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--kombos-gray-700);
+}
+
+.kombos-pd-desc__body > p,
+.ck-category-about__content > p {
+  margin: 0 0 1rem;
+}
+
+.kombos-pd-desc__body strong,
+.ck-category-about__content strong {
+  color: var(--kombos-gray-900);
+  font-weight: 600;
+}
+
+.kombos-pd-desc__body h2,
+.ck-category-about__content h2 {
+  position: relative;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--kombos-gray-900);
+  letter-spacing: -0.01em;
+}
+
+.kombos-pd-desc__body h2::after,
+.ck-category-about__content h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2.5rem;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--ck-brass-gradient);
+}
+
+.kombos-pd-desc__body h2:first-child,
+.ck-category-about__content h2:first-child {
+  margin-top: 0;
+}
+
+.kombos-pd-desc__body h3,
+.ck-category-about__content h3 {
+  margin: 1.25rem 0 0.375rem;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--kombos-gray-900);
+}
+
+/* Feature lists: brass check marks instead of bullets */
+.kombos-pd-desc__body ul,
+.ck-category-about__content ul {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.kombos-pd-desc__body ul li,
+.ck-category-about__content ul li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.kombos-pd-desc__body ul li::before,
+.ck-category-about__content ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: var(--ck-brass-tint)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238f6c3b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E")
+    center / 0.75rem no-repeat;
+}
+
+/* Spec table */
+.kombos-pd-desc__body table,
+.ck-category-about__content table {
+  width: 100%;
+  margin: 0 0 1.5rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--kombos-gray-200);
+  border-radius: var(--ck-radius);
+  overflow: hidden;
+  font-size: 0.9375rem;
+}
+
+.kombos-pd-desc__body th,
+.kombos-pd-desc__body td,
+.ck-category-about__content th,
+.ck-category-about__content td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--kombos-gray-200);
+}
+
+.kombos-pd-desc__body tr:last-child th,
+.kombos-pd-desc__body tr:last-child td,
+.ck-category-about__content tr:last-child th,
+.ck-category-about__content tr:last-child td {
+  border-bottom: none;
+}
+
+.kombos-pd-desc__body th,
+.ck-category-about__content th {
+  width: 40%;
+  font-weight: 600;
+  color: var(--kombos-gray-900);
+  background: var(--kombos-gray-50);
+}
+
+.kombos-pd-desc__body tr:nth-child(even) td,
+.ck-category-about__content tr:nth-child(even) td {
+  background: var(--kombos-gray-50);
+}
+
+.kombos-pd-desc__body a,
+.ck-category-about__content a {
+  color: var(--ck-brass-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.kombos-pd-desc__body a:hover,
+.ck-category-about__content a:hover {
+  color: var(--kombos-gray-900);
+}
+
+@media (min-width: 768px) {
+  .kombos-pd-desc__body th,
+  .ck-category-about__content th {
+    width: 32%;
+  }
+}
+
+/* ikas base CSS applies `all: unset` to headings/lists (inline) — restore block layout */
+.kombos-pd-desc__body h2,
+.kombos-pd-desc__body h3,
+.kombos-pd-desc__body p,
+.kombos-pd-desc__body ul,
+.kombos-pd-desc__body li,
+.kombos-pd-desc__body table {
+  display: block; /* ikas base resets */
+}
+
+.kombos-pd-desc__body ul {
+  display: grid;
+}
+
+.kombos-pd-desc__body table {
+  display: table;
+}

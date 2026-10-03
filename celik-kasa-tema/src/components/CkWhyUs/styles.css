@@ -1,0 +1,139 @@
+.ck-why {
+  background: var(--kombos-white);
+}
+
+.ck-why__inner {
+  display: grid;
+  gap: 2.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  align-items: center;
+}
+
+.ck-why__media {
+  position: relative;
+  border-radius: var(--ck-radius-lg);
+  overflow: hidden;
+  background: var(--ck-steel-gradient);
+  aspect-ratio: 4 / 3;
+}
+
+.ck-why__media:has(.ck-why__img) {
+  background: radial-gradient(circle at 50% 40%, var(--kombos-white) 0%, var(--kombos-gray-100) 55%, var(--kombos-gray-200) 100%);
+  border: 1px solid var(--kombos-gray-200);
+}
+
+.ck-why__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 2.5rem;
+  filter: drop-shadow(0 24px 30px rgba(16, 18, 22, 0.28));
+}
+
+.ck-why__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.03) 0,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+  color: var(--ck-brass-light);
+}
+
+.ck-why__visual-icon {
+  font-size: 6rem;
+  opacity: 0.9;
+}
+
+.ck-why__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ck-why__eyebrow {
+  margin: 0;
+  color: var(--ck-brass-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ck-why__title {
+  margin: 0;
+  color: var(--kombos-gray-900);
+  letter-spacing: -0.01em;
+}
+
+.ck-why__subtitle {
+  margin: 0;
+  color: var(--kombos-gray-500);
+}
+
+.ck-why__list {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ck-why__item {
+  display: flex;
+  gap: 1rem;
+}
+
+.ck-why__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--ck-radius);
+  background: var(--ck-anthracite);
+  color: var(--ck-brass-light);
+  font-size: 1.25rem;
+}
+
+.ck-why__item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ck-why__item-title {
+  margin: 0;
+  color: var(--kombos-gray-900);
+}
+
+.ck-why__item-text {
+  margin: 0;
+  color: var(--kombos-gray-500);
+}
+
+@media (min-width: 768px) {
+  .ck-why__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ck-why__inner {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .ck-why__media {
+    aspect-ratio: 4 / 5;
+  }
+}

@@ -1,0 +1,110 @@
+.ck-assure {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--kombos-gray-200);
+  border-radius: var(--ck-radius-lg);
+  background: var(--kombos-gray-50);
+}
+
+.ck-assure__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ck-assure__row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ck-assure__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--ck-brass-tint);
+  color: var(--ck-brass-dark);
+  font-size: 1.125rem;
+}
+
+.ck-assure__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.ck-assure__title {
+  color: var(--kombos-gray-900);
+}
+
+.ck-assure__text {
+  color: var(--kombos-gray-500);
+}
+
+.ck-assure__help {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--kombos-gray-200);
+}
+
+.ck-assure__help-text {
+  margin: 0;
+  color: var(--kombos-gray-700);
+}
+
+.ck-assure__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.ck-assure__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--ck-radius);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ck-assure__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--ck-shadow-sm);
+}
+
+.ck-assure__btn:focus-visible {
+  outline: 2px solid var(--ck-brass);
+  outline-offset: 2px;
+}
+
+.ck-assure__btn--phone {
+  background: var(--ck-call-blue);
+  color: var(--kombos-white);
+}
+
+.ck-assure__btn--phone:hover {
+  background: var(--ck-call-blue-hover);
+}
+
+.ck-assure__btn--wa {
+  background: var(--ck-whatsapp);
+  color: var(--kombos-white);
+}
+
+.ck-assure__btn-icon {
+  font-size: 1.125rem;
+}

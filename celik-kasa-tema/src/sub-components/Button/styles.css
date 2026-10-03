@@ -1,0 +1,128 @@
+/* ===== Button ===== */
+
+/* --- Base --- */
+.kombos-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--ck-radius);
+  gap: 0.5rem;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.kombos-btn:focus-visible {
+  outline: 2px solid var(--ck-brass);
+  outline-offset: 2px;
+}
+
+.kombos-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.kombos-btn:disabled {
+  cursor: not-allowed;
+}
+
+/* --- Spinner --- */
+.kombos-btn__spinner {
+  animation: kombos-spin 1s linear infinite;
+}
+
+@keyframes kombos-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --- Icon --- */
+.kombos-btn__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.kombos-btn--xs .kombos-btn__icon {
+  font-size: 1rem;
+}
+
+.kombos-btn--s .kombos-btn__icon {
+  font-size: 1.25rem;
+}
+
+.kombos-btn--m .kombos-btn__icon {
+  font-size: 1.5rem;
+}
+
+/* --- Sizes --- */
+.kombos-btn--xs {
+  padding: 0.4375rem 0.9375rem;
+  min-height: 2.25rem;
+}
+
+.kombos-btn--s {
+  padding: 0.5625rem 1.1875rem;
+  min-height: 2.75rem;
+}
+
+.kombos-btn--m {
+  padding: 0.6875rem 1.4375rem;
+  min-height: 3.375rem;
+}
+
+/* --- Primary --- */
+.kombos-btn--primary {
+  background-color: var(--kombos-gray-900);
+  border-color: var(--kombos-gray-900);
+  color: var(--kombos-white);
+}
+
+.kombos-btn--primary:hover:not(:disabled) {
+  background-color: var(--ck-brass-dark);
+  border-color: var(--ck-brass-dark);
+  box-shadow: var(--ck-shadow-md);
+}
+
+.kombos-btn--primary:disabled {
+  background-color: var(--kombos-gray-300);
+  border-color: var(--kombos-gray-300);
+  color: var(--kombos-gray-50);
+}
+
+/* --- Secondary --- */
+.kombos-btn--secondary {
+  background-color: var(--kombos-white);
+  border-color: var(--kombos-gray-200);
+  color: var(--kombos-gray-900);
+}
+
+.kombos-btn--secondary:hover:not(:disabled) {
+  border-color: var(--ck-brass);
+  color: var(--ck-brass-dark);
+}
+
+.kombos-btn--secondary:disabled {
+  background-color: var(--kombos-gray-50);
+  border-color: var(--kombos-gray-200);
+  color: var(--kombos-gray-300);
+}
+
+/* --- Dangerous --- */
+.kombos-btn--dangerous {
+  background-color: var(--kombos-error);
+  border-color: var(--kombos-error);
+  color: var(--kombos-white);
+}
+
+.kombos-btn--dangerous:hover:not(:disabled) {
+  background-color: var(--kombos-error-hover);
+  border-color: var(--kombos-error-hover);
+}
+
+.kombos-btn--dangerous:disabled {
+  background-color: var(--kombos-gray-300);
+  border-color: var(--kombos-gray-300);
+  color: var(--kombos-gray-50);
+}

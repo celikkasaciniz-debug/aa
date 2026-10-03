@@ -1,0 +1,261 @@
+.ck-seo {
+  background: var(--kombos-white);
+  border-top: 1px solid var(--kombos-gray-200);
+}
+
+.ck-seo__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 56rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.ck-seo__title {
+  margin: 0;
+  color: var(--kombos-gray-900);
+}
+
+.ck-seo__body {
+  position: relative;
+  overflow: hidden;
+}
+
+.ck-seo__body--collapsed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 90%);
+  pointer-events: none;
+}
+
+.ck-seo__content {
+  color: var(--kombos-gray-600);
+  line-height: 1.7;
+}
+
+.ck-seo__content p + p,
+.ck-seo__content p + h3,
+.ck-seo__content ul + h3 {
+  margin-top: 0.875rem;
+}
+
+.ck-seo__content h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.375rem;
+  color: var(--kombos-gray-900);
+}
+
+.ck-seo__content a {
+  color: var(--ck-brass-dark);
+  text-decoration: underline;
+}
+
+.ck-seo__toggle {
+  align-self: flex-start;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--ck-brass-dark);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ck-seo__toggle:focus-visible {
+  outline: 2px solid var(--ck-brass);
+  outline-offset: 2px;
+}
+
+/* ===== Rich product description typography (Çelik Kasa Merkezi) ===== */
+.kombos-pd-desc__body.kombos-richtext,
+.ck-seo__content.kombos-richtext {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--kombos-gray-700);
+}
+
+.kombos-pd-desc__body > p,
+.ck-seo__content > p {
+  margin: 0 0 1rem;
+}
+
+.kombos-pd-desc__body strong,
+.ck-seo__content strong {
+  color: var(--kombos-gray-900);
+  font-weight: 600;
+}
+
+.kombos-pd-desc__body h2,
+.ck-seo__content h2 {
+  position: relative;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--kombos-gray-900);
+  letter-spacing: -0.01em;
+}
+
+.kombos-pd-desc__body h2::after,
+.ck-seo__content h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2.5rem;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--ck-brass-gradient);
+}
+
+.kombos-pd-desc__body h2:first-child,
+.ck-seo__content h2:first-child {
+  margin-top: 0;
+}
+
+.kombos-pd-desc__body h3,
+.ck-seo__content h3 {
+  margin: 1.25rem 0 0.375rem;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--kombos-gray-900);
+}
+
+/* Feature lists: brass check marks instead of bullets */
+.kombos-pd-desc__body ul,
+.ck-seo__content ul {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.kombos-pd-desc__body ul li,
+.ck-seo__content ul li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.kombos-pd-desc__body ul li::before,
+.ck-seo__content ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: var(--ck-brass-tint)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238f6c3b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E")
+    center / 0.75rem no-repeat;
+}
+
+/* Spec table */
+.kombos-pd-desc__body table,
+.ck-seo__content table {
+  width: 100%;
+  margin: 0 0 1.5rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--kombos-gray-200);
+  border-radius: var(--ck-radius);
+  overflow: hidden;
+  font-size: 0.9375rem;
+}
+
+.kombos-pd-desc__body th,
+.kombos-pd-desc__body td,
+.ck-seo__content th,
+.ck-seo__content td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--kombos-gray-200);
+}
+
+.kombos-pd-desc__body tr:last-child th,
+.kombos-pd-desc__body tr:last-child td,
+.ck-seo__content tr:last-child th,
+.ck-seo__content tr:last-child td {
+  border-bottom: none;
+}
+
+.kombos-pd-desc__body th,
+.ck-seo__content th {
+  width: 40%;
+  font-weight: 600;
+  color: var(--kombos-gray-900);
+  background: var(--kombos-gray-50);
+}
+
+.kombos-pd-desc__body tr:nth-child(even) td,
+.ck-seo__content tr:nth-child(even) td {
+  background: var(--kombos-gray-50);
+}
+
+.kombos-pd-desc__body a,
+.ck-seo__content a {
+  color: var(--ck-brass-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.kombos-pd-desc__body a:hover,
+.ck-seo__content a:hover {
+  color: var(--kombos-gray-900);
+}
+
+@media (min-width: 768px) {
+  .kombos-pd-desc__body th,
+  .ck-seo__content th {
+    width: 32%;
+  }
+}
+
+/* ikas base CSS applies `all: unset` to headings/lists (inline) — restore block layout */
+.ck-seo__content h2,
+.ck-seo__content h3,
+.ck-seo__content p,
+.ck-seo__content ul,
+.ck-seo__content li,
+.ck-seo__content table {
+  display: block; /* ikas base resets */
+}
+
+.ck-seo__content ul {
+  display: grid;
+}
+
+.ck-seo__content table {
+  display: table;
+}
+
+/* Standalone page mode (Hakkımızda, KVKK, sözleşmeler…) */
+.ck-seo--page {
+  border-top: none;
+}
+
+.ck-seo--page .ck-seo__inner {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  gap: 1.5rem;
+}
+
+.ck-seo__title--page {
+  display: block;
+  color: var(--kombos-gray-900);
+  letter-spacing: -0.02em;
+}
+
+.ck-seo__title {
+  display: block;
+}

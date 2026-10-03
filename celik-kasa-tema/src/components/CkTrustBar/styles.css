@@ -1,0 +1,65 @@
+.ck-trust {
+  background: var(--kombos-white);
+  border-bottom: 1px solid var(--kombos-gray-200);
+}
+
+.ck-trust__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1rem;
+  margin: 0;
+  padding: 1.5rem 0;
+  list-style: none;
+}
+
+.ck-trust__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.ck-trust__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--ck-brass-tint);
+  color: var(--ck-brass-dark);
+  font-size: 1.25rem;
+}
+
+.ck-trust__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.ck-trust__title {
+  color: var(--kombos-gray-900);
+}
+
+.ck-trust__text {
+  color: var(--kombos-gray-500);
+}
+
+@media (min-width: 1024px) {
+  .ck-trust__list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 1.75rem 0;
+  }
+
+  .ck-trust__item + .ck-trust__item {
+    border-left: 1px solid var(--kombos-gray-200);
+    padding-left: 1.5rem;
+  }
+
+  .ck-trust__icon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+}
