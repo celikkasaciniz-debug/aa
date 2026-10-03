@@ -12,3 +12,5 @@
 | 2026-10-03 | Contact events are published but not sent to Google Ads | Claude | The existing "Telefon Tıklamaları" and "Whatsapp Tıklamaları" actions have an unknown source; sending a second signal could double count. Connect only after the Tag Assistant test (tracking.md, finding 4) |
 | 2026-10-03 | Compare-at removal, policy placeholders and Google Ads goal changes are done by the owner | Claude | Store-wide price change blocked by the session safety check twice; policies need the `write_legal_policies` scope this connection lacks; Google Ads tool is read-only. Steps in docs/manual-steps.md |
 | 2026-10-03 | ads-03 follows MASTER_PROMPT 9.2: phone and WhatsApp taps become secondary instead of getting a value | Owner via prompt | Re-evaluate when offline lead import exists |
+| 2026-10-03 | Development theme is now 142814871752; the old working copy 142814806216 is live | Owner published | CLAUDE.md updated |
+| 2026-10-03 | Design tokens adjusted for contrast: `--celik` #5E666E (was #6B737B, 4,0:1), new `--pirinc-koyu` #7A5E2A for link text, WhatsApp label #0B3D2E | Claude | Brief's values failed WCAG AA for text; see design-system.md |

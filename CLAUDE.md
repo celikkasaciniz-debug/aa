@@ -1,34 +1,68 @@
-# celikkasamerkezi
+# Çelik Kasacı (celikkasaci.com)
 
-ikas storefront theme for the Çelik Kasa Merkezi store (Preact + TypeScript, ikas Code Components).
+Shopify store for a steel safe seller in Avcılar, İstanbul. The full brief is `docs/MASTER_PROMPT.md`; this file is the short version every session follows. Where they differ, MASTER_PROMPT wins.
 
-- `celik-kasa-tema/` — the theme project. Read `celik-kasa-tema/CLAUDE.md` before changing anything there; it holds the framework rules (CLI-managed files, sub-components, icons, Button).
-- `celikkasaci-yedek/` — backups of storefront snippets removed from the live store (for restore only, not part of the build).
+## Repository
 
-## Working in this repo
+- `shopify-theme/`: the Shopify theme (Dawn based). Source of truth for theme code.
+- `docs/`: audit, plans, logs. Start with `docs/PHASE0-SUMMARY.md`, `docs/NEEDS-CONFIRMATION.md`, `docs/CHANGELOG.md`, `docs/DECISIONS.md`, `docs/manual-steps.md`.
+- `scripts/`: report and check scripts (`catalog_audit.py`). `backups/`: Admin API exports.
+- `celik-kasa-tema/`: an old ikas theme, not used by the Shopify store. Do not edit unless asked.
 
-All commands run from `celik-kasa-tema/`:
+## Themes
 
-- `npm ci` — install (a SessionStart hook does this automatically in cloud sessions)
-- `npx ikas-component check --json` — type-check
-- `npx ikas-component build` — build to `dist/` (gitignored)
-- `python3 scripts/sync-inlined-styles.py` — re-run after editing styles of components inlined into ProductDetail / ProductCard
+| Role | Name | Id |
+| --- | --- | --- |
+| Live (MAIN) | Celik Kasaci - calisma kopyasi | 142814806216 |
+| Development (unpublished) | Celik Kasaci - gelistirme | 142814871752 |
 
-Live preview (`ikas theme dev`) needs the global `ikas` CLI and a login to the store editor; it is meant for a local machine, not the cloud container.
+Edit in `shopify-theme/`, push only to the development theme with `themeFilesUpsert`, send the preview link `https://celikkasaci.com/?preview_theme_id=142814871752`. Publishing is the owner's step. JSON templates and `config/settings_data.json` are also changed by the theme editor: re-export them from the live theme before editing.
 
-## Google Ads MCP
+## Tools
 
-`.mcp.json` registers the `google-ads` server ([googleads/google-ads-mcp](https://github.com/googleads/google-ads-mcp), pinned in `scripts/google-ads-mcp.sh`). The launcher installs it into `~/.venvs/google-ads-mcp` on first use. Tools are read-only: `customers_list_accessible_customers`, `metadata_get_resource_metadata`, `search_search` (GAQL).
+- Shopify Admin API (Shopify connector): read and write. Theme writes only to unpublished themes. No `write_legal_policies` scope: policy text is edited by the owner.
+- Google Ads (`google-ads` MCP): read only. Ad account 2404786286. Changes go to the owner as click steps.
+- Kling AI (`kling` MCP): charged per job; use only as allowed below.
+- The container cannot reach celikkasaci.com over HTTP (network policy), so no Lighthouse or rendered checks from here.
 
-Credentials come from environment variables (set them in the cloud environment settings, never in the repo):
+## Working rules (MASTER_PROMPT 0.4)
 
-- `GOOGLE_ADS_DEVELOPER_TOKEN` — optional; Google no longer requires one and API access levels are managed in Google Cloud Console. The account's existing token is Test Account level only, so leave it unset
-- `GOOGLE_ADS_ADC_JSON` — contents of an `authorized_user` ADC file with the `adwords` scope; the launcher writes it to `~/.config/gcloud/application_default_credentials.json`
-- `GOOGLE_ADS_LOGIN_CUSTOMER_ID` — leave unset: the ad account is accessed directly, not through the manager account `2307077449`
-- `GOOGLE_CLOUD_PROJECT` — optional, defaults to the project `able-balm-510520-v4` in `.mcp.json`
+1. Plan, then wait for `APPROVED: <id>`. Small fixes inside an approved phase need no new approval.
+2. Never edit the live theme. Work on the development theme; publishing is a separate approval.
+3. Redirect before you move: no handle change without a 301 in the same change.
+4. Never invent facts. Weights, steel, certificates, founding year, production, delivery times and prices come from Shopify data or from Muhammed. Unknown goes to `docs/NEEDS-CONFIRMATION.md` and stays hidden on the site.
+5. Google Ads changes need `APPROVED: ads <id>`. Reports are always allowed.
+6. Log every change in `docs/CHANGELOG.md` and every decision in `docs/DECISIONS.md`.
+7. Small commits, one concern each.
+8. Customer-facing text is Turkish, written like a careful native writer.
+9. No em dashes or en dashes anywhere (copy, metadata, ads, documents). Use commas, colons, full stops, or a vertical bar in page titles.
+10. Ask one short question with a recommended answer when a decision affects money, law, brand or live data.
 
-Accounts: ad account **Çelik Kasacı `2404786286`** (TRY, Europe/Istanbul) for celikkasaci.com; manager account `2307077449` has no linked clients.
+## Voice (MASTER_PROMPT 3)
 
-## Kling AI MCP
+- Positioning: heavy, floor-fixed steel safes in İstanbul; same-day delivery, stair carrying and installation included.
+- Plain Turkish, "siz", short sentences, the number first ("300 kg, 6 mm gövde sacı").
+- Calm about crime; never frighten.
+- Sentence case. No ALL CAPS labels.
+- Banned: "değerli olan her şey", "güvenliğiniz bizim önceliğimiz", "en kaliteli", "en iyi", "en ucuz", "lider", "önde gelen", "mükemmel çözüm", "profesyonel çözümler", "son teknoloji", "eşsiz", "kusursuz", "üstün", "hayalinizdeki", "dijital çağda", "huzurlu uykular", "ile tanışın", "yolculuğumuz", "çözüm ortağınız", "sektörün öncüsü", "kalite ve güvenin adresi", "fark yaratan", "her zaman yanınızdayız"; reflex "Keşfedin" or "Hemen inceleyin" buttons; exclamation marks or emojis in headings; rhetorical question headings; adjective triplets; one accented word in a headline; arrows on buttons.
+- Formatting: 20.000 TL, 5,0; "TL" not "₺"; non-breaking space between number and unit; dates as "1 Ekim 2026".
+- Labels: "WhatsApp'tan sor", "Ara: 0541 445 15 48", "Sepete ekle", "Ödemeye geç", "Ücretsiz keşif iste", "Toplu fiyat iste", "Servis talebi oluştur".
 
-`.mcp.json` also registers `kling` (remote HTTP server at `https://kling.ai/mcp`). The cloud environment's network policy must allow `kling.ai` for it to connect; authorize it with `/mcp` → `kling` → Authenticate.
+## Design (MASTER_PROMPT 4, details in `docs/design-system.md`)
+
+- One signature element: the "kasa plakası" spec plate. Everything else quiet: left aligned, real photos, borders only where they carry information.
+- Avoid the generated-page defaults: cream plus serif plus terracotta, near-black plus acid accent, identical rounded cards, ALL CAPS eyebrows, middle-dot metadata, 01/02/03 markers on non-sequences, scroll entrance animations, gradient blobs, icon trios, trust badge walls, fake counters, any AI imagery.
+- Two type families with full Turkish glyphs. Not Inter, Space Grotesk, Playfair Display, Poppins or Montserrat.
+- Motion only in answer to an action, and respect `prefers-reduced-motion`.
+
+## Kling AI policy (MASTER_PROMPT 4.8)
+
+Allowed: abstract textures without product or people, obvious explanatory motion graphics, storyboards, social edits of real footage. Not allowed: generating or enhancing product images, interiors, deliveries, people, customers or reviews; any generated visual on product pages, in Merchant Center or in Google Ads. Log every output in `docs/generated-media.md`.
+
+## Before showing any page: the 20-point rubric (MASTER_PROMPT 17)
+
+Real photos only; a specific fact in every section; no copy that fits a competitor; no banned phrases; no dashes, arrows or heading emojis; no ALL CAPS; no accented headline word; numbers only on real sequences; no identical icon card grids; no scroll animations; one signature element; at most two type families; token colours only; prices and claims match data; real people only with consent; reads naturally aloud in Turkish; on mobile the product page shows price, weight, WhatsApp and call in the first screen; unknown fields hidden; one clear next action per page; one decorative element removed before handover.
+
+## Google Ads MCP setup
+
+`.mcp.json` registers `google-ads` (pinned in `scripts/google-ads-mcp.sh`). Credentials come from environment variables in the cloud environment settings, never the repo: `GOOGLE_ADS_ADC_JSON` (authorized_user ADC with the `adwords` scope), optional `GOOGLE_CLOUD_PROJECT` (defaults to able-balm-510520-v4). Leave `GOOGLE_ADS_DEVELOPER_TOKEN` and `GOOGLE_ADS_LOGIN_CUSTOMER_ID` unset. `kling` is a remote HTTP server; the network policy must allow `kling.ai`.
