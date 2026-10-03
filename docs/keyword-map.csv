@@ -1,0 +1,32 @@
+keyword,cluster,intent,volume_istanbul,volume_turkiye,trend,cpc_low,cpc_high,ads_cost_tl_23sep_2oct,ads_clicks,ads_conversions,current_url,target_url,priority,notes
+çelik kasa,A core,T,,,,,,1405.09,49,5.5,/ (ads),/collections/celik-kasa,A,reported conversions are test orders
+kasa fiyatları,A core,T,,,,,,499.59,18,0,/ (ads),/collections/celik-kasa,B,matches computer cases; use exact match or add negatives
+ev tipi kasa,A core,T,,,,,,186.70,8,1,/ (ads),/collections/ev-ofis-kasasi,A,
+çelik kasa ev tipi,A core,T,,,,,,164.27,7,0,/ (ads),/collections/ev-ofis-kasasi,A,
+ev tipi çelik kasa,A core,T,,,,,,60.13,3,0,/ (ads),/collections/ev-ofis-kasasi,A,
+çelik kasa fiyatları,A core,T C,,,,,,,,,/ (ads),/collections/celik-kasa,A,keyword spent 559.81 TL 29 clicks
+istanbul çelik kasa,B local,L,,,,,,112.96,2,0,/ (ads),/,A,
+kuyumcu çelik kasa fiyatları,E jeweller,T,,,,,,105.87,4,0,/ (ads),/collections/kuyumcu-kasalari,A,
+para kasası fiyatları,A core,T,,,,,,95.11,1,0,/ (ads),/collections/celik-kasa,A,
+şifreli kasa,A core,T,,,,,,70.30,3,0,/ (ads),/collections/ev-ofis-kasasi,B,
+ev tipi kasa modelleri,A core,C,,,,,,68.35,2,0,/ (ads),/collections/ev-ofis-kasasi,B,
+ev için para kasası,A core,T,,,,,,66.31,1,0,/ (ads),/collections/ev-ofis-kasasi,A,
+küçük kasa fiyatları,A core,T,,,,,,65.30,3,0,/ (ads),/collections/55cm-celik-kasa,B,
+asansörlü çelik kasa fiyatları,E jeweller,T,,,,,,50.76,2,0,/ (ads),/collections/asansorlu-kuyumcu-kasasi,A,
+200 kg çelik kasa fiyatları,D size,T,,,,,,34.55,1,0,/ (ads),/collections/zirhli-celik-kasa,B,
+70 cm çelik kasa,D size,T,,,,,,31.05,1,0,/ (ads),/collections/70-celik-kasa,B,
+zırhlı çelik kasa,C armoured,T,,,,,,30.49,1,0,/ (ads),/collections/zirhli-celik-kasa,A,
+altın kasası,A core,T,,,,,,20.03,1,0,/ (ads),/collections/ev-ofis-kasasi,B,
+ev içi çelik kasa,A core,T,,,,,,21.12,1,1,/ (ads),/collections/ev-ofis-kasasi,B,
+ev için çelik kasa önerisi,H questions,C,,,,,,31.86,2,0,/ (ads),/pages/kasa-secim-rehberi,B,guide candidate
+ev tipi kasalar güvenli mi,H questions,I,,,,,,20.83,1,0,/ (ads),guide,C,guide candidate
+çelik kasa nerede satılır,B local,L,,,,,,19.18,1,0,/ (ads),/pages/iletisim,B,
+çelik kasa şifresi nasıl değişir,H questions,I,,,,,,18.27,1,0,/ (ads),guide 11,C,content only; negative in ads
+kale çelik kasa,excluded brand,,,,,,,134.33,4,0,/ (ads),,,negative unless Kale is sold
+2 el çelik kasa fiyatları letgo,excluded second hand,,,,,,,62.92,5,0,/ (ads),,,negative
+bilgisayar kasa fiyatları,excluded,,,,,,,21.07,1,0,/ (ads),,,negative
+çelik kasa avcılar,B local,L,,,,,,,,,,/,A,from keyword universe; no data yet
+zırhlı kasa fiyatları,C armoured,T,,,,,,,,,,/collections/zirhli-celik-kasa,A,from keyword universe; no data yet
+otel kasası,F hotel,T,,,,,,,,,,/collections/otel-kasalari,A,from keyword universe; no data yet
+kuyumcu kasası,E jeweller,T,,,,,,,,,,/collections/kuyumcu-kasalari,A,from keyword universe; no data yet
+parmak izli kasa,A core,T,,,,,,,,,,/collections/premium-ev-ofis-kasasi,A,from keyword universe; no data yet

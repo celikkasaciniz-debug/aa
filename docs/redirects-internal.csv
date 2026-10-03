@@ -1,0 +1,9 @@
+old_path,new_path,reason,status
+/pages/i%CC%87letisim,/pages/iletisim,combining dot in handle,proposed (recreate page under new handle in the same change)
+/pages/i%CC%87ade-ve-i%CC%87ptal-politikasi,/pages/iade-ve-iptal,combining dot in handle,proposed
+/pages/on-bi%CC%87lgilendirme-sozlesmesi,/pages/on-bilgilendirme-formu,combining dot and wrong document name,proposed
+/pages/kisisel-veirlerin-korunmasi-kanunu,/pages/kvkk-aydinlatma-metni,typo in handle,proposed
+/pages/istanbul-celik-kasa,/pages/teslimat-ve-kurulum,title does not match handle; duplicates shipping policy,proposed
+/pages/celik-kasa,/collections/celik-kasa,cannibalises the hub collection,proposed
+/products/85-cm-zirhli-kasa-500-kg,/products/85-cm-zirhli-kasa,fix redirect chain (currently via 85-cm-zirhli-kasa-450-kg),proposed
+/collections/all,,"redirect never fires because the path exists; change hero links to /collections/celik-kasa instead",proposed
