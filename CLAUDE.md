@@ -15,3 +15,14 @@ All commands run from `celik-kasa-tema/`:
 - `python3 scripts/sync-inlined-styles.py` — re-run after editing styles of components inlined into ProductDetail / ProductCard
 
 Live preview (`ikas theme dev`) needs the global `ikas` CLI and a login to the store editor; it is meant for a local machine, not the cloud container.
+
+## Google Ads MCP
+
+`.mcp.json` registers the `google-ads` server ([googleads/google-ads-mcp](https://github.com/googleads/google-ads-mcp), pinned in `scripts/google-ads-mcp.sh`). The launcher installs it into `~/.venvs/google-ads-mcp` on first use. Tools are read-only: `customers_list_accessible_customers`, `metadata_get_resource_metadata`, `search_search` (GAQL).
+
+Credentials come from environment variables (set them in the cloud environment settings, never in the repo):
+
+- `GOOGLE_ADS_DEVELOPER_TOKEN` — Google Ads API developer token (Explorer access or higher)
+- `GOOGLE_ADS_ADC_JSON` — contents of an `authorized_user` ADC file with the `adwords` scope; the launcher writes it to `~/.config/gcloud/application_default_credentials.json`
+- `GOOGLE_ADS_LOGIN_CUSTOMER_ID` — optional, manager (MCC) account ID if access goes through one
+- `GOOGLE_CLOUD_PROJECT` — optional, Google Cloud project ID
