@@ -61,44 +61,30 @@
             "content_position_horizontal": "center",
             "content_position_vertical_mobile": "bottom",
             "content_position_horizontal_mobile": "left",
-            "eyebrow": "İstanbul · Kendi Üretim Tesisimiz",
-            "heading": "Değerli Olan Her Şeyi Çelik Güvencesiyle Koruyun",
+            "eyebrow": "Avcılar, İstanbul",
+            "heading": "İstanbul'a aynı gün çelik kasa: taşıma ve sabitleme dahil",
             "subheading": "",
-            "button_label": "Ürünleri Keşfet",
-            "button_link": "shopify://collections/all",
-            "button_label_2": "Hemen Ara",
+            "button_label": "Modelleri gör",
+            "button_link": "shopify://collections/celik-kasa",
+            "button_label_2": "Ara: 0541 445 15 48",
             "button_link_2": "tel:+905414451548"
-          }
-        },
-        "trust_item_FmjGxd": {
-          "type": "trust_item",
-          "settings": {
-            "text": "%100 Memnuniyet Garantisi"
           }
         },
         "trust_item_DndFEU": {
           "type": "trust_item",
           "settings": {
-            "text": "Ücretsiz Kurulum"
-          }
-        },
-        "trust_item_Uf9Yc6": {
-          "type": "trust_item",
-          "settings": {
-            "text": "Kendi Üretim Tesisimiz"
+            "text": "İstanbul içi ücretsiz kurulum"
           }
         }
       },
       "block_order": [
         "slide_GYqGXw",
-        "trust_item_FmjGxd",
-        "trust_item_DndFEU",
-        "trust_item_Uf9Yc6"
+        "trust_item_DndFEU"
       ],
       "name": "Hero Slider",
       "settings": {
         "color_scheme": "",
-        "show_trust_plate": true,
+        "show_trust_plate": false,
         "trust_plate_number": "15+",
         "trust_plate_caption": "Yıl Üretim Tecrübesi",
         "auto_rotate": true,
@@ -111,7 +97,7 @@
         "tile_Cefpt9": {
           "type": "tile",
           "settings": {
-            "weight_range": "50–100 KG",
+            "weight_range": "50 ile 100 kg",
             "category": "Ev Tipi Kasa",
             "cap_text": "Giriş Seviyesi Koruma",
             "tier": "1",
@@ -122,7 +108,7 @@
         "tile_dUapKi": {
           "type": "tile",
           "settings": {
-            "weight_range": "150–250 KG",
+            "weight_range": "150 ile 250 kg",
             "category": "Ofis Tipi Kasa",
             "cap_text": "Orta Seviye Koruma",
             "tier": "2",
@@ -133,7 +119,7 @@
         "tile_FtMUVF": {
           "type": "tile",
           "settings": {
-            "weight_range": "300–500 KG",
+            "weight_range": "300 ile 500 kg",
             "category": "Zırhlı Seri",
             "cap_text": "Yüksek Seviye Koruma",
             "tier": "3",
@@ -144,9 +130,9 @@
         "tile_NJLKFE": {
           "type": "tile",
           "settings": {
-            "weight_range": "500 KG+",
+            "weight_range": "500 kg ve üzeri",
             "category": "Banka Tipi Kasa",
-            "cap_text": "Zırhlı + Yangına Dayanıklı",
+            "cap_text": "Kuyumcu ve iş yeri",
             "tier": "4",
             "image": "shopify://shop_images/Adsiz_tasarim_77.png",
             "link": "shopify://collections/kuyumcu-kasalari"
@@ -174,7 +160,7 @@
       "settings": {
         "collection": "105cm-celik-kasa",
         "products_to_show": 4,
-        "title": "EN ÇOK SATANLAR",
+        "title": "105 cm modeller",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -188,7 +174,7 @@
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
-        "show_vendor": true,
+        "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
@@ -547,7 +533,7 @@
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
-        "show_vendor": true,
+        "show_vendor": false,
         "show_rating": false,
         "quick_add": "standard",
         "columns_mobile": "2",
@@ -570,7 +556,7 @@
           "type": "question",
           "settings": {
             "question": "İstanbul dışına teslimat yapıyor musunuz?",
-            "answer": "<p>Evet, Türkiye geneline teslimat yapıyoruz. İstanbul dışı teslimat ve kurulum ücretleri bölgeye göre değişiklik gösterebilir, sipariş öncesi bizi arayarak netleştirebilirsiniz.</p>"
+            "answer": "<p>Teslimat ve kurulum İstanbul içinde ücretsizdir. İstanbul dışı için sipariş vermeden önce 0541 445 15 48'i arayın; bölgenize göre fiyat ve süreyi bildirelim.</p>"
           }
         },
         "question_b4bMtz": {
@@ -580,18 +566,11 @@
             "answer": "<p>Şifrenizi unutmanız durumunda yetkili servisimiz kimlik doğrulaması sonrası kasanızı açar ve şifrenizi sıfırlar. Kullanıcı kaynaklı unutma durumunda bu hizmet ücretlidir; kilit arızasından kaynaklanan durumlarda garanti kapsamındadır.</p>"
           }
         },
-        "question_Xi73rr": {
-          "type": "question",
-          "settings": {
-            "question": "Kasalarınız yangına dayanıklı mı?",
-            "answer": "<p>Ürün serimize göre değişir — Premium ve Zırhlı seri modellerimiz yangına dayanıklı sertifikalıdır. Her ürün sayfasında yangın dayanım süresi belirtilir.</p>"
-          }
-        },
         "question_fXazBr": {
           "type": "question",
           "settings": {
             "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
-            "answer": "<p>Kredi kartı (taksitli), havale/EFT ve kapıda ödeme seçenekleri sunuyoruz.</p>"
+            "answer": "<p>Kredi ve banka kartı (PayTR) ile kapıda ödeme.</p>"
           }
         },
         "question_zp7MdM": {
@@ -612,21 +591,14 @@
           "type": "question",
           "settings": {
             "question": "Kasa çok ağır, taşıma/montaj nasıl yapılıyor?",
-            "answer": "<p>Kurulum ekibimiz gerekli ekipmanla kasayı güvenli şekilde taşır ve yerleştirir — siz hiçbir fiziksel işlem yapmazsınız.</p>"
-          }
-        },
-        "question_kBmBFg": {
-          "type": "question",
-          "settings": {
-            "question": "Kasaları kendiniz mi üretiyorsunuz?",
-            "answer": "<p>Evet, İstanbul Avcılar'daki kendi tesisimizde, 15 yılı aşkın tecrübeyle üretim yapıyoruz.</p>"
+            "answer": "<p>Kurulum ekibimiz gerekli ekipmanla kasayı güvenli şekilde taşır ve yerleştirir; siz hiçbir fiziksel işlem yapmazsınız.</p>"
           }
         },
         "question_xywY3V": {
           "type": "question",
           "settings": {
             "question": "Toplu/kurumsal alımlarda indirim var mı?",
-            "answer": "<p>Ofis, banka, kuyumcu gibi kurumsal toplu alımlarda özel fiyatlandırma sunuyoruz — 0541 445 15 48'den bize ulaşabilirsiniz.</p>"
+            "answer": "<p>Ofis, banka, kuyumcu gibi kurumsal toplu alımlarda özel fiyatlandırma sunuyoruz. 0541 445 15 48'den bize ulaşabilirsiniz.</p>"
           }
         }
       },
@@ -634,12 +606,10 @@
         "question_mxQUUM",
         "question_WQaine",
         "question_b4bMtz",
-        "question_Xi73rr",
         "question_fXazBr",
         "question_zp7MdM",
         "question_wcbqwD",
         "question_XEUztJ",
-        "question_kBmBFg",
         "question_xywY3V"
       ],
       "name": "SSS",
@@ -762,7 +732,7 @@
         "loovly_review_shop_rating_FqMnzn": {
           "type": "shopify://apps/loovly-review/blocks/shop-rating/019ebfb3-a4a0-788b-b71d-1d94155380e9",
           "settings": {
-            "heading": "Let customers speak for us",
+            "heading": "Müşteri yorumları",
             "star_color": "#D44518",
             "align": "center",
             "show_verified": true
@@ -771,7 +741,7 @@
         "loovly_review_review_carousel_fRNYMy": {
           "type": "shopify://apps/loovly-review/blocks/review-carousel/019ebfb3-a4a0-788b-b71d-1d94155380e9",
           "settings": {
-            "heading": "Customers are saying",
+            "heading": "Müşteri yorumları",
             "full_width": true,
             "max_width": 1100,
             "card_border_color": "#D44518",
@@ -789,8 +759,8 @@
         "loovly_review_trust_badges_RnJyYT": {
           "type": "shopify://apps/loovly-review/blocks/trust-badges/019ebfb3-a4a0-788b-b71d-1d94155380e9",
           "settings": {
-            "heading": "Trusted by our customers",
-            "subheading": "Real reviews from verified shoppers",
+            "heading": "Müşteri yorumları",
+            "subheading": "",
             "style": "circle",
             "ring_color": "#D44518",
             "fill_color": "#faf7f1",

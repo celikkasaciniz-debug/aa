@@ -27,7 +27,7 @@
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
-        "show_vendor": true,
+        "show_vendor": false,
         "show_rating": false,
         "quick_add": "standard",
         "enable_filtering": true,
@@ -44,7 +44,7 @@
           "type": "shopify://apps/loovly-review/blocks/review-carousel/019ebfb3-a4a0-788b-b71d-1d94155380e9",
           "disabled": true,
           "settings": {
-            "heading": "Customers are saying",
+            "heading": "Müşteri yorumları",
             "full_width": true,
             "max_width": 1100,
             "card_border_color": "#D44518",
@@ -62,7 +62,7 @@
         "loovly_review_review_carousel_8tRjci": {
           "type": "shopify://apps/loovly-review/blocks/review-carousel/019ebfb3-a4a0-788b-b71d-1d94155380e9",
           "settings": {
-            "heading": "MÜŞTERİ YORUMLARIMIZ",
+            "heading": "Müşteri yorumları",
             "full_width": true,
             "max_width": 1100,
             "card_border_color": "#D44518",
