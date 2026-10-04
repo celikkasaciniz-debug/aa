@@ -15,9 +15,9 @@ Primary conversion actions now: Purchase, Begin Checkout, Add To Cart, Telefon T
 
 | Id | Change | Why |
 | --- | --- | --- |
-| ads-02 | Add To Cart and Begin Checkout to secondary | Bidding learns from purchases and leads only |
+| ads-02 | DROPPED 4 October 2026 by the owner: Add To Cart and Begin Checkout stay primary, because customers reach these steps and then finish the purchase by phone. Instead their fixed 1 TL value changes to a stage value (see ads-03) | Bidding still sees the steps that lead to phone sales |
 | ads-01 | Data exclusion 25 September 2026 (test orders) | Keeps fake 70.004 TL out of learning |
-| ads-03 | Lead values: Telefon and WhatsApp at an owner-agreed TL value | 1 TL leads next to full-value purchases skew bidding |
+| ads-03 | Stage values instead of 1 TL: Add To Cart 250 TL, Begin Checkout 500 TL, Telefon and WhatsApp 1.000 TL (proposed, owner to confirm). Purchase keeps the order value | One buyer can fire cart, checkout and call: graded values keep a cart add from counting like a sale |
 | ads-12 | Publish the development theme first | The ads land on the cleaned pages (no fixing or fire claims, prices and weights on the plate) |
 | ads-13 | Test phone and WhatsApp tags with Tag Assistant after publish | The source of those two actions is unknown (`docs/tracking.md`) |
 
@@ -28,7 +28,7 @@ Primary conversion actions now: Purchase, Begin Checkout, Add To Cart, Telefon T
 - Location: İstanbul province, option "Presence: people in or regularly in your targeted locations". Language Turkish.
 - Schedule: all day (shop open 24 hours, phone answered at any hour). Review hour-of-day after 2 weeks.
 - Bidding: Maximise clicks with a 30 TL max CPC for the first 2 to 4 weeks; switch to Maximise conversions after about 30 real primary conversions in 30 days.
-- Budget: owner decides. Old campaign ran 1.224 TL a day at 25 TL average CPC. Recommendation: 750 TL a day (about 30 clicks, about 22.800 TL a month), then raise by 20 to 30% only under MASTER_PROMPT 10.6.
+- Budget: 1.500 TL a day, owner decision 4 October 2026 (about 45.600 TL a month; about 50 to 60 clicks a day at 25 to 30 TL). Changes after that follow MASTER_PROMPT 10.6.
 - Auto-applied recommendations: off.
 
 ## 3. Ad groups, keywords, landing pages

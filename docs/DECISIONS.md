@@ -22,3 +22,5 @@
 | 2026-10-04 | Product descriptions were cleaned, not rewritten | Claude | A full rewrite needs Muhammed's confirmed specs (steel thickness, lock brand, bolts). Until then the old texts stay with every untested claim removed. Several still say "paslanmaz çelik", "zırhlı", "premium" and the PANZER 70 says 350 kg while its title says 300 kg; these are in NEEDS-CONFIRMATION 9 |
 | 2026-10-04 | No fixing claims anywhere: Çelik Kasacı does not anchor safes to floor or wall | Owner | Owner: "sabitlenir kasa yok, satmıyoruz". Delivery copy now says carrying and placing, plus first code set together |
 | 2026-10-04 | FAQ page (page.faq.json) on the dev theme: fire certificate and own-production answers removed, other answers aligned with the homepage FAQ | Claude | Rule 4: no certificate or production fact on file. The live theme still shows them until publish |
+| 2026-10-04 | Add To Cart and Begin Checkout stay primary conversions (ads-02 dropped) | Owner | Owner: customers reach cart or checkout and then complete the order by phone. Graded values proposed instead of 1 TL (ads-03) |
+| 2026-10-04 | New Search campaign daily budget 1.500 TL | Owner | Owner answer |
