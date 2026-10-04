@@ -85,10 +85,18 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "kasa_karsilastirma": {
+      "type": "kasa-karsilastirma",
+      "settings": {
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
     }
   },
   "order": [
     "banner",
+    "kasa_karsilastirma",
     "product-grid",
     "1787339005d169104e"
   ]

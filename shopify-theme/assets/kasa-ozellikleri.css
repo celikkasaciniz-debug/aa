@@ -176,3 +176,82 @@
     padding-bottom: 7.2rem;
   }
 }
+
+/* Collection comparison (sections/kasa-karsilastirma.liquid) */
+.kasa-karsi {
+  color: var(--grafit);
+}
+.kasa-karsi__ozet {
+  margin: 0 0 2rem;
+  font-size: 1.7rem;
+}
+.kasa-merdiven {
+  margin: 0 0 2.4rem;
+  max-width: 72rem;
+}
+.kasa-merdiven__baslik {
+  font-size: 1.3rem;
+  color: var(--celik);
+  margin-bottom: 0.8rem;
+}
+.kasa-merdiven__cizgi {
+  position: relative;
+  height: 2rem;
+  border-bottom: 1px solid var(--celik);
+  margin: 0 0.6rem;
+}
+.kasa-merdiven__nokta {
+  position: absolute;
+  bottom: -0.6rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: -0.6rem;
+  border-radius: 50%;
+  background: var(--pirinc);
+  border: 2px solid var(--galvaniz);
+}
+.kasa-merdiven__nokta:hover,
+.kasa-merdiven__nokta:focus-visible {
+  background: var(--pirinc-koyu);
+}
+.kasa-merdiven__uclar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  color: var(--celik);
+  margin-top: 0.8rem;
+}
+.kasa-karsi__kaydir {
+  overflow-x: auto;
+}
+.kasa-tablo--karsi {
+  max-width: none;
+  min-width: 56rem;
+  margin-bottom: 1.2rem;
+}
+.kasa-tablo--karsi thead th {
+  font-size: 1.3rem;
+  border-bottom-color: var(--celik);
+}
+.kasa-tablo--karsi tbody th {
+  width: auto;
+  font-weight: 500;
+  color: var(--grafit);
+}
+.kasa-tablo--karsi tbody th a {
+  color: var(--grafit);
+}
+.kasa-tablo--karsi td {
+  padding-left: 1.6rem;
+  white-space: nowrap;
+}
+.kasa-tablo__fiyat {
+  font-family: var(--font-heading-family);
+}
+.kasa-karsi__not {
+  font-size: 1.3rem;
+  color: var(--celik);
+}
+.kasa-karsi__not a {
+  color: var(--pirinc-koyu);
+}

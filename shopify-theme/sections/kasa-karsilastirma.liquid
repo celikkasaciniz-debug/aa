@@ -1,0 +1,133 @@
+{% comment %}
+  Kasa karşılaştırma: summary line, weight ladder and comparison table for a
+  collection (docs/design-system.md, collection wireframe). Values come from
+  product.metafields.kasa; a column with no values is left out, and the
+  section hides itself when fewer than two products have a size or weight.
+{% endcomment %}
+{{ 'kasa-ozellikleri.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign adet = 0
+  assign veri_adet = 0
+  assign min_fiyat = nil
+  assign min_kg = nil
+  assign max_kg = nil
+  assign kolon_olcu = false
+  assign kolon_kg = false
+  assign kolon_sac = false
+  assign kolon_kilit = false
+  for p in collection.products limit: 50
+    assign adet = adet | plus: 1
+    assign k = p.metafields.kasa
+    if min_fiyat == nil or p.price < min_fiyat
+      assign min_fiyat = p.price
+    endif
+    if k.dis_yukseklik_cm.value != blank or k.agirlik_kg.value != blank
+      assign veri_adet = veri_adet | plus: 1
+    endif
+    if k.dis_yukseklik_cm.value != blank
+      assign kolon_olcu = true
+    endif
+    if k.agirlik_kg.value != blank
+      assign kolon_kg = true
+      if min_kg == nil or k.agirlik_kg.value < min_kg
+        assign min_kg = k.agirlik_kg.value
+      endif
+      if max_kg == nil or k.agirlik_kg.value > max_kg
+        assign max_kg = k.agirlik_kg.value
+      endif
+    endif
+    if k.govde_sac_mm.value != blank
+      assign kolon_sac = true
+    endif
+    if k.kilit_tipi.value != blank
+      assign kolon_kilit = true
+    endif
+  endfor
+-%}
+
+{%- if veri_adet >= 2 -%}
+  <div class="kasa-karsi page-width section-{{ section.id }}-padding">
+    <p class="kasa-karsi__ozet">
+      {{ adet }} model, {{ min_fiyat | money_without_trailing_zeros }}'den
+      {%- if min_kg != nil and max_kg != nil and max_kg != min_kg -%}
+        , {{ min_kg }} ile {{ max_kg }}&nbsp;kg
+      {%- elsif min_kg != nil -%}
+        , {{ min_kg }}&nbsp;kg
+      {%- endif -%}
+      .
+    </p>
+
+    {%- if min_kg != nil and max_kg != nil and max_kg > min_kg -%}
+      {%- assign aralik = max_kg | minus: min_kg -%}
+      <figure class="kasa-merdiven">
+        <figcaption class="kasa-merdiven__baslik">Ağırlık</figcaption>
+        <div class="kasa-merdiven__cizgi" role="list">
+          {%- for p in collection.products limit: 50 -%}
+            {%- assign kg = p.metafields.kasa.agirlik_kg.value -%}
+            {%- if kg != blank -%}
+              {%- assign konum = kg | minus: min_kg | times: 100.0 | divided_by: aralik -%}
+              <a class="kasa-merdiven__nokta" role="listitem" href="{{ p.url }}" style="left: {{ konum }}%;" title="{{ p.title | escape }}: {{ kg }} kg">
+                <span class="visually-hidden">{{ p.title | escape }}: {{ kg }} kg</span>
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        <div class="kasa-merdiven__uclar" aria-hidden="true">
+          <span>{{ min_kg }}&nbsp;kg</span><span>{{ max_kg }}&nbsp;kg</span>
+        </div>
+      </figure>
+    {%- endif -%}
+
+    <div class="kasa-karsi__kaydir" tabindex="0" role="region" aria-label="Model karşılaştırma tablosu">
+      <table class="kasa-tablo kasa-tablo--karsi">
+        <thead>
+          <tr>
+            <th scope="col">Model</th>
+            {%- if kolon_olcu -%}<th scope="col">Dış ölçü (cm)</th>{%- endif -%}
+            {%- if kolon_kg -%}<th scope="col">Ağırlık</th>{%- endif -%}
+            {%- if kolon_sac -%}<th scope="col">Gövde sacı</th>{%- endif -%}
+            {%- if kolon_kilit -%}<th scope="col">Kilit</th>{%- endif -%}
+            <th scope="col">Fiyat</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for p in collection.products limit: 50 -%}
+            {%- assign k = p.metafields.kasa -%}
+            <tr>
+              <th scope="row"><a href="{{ p.url }}">{{ p.title | escape }}</a></th>
+              {%- if kolon_olcu -%}
+                <td>{% if k.dis_yukseklik_cm.value != blank and k.dis_genislik_cm.value != blank and k.dis_derinlik_cm.value != blank %}{{ k.dis_yukseklik_cm.value }} x {{ k.dis_genislik_cm.value }} x {{ k.dis_derinlik_cm.value }}{% elsif k.dis_yukseklik_cm.value != blank %}{{ k.dis_yukseklik_cm.value }} yükseklik{% endif %}</td>
+              {%- endif -%}
+              {%- if kolon_kg -%}<td>{% if k.agirlik_kg.value != blank %}{{ k.agirlik_kg.value }}&nbsp;kg{% endif %}</td>{%- endif -%}
+              {%- if kolon_sac -%}<td>{% if k.govde_sac_mm.value != blank %}{{ k.govde_sac_mm.value | replace: '.', ',' }}&nbsp;mm{% endif %}</td>{%- endif -%}
+              {%- if kolon_kilit -%}<td>{{ k.kilit_tipi.value | join: ', ' | escape }}</td>{%- endif -%}
+              <td class="kasa-tablo__fiyat">{% if p.price_varies %}{{ p.price_min | money_without_trailing_zeros }}'den{% else %}{{ p.price | money_without_trailing_zeros }}{% endif %}</td>
+            </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+    </div>
+    <p class="kasa-karsi__not">Ölçüler yükseklik x genişlik x derinlik. Boş hücredeki bilgi henüz doğrulanmadı; sormak için <a href="tel:+905414451548" data-contact-event="tel_click">0541 445 15 48</a>.</p>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Kasa karşılaştırma",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "range", "id": "padding_top", "min": 0, "max": 60, "step": 4, "unit": "px", "label": "Üst boşluk", "default": 12 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 60, "step": 4, "unit": "px", "label": "Alt boşluk", "default": 12 }
+  ],
+  "enabled_on": { "templates": ["collection"] },
+  "presets": [{ "name": "Kasa karşılaştırma" }]
+}
+{% endschema %}
