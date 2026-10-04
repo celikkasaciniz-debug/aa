@@ -2,7 +2,7 @@ handle,title,dis_yukseklik_cm,dis_genislik_cm,dis_derinlik_cm,ic_yukseklik_cm,ic
 105-cm-premium-kasa,Premium 105 cm Şifreli Çelik Kasa – Büyük Tip Profesyonel Kasa,105,60,57,72,47,33,350,description,,,,,,,fingerprint lock mentioned; confirm
 105-cm-zirhli-kasa,"PANZER 105 cm Zırhlı Çelik Kasa – Şifreli, Anahtarlı ve Parmak İzi Okuyuculu",105,60,57,67,47,29,,,,,,,,,fingerprint lock mentioned; confirm
 105cm-celik-kasa,CK 105 cm Anahtarlı Çelik Kasa – Geniş Hacimli Ofis Güvenlik Kasası,105,47,38,,,,180,description,,,,,,,
-105cm-celik-kasa-350kg,105 CM 350 KG Şifreli Çelik Kasa – Büyük Tip Profesyonel Kasa,105,60,57,72,47,33,350,description,,,,,,,description claims fire resistance; no certificate on file
+105cm-celik-kasa-350kg,105 CM 350 KG Şifreli Çelik Kasa – Büyük Tip Profesyonel Kasa,105,60,57,72,47,33,350,description,,,,,,,description claims fire resistance; no certificate on file; owner will correct this product himself (2026-10-04)
 105cm-celik-kasa-sifreli,CK 105 cm Şifreli Çelik Kasa – Büyük Tip Ofis ve Kurumsal Güvenlik Kasası,105,47,38,,,,140,description,,,,,,,
 150-cm-kuyumcu-kasasi,150 Cm 2 Kapak Banko Kuyumcu Kasası,60,150,50,,,,,,,,,,,,"height: title 150 cm, description 60 cm"
 180-cm-kuyumcu-kasasi,"180 cm 3 Kapaklı Banko Kuyumcu Kasası, Üç Bölmeli Yüksek Güvenlik Kasası",180,,,,,,,,,,,,,,description claims fire resistance; no certificate on file
@@ -26,7 +26,7 @@ handle,title,dis_yukseklik_cm,dis_genislik_cm,dis_derinlik_cm,ic_yukseklik_cm,ic
 65cm-premium-celik-kasa,Premium 65 cm Şifreli Çelik Kasa – Orta Boy Profesyonel Kasa,65,50,51,32,37,24,,,,,,,,,fingerprint lock mentioned; confirm
 65cm-zirhli-celik-kasa,PANZER 65 cm Zırhlı Çelik Kasa – Şifreli ve Anahtarlı Yüksek Güvenlik,65,50,51,32,37,24,,,,,,,,,description claims fire resistance; no certificate on file; fingerprint lock mentioned; confirm
 70-cm-premium-kasa-300-kg,Premium 70 cm Anahtarlı Çelik Kasa – Orta Boy Ofis Kasası,,,,,,,300,description,8,4,,,1,,description claims fire resistance; no certificate on file
-70-cm-zirhli-kasa-300-kg,PANZER 70 cm Zırhlı Çelik Kasa 300 KG – Anahtarlı Profesyonel Güvenlik Kasası,70,50,50,,,,350,description,8,4,,,1,2,"weight: title 300 kg, description 350 kg; description claims fire resistance; no certificate on file"
+70-cm-zirhli-kasa-300-kg,PANZER 70 cm Zırhlı Çelik Kasa 300 KG – Anahtarlı Profesyonel Güvenlik Kasası,70,50,50,,,,300,owner 2026-10-04,8,4,,,1,2,weight confirmed 300 kg by owner; description claims fire resistance; no certificate on file
 70cm-celik-kasa,CK 70 cm Anahtarlı Çelik Kasa – Orta Boy Ev ve Ofis Güvenlik Kasası,70,50,38,,,,110,description,,,3,30,,,
 70cm-celik-kasa-200kg,Premium 70 cm Şifreli Çelik Kasa – Dayanıklı Ofis Tipi Kasa,70,51,50,30,39,24,200,description,,,,,,,description claims fire resistance; no certificate on file
 70cm-celik-kasa-sifreli,CK 70 cm Şifreli Çelik Kasa – Geniş Hacimli Ev ve Ofis Güvenlik Kasası,70,50,38,,,,110,description,,,,,,,
