@@ -1,5 +1,5 @@
 {% comment %}
-  MR — Kapasite Sınıfına Göre Keşfet
+  MR: Kapasite Sınıfına Göre Keşfet
   Hero altı, 4 kartlı "hızlı karar" modülü. scheme-1 zemin, kartlar kendi tier renklerinde.
 {% endcomment %}
 {{ 'component-capacity-tiles.css' | asset_url | stylesheet_tag }}
@@ -46,8 +46,35 @@
               {% render 'icon-vault-tier', tier: block.settings.tier %}
             {%- endif -%}
           </span>
+          {%- comment -%}
+            The weight range comes from the kasa.agirlik_kg values of the
+            linked collection, not from the typed setting, so the tile can
+            never claim a range the products do not have (MASTER_PROMPT 0.4.4).
+          {%- endcomment -%}
+          {%- liquid
+            assign tile_min = nil
+            assign tile_max = nil
+            assign tile_handle = block.settings.link | split: '/collections/' | last | split: '?' | first
+            if block.settings.link contains '/collections/'
+              for p in collections[tile_handle].products limit: 50
+                assign kg = p.metafields.kasa.agirlik_kg.value
+                if kg != blank
+                  if tile_min == nil or kg < tile_min
+                    assign tile_min = kg
+                  endif
+                  if tile_max == nil or kg > tile_max
+                    assign tile_max = kg
+                  endif
+                endif
+              endfor
+            endif
+          -%}
           <span class="capacity-tile__text">
-            <span class="capacity-tile__weight">{{ block.settings.weight_range | escape }}</span>
+            {%- if tile_min != nil and tile_max != nil and tile_max > tile_min -%}
+              <span class="capacity-tile__weight">{{ tile_min }} ile {{ tile_max }}&nbsp;kg</span>
+            {%- elsif tile_min != nil -%}
+              <span class="capacity-tile__weight">{{ tile_min }}&nbsp;kg</span>
+            {%- endif -%}
             <span class="capacity-tile__category">{{ block.settings.category | escape }}</span>
             {%- if block.settings.cap_text != blank -%}
               <span class="capacity-tile__cap">{{ block.settings.cap_text | escape }}</span>
@@ -82,20 +109,20 @@
       "type": "tile",
       "name": "Kapasite Kartı",
       "settings": [
-        { "type": "text", "id": "weight_range", "label": "Ağırlık aralığı", "default": "50–100 KG" },
+        { "type": "text", "id": "weight_range", "label": "Ağırlık aralığı (kullanılmıyor, ürün verisinden hesaplanır)" },
         { "type": "text", "id": "category", "label": "Kategori adı", "default": "Ev Tipi Kasa" },
         { "type": "text", "id": "cap_text", "label": "Alt etiket (opsiyonel)", "default": "Giriş Seviyesi Koruma" },
         {
           "type": "select", "id": "tier", "label": "Görsel yoğunluk seviyesi",
           "options": [
-            { "value": "1", "label": "1 — En hafif (nötr gri)" },
-            { "value": "2", "label": "2 — Pirinç" },
-            { "value": "3", "label": "3 — Açık turuncu" },
-            { "value": "4", "label": "4 — Dolu turuncu (en yüksek vurgu)" }
+            { "value": "1", "label": "1: En hafif (nötr gri)" },
+            { "value": "2", "label": "2: Pirinç" },
+            { "value": "3", "label": "3: Açık turuncu" },
+            { "value": "4", "label": "4: Dolu turuncu (en yüksek vurgu)" }
           ],
           "default": "1"
         },
-        { "type": "image_picker", "id": "image", "label": "Ürün görseli (opsiyonel — boşsa placeholder ikon kullanılır)" },
+        { "type": "image_picker", "id": "image", "label": "Ürün görseli (opsiyonel: boşsa placeholder ikon kullanılır)" },
         { "type": "url", "id": "link", "label": "Bağlantı (koleksiyon sayfası)" }
       ]
     }
@@ -104,10 +131,10 @@
     {
       "name": "Kapasite Sınıfı Kartları",
       "blocks": [
-        { "type": "tile", "settings": { "weight_range": "50–100 KG", "category": "Ev Tipi Kasa", "cap_text": "Giriş Seviyesi Koruma", "tier": "1" } },
-        { "type": "tile", "settings": { "weight_range": "150–250 KG", "category": "Ofis Tipi Kasa", "cap_text": "Orta Seviye Koruma", "tier": "2" } },
-        { "type": "tile", "settings": { "weight_range": "300–500 KG", "category": "Zırhlı Seri", "cap_text": "Yüksek Seviye Koruma", "tier": "3" } },
-        { "type": "tile", "settings": { "weight_range": "500 KG+", "category": "Banka Tipi Kasa", "cap_text": "Zırhlı + Yangına Dayanıklı", "tier": "4" } }
+        { "type": "tile", "settings": { "category": "Ev Tipi Kasa", "cap_text": "Giriş Seviyesi Koruma", "tier": "1" } },
+        { "type": "tile", "settings": { "category": "Ofis Tipi Kasa", "cap_text": "Orta Seviye Koruma", "tier": "2" } },
+        { "type": "tile", "settings": { "category": "Zırhlı Seri", "cap_text": "Yüksek Seviye Koruma", "tier": "3" } },
+        { "type": "tile", "settings": { "category": "Banka Tipi Kasa", "cap_text": "Kuyumcu ve iş yeri", "tier": "4" } }
       ]
     }
   ]
