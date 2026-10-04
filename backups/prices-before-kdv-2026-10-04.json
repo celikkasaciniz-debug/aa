@@ -1,0 +1,974 @@
+[
+ {
+  "id": "gid://shopify/Product/8123029848264",
+  "handle": "55-cm-zirhli-kasa-250-kg",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307909902536",
+    "title": "Default Title",
+    "price": "75000.00",
+    "compareAtPrice": "80000.00"
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123030044872",
+  "handle": "70-cm-zirhli-kasa-300-kg",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307910557896",
+    "title": "Default Title",
+    "price": "100000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123030339784",
+  "handle": "85-cm-zirhli-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44874842538184",
+    "title": "Siyah",
+    "price": "120000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44874842570952",
+    "title": "Gri",
+    "price": "120000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44874842603720",
+    "title": "Beyaz",
+    "price": "120000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123030700232",
+  "handle": "105-cm-zirhli-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44874810065096",
+    "title": "Siyah",
+    "price": "185000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44874810097864",
+    "title": "Gri",
+    "price": "185000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123031224520",
+  "handle": "3150-super-model-celik-kasa",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307916095688",
+    "title": "Default Title",
+    "price": "195000.00",
+    "compareAtPrice": "235000.00"
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123031453896",
+  "handle": "3125-super-model-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307919503560",
+    "title": "Default Title",
+    "price": "210000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123031748808",
+  "handle": "2200-super-model-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307922878664",
+    "title": "Default Title",
+    "price": "295000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123032109256",
+  "handle": "2125-ofis-ve-buro-tipi-celik-kasalar",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307926778056",
+    "title": "Default Title",
+    "price": "200000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123032207560",
+  "handle": "2085-super-model-celik-kasa",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307929956552",
+    "title": "Default Title",
+    "price": "115000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123033649352",
+  "handle": "2060-super-model-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307935789256",
+    "title": "Default Title",
+    "price": "70000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123034009800",
+  "handle": "2055-super-model-ev-tipi-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307937099976",
+    "title": "Default Title",
+    "price": "75000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123035517128",
+  "handle": "50x35x31-cm-otel-kasalari",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307943588040",
+    "title": "Default Title",
+    "price": "6500.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123035812040",
+  "handle": "22x43x40-cm-otel-kasalari",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307944308936",
+    "title": "Default Title",
+    "price": "5000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123036139720",
+  "handle": "25x35x25-cm-otel-kasalari-anahtarla",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307945455816",
+    "title": "Default Title",
+    "price": "4000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123036401864",
+  "handle": "25x35x25-cm-otel-kasalari",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307946209480",
+    "title": "Default Title",
+    "price": "3000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123036631240",
+  "handle": "22x43x40cm-otel-kasalari",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307947192520",
+    "title": "Default Title",
+    "price": "4500.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123036926152",
+  "handle": "85cm-celik-kasa-sifreli",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44867513876680",
+    "title": "Siyah",
+    "price": "27000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44867513843912",
+    "title": "Gri",
+    "price": "27000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123037155528",
+  "handle": "105cm-celik-kasa-siyah-sifreli",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307949060296",
+    "title": "Default Title",
+    "price": "21000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123045904584",
+  "handle": "105cm-celik-kasa-siyah",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307985727688",
+    "title": "Default Title",
+    "price": "19000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123046133960",
+  "handle": "105cm-celik-kasa-sifreli",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44867525935304",
+    "title": "Siyah",
+    "price": "29000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44867525902536",
+    "title": "Gri",
+    "price": "29000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123046658248",
+  "handle": "105cm-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44867524526280",
+    "title": "Gri",
+    "price": "26000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44867524559048",
+    "title": "Siyah",
+    "price": "26000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123046854856",
+  "handle": "85cm-celik-kasa-siyah-sifreli",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307989954760",
+    "title": "Default Title",
+    "price": "20000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123046985928",
+  "handle": "85cm-celik-kasa-siyah",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307991003336",
+    "title": "Default Title",
+    "price": "18000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123047117000",
+  "handle": "85cm-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44867511550152",
+    "title": "Gri",
+    "price": "24000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44867511582920",
+    "title": "Siyah",
+    "price": "24000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123047215304",
+  "handle": "70cm-celik-kasa-siyah-sifreli",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307991855304",
+    "title": "Default Title",
+    "price": "19000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123047379144",
+  "handle": "70cm-celik-kasa-siyah",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307992838344",
+    "title": "Default Title",
+    "price": "17000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123047641288",
+  "handle": "70cm-celik-kasa-sifreli",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44867502440648",
+    "title": "Siyah",
+    "price": "25000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44867502407880",
+    "title": "Gri",
+    "price": "25000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123047837896",
+  "handle": "70cm-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44867501719752",
+    "title": "Gri",
+    "price": "22000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44867501752520",
+    "title": "Siyah",
+    "price": "22000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123048100040",
+  "handle": "55cm-celik-kasa-siyah-sifreli",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44307996541128",
+    "title": "Default Title",
+    "price": "17000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123048427720",
+  "handle": "55cm-celik-kasa-sifreli",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44867498836168",
+    "title": "Siyah",
+    "price": "23000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44867498803400",
+    "title": "Gri",
+    "price": "23000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123048952008",
+  "handle": "55cm-celik-kasa-siyah",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44308000374984",
+    "title": "Default Title",
+    "price": "15000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123049312456",
+  "handle": "55cm-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44867497754824",
+    "title": "Gri",
+    "price": "20000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44867497787592",
+    "title": "Siyah",
+    "price": "20000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8123085095112",
+  "handle": "2055-super-model-celik-kasa",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44308148879560",
+    "title": "Default Title",
+    "price": "65000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8220915302600",
+  "handle": "zirhli-ozel-yapim-kuyumcu-kasasi",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44683675926728",
+    "title": "Default Title",
+    "price": "170000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8220918841544",
+  "handle": "200-cm-mucevher-guvenli",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44683687755976",
+    "title": "Default Title",
+    "price": "225000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8220923920584",
+  "handle": "180-cm-kuyumcu-kasasi",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44683703779528",
+    "title": "Default Title",
+    "price": "200000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8220927525064",
+  "handle": "150-cm-kuyumcu-kasasi",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44683712757960",
+    "title": "Default Title",
+    "price": "175000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8221457973448",
+  "handle": "809-evrak-kasas",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44685305020616",
+    "title": "Default Title",
+    "price": "0.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8221458006216",
+  "handle": "801-evrak-kasas",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44685305151688",
+    "title": "Default Title",
+    "price": "0.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8263252410568",
+  "handle": "105cm-celik-kasa-350kg",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44874820124872",
+    "title": "Siyah",
+    "price": "175000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44874820157640",
+    "title": "Gri",
+    "price": "175000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8263256572104",
+  "handle": "65cm-zirhli-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44874847289544",
+    "title": "Siyah",
+    "price": "85000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44874847322312",
+    "title": "Gri",
+    "price": "85000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44874847355080",
+    "title": "Beyaz",
+    "price": "85000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8263257260232",
+  "handle": "65cm-celik-kasa-180kg",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44874916430024",
+    "title": "Default Title",
+    "price": "70000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8263257882824",
+  "handle": "70cm-celik-kasa-200kg",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44875282546888",
+    "title": "Siyah",
+    "price": "65000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44875282579656",
+    "title": "Gri",
+    "price": "65000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44875282612424",
+    "title": "Beyaz",
+    "price": "65000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44875282645192",
+    "title": "Pembe",
+    "price": "65000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8263258177736",
+  "handle": "75cm-zirhli-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44875286315208",
+    "title": "Siyah",
+    "price": "100000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44875286347976",
+    "title": "Gri",
+    "price": "100000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44875286380744",
+    "title": "Beyaz",
+    "price": "100000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8263258407112",
+  "handle": "85cm-celik-kasa-250kg",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44875289067720",
+    "title": "Siyah",
+    "price": "85000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44875289100488",
+    "title": "Gri",
+    "price": "85000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44875289133256",
+    "title": "Beyaz",
+    "price": "85000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8264910897352",
+  "handle": "55-cm-premium-kasa-250-kg",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44883342360776",
+    "title": "Default Title",
+    "price": "60000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8264910930120",
+  "handle": "70-cm-premium-kasa-300-kg",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44883342426312",
+    "title": "Default Title",
+    "price": "65000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8264910962888",
+  "handle": "85-cm-premium-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44883342459080",
+    "title": "Siyah",
+    "price": "85000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44883342491848",
+    "title": "Gri",
+    "price": "85000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44883342524616",
+    "title": "Beyaz",
+    "price": "85000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8264910995656",
+  "handle": "105-cm-premium-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44883342590152",
+    "title": "Siyah",
+    "price": "120000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44883342622920",
+    "title": "Gri",
+    "price": "120000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8264911028424",
+  "handle": "2060-premium-model-celik-kasa",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44883342655688",
+    "title": "Default Title",
+    "price": "60000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8264911061192",
+  "handle": "2055-premium-model-ev-tipi-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44883342688456",
+    "title": "Default Title",
+    "price": "60000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8264911093960",
+  "handle": "65cm-premium-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44883342786760",
+    "title": "Gri",
+    "price": "60000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44883342753992",
+    "title": "Siyah",
+    "price": "60000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44883342819528",
+    "title": "Beyaz",
+    "price": "60000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8264911126728",
+  "handle": "75cm-premium-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44883342885064",
+    "title": "Gri",
+    "price": "70000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44883342852296",
+    "title": "Siyah",
+    "price": "70000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44883342917832",
+    "title": "Beyaz",
+    "price": "70000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8265185460424",
+  "handle": "ultra-guvenlikli-4kapakli-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44885066055880",
+    "title": "Altin",
+    "price": "250000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44885066088648",
+    "title": "Beyaz",
+    "price": "250000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44885066121416",
+    "title": "Siyah",
+    "price": "250000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44885115666632",
+    "title": "Gri",
+    "price": "250000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8265187033288",
+  "handle": "kuyumcu-tipi-profesyonel-asansorlu-vitrin-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44885089616072",
+    "title": "Default Title",
+    "price": "350000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8265187262664",
+  "handle": "genis-asansorlu-kuyumcu-kasasi",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44885092696264",
+    "title": "Default Title",
+    "price": "450000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8265188475080",
+  "handle": "ultra-guvenlikli-2-kapakli-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44888249434312",
+    "title": "Altin",
+    "price": "175000.00",
+    "compareAtPrice": null
+   },
+   {
+    "id": "gid://shopify/ProductVariant/44888249467080",
+    "title": "Beyaz",
+    "price": "175000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8265707585736",
+  "handle": "ultra-guvenlikli-5kapakli-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44888244781256",
+    "title": "Default Title",
+    "price": "300000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8265709355208",
+  "handle": "ultra-guvenlikli-3-kapakli-celik-kasa",
+  "status": "ACTIVE",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/44888247730376",
+    "title": "Default Title",
+    "price": "250000.00",
+    "compareAtPrice": null
+   }
+  ]
+ },
+ {
+  "id": "gid://shopify/Product/8334854455496",
+  "handle": "60-cm-sifreli-celik-kasa-kompakt-yuksek-guvenlikli-ev-ve-ofis-kasasi-copy",
+  "status": "DRAFT",
+  "variants": [
+   {
+    "id": "gid://shopify/ProductVariant/45155374563528",
+    "title": "Default Title",
+    "price": "5.00",
+    "compareAtPrice": null
+   }
+  ]
+ }
+]
