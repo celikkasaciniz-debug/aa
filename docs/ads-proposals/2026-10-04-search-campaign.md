@@ -16,7 +16,7 @@ Primary conversion actions now: Purchase, Begin Checkout, Add To Cart, Telefon T
 | Id | Change | Why |
 | --- | --- | --- |
 | ads-02 | DROPPED 4 October 2026 by the owner: Add To Cart and Begin Checkout stay primary, because customers reach these steps and then finish the purchase by phone. Instead their fixed 1 TL value changes to a stage value (see ads-03) | Bidding still sees the steps that lead to phone sales |
-| ads-01 | Data exclusion 25 September 2026 (test orders) | Keeps fake 70.004 TL out of learning |
+| ads-01 | DROPPED 4 October 2026 by the owner: no data exclusion, the 25 September test orders stay in the learning data | The new campaign starts on Maximise clicks, which does not use conversion data; revisit before switching to Maximise conversions |
 | ads-03 | Stage values instead of 1 TL: Add To Cart 250 TL, Begin Checkout 500 TL, Telefon and WhatsApp 1.000 TL (proposed, owner to confirm). Purchase keeps the order value | One buyer can fire cart, checkout and call: graded values keep a cart add from counting like a sale |
 | ads-12 | Publish the development theme first | The ads land on the cleaned pages (no fixing or fire claims, prices and weights on the plate) |
 | ads-13 | Test phone and WhatsApp tags with Tag Assistant after publish | The source of those two actions is unknown (`docs/tracking.md`) |
