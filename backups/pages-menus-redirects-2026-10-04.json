@@ -1,0 +1,571 @@
+{
+ "data": {
+  "pages": {
+   "nodes": [
+    {
+     "id": "gid://shopify/Page/106592272584",
+     "handle": "i̇letisim",
+     "title": "İletişim",
+     "isPublished": true,
+     "templateSuffix": "contact"
+    },
+    {
+     "id": "gid://shopify/Page/107052040392",
+     "handle": "hakkimizda",
+     "title": "Hakkımızda",
+     "isPublished": true,
+     "templateSuffix": "about-us"
+    },
+    {
+     "id": "gid://shopify/Page/107130454216",
+     "handle": "sss",
+     "title": "Çelik Kasa Kurulum ve Şifre",
+     "isPublished": true,
+     "templateSuffix": "template-faqs"
+    },
+    {
+     "id": "gid://shopify/Page/110425866440",
+     "handle": "istanbul-celik-kasa",
+     "title": "Aynı Gün Hemen Teslimat",
+     "isPublished": true,
+     "templateSuffix": "landing"
+    },
+    {
+     "id": "gid://shopify/Page/111173894344",
+     "handle": "celik-kasa",
+     "title": "Çelik Kasa | Ev ve Ofis İçin Güvenli Kasalar – Çelik Kasacı",
+     "isPublished": true,
+     "templateSuffix": "page"
+    },
+    {
+     "id": "gid://shopify/Page/111498100936",
+     "handle": "mesafeli-satis-sozlesmesi",
+     "title": "Mesafeli Satış Sözleşmesi",
+     "isPublished": true,
+     "templateSuffix": "page"
+    },
+    {
+     "id": "gid://shopify/Page/111498133704",
+     "handle": "kisisel-veirlerin-korunmasi-kanunu",
+     "title": "Kişisel Verilerin Korunması Kanunu",
+     "isPublished": true,
+     "templateSuffix": "page"
+    },
+    {
+     "id": "gid://shopify/Page/111498166472",
+     "handle": "web-site-kullanim-kosullari",
+     "title": "Web Site Kullanım Koşulları",
+     "isPublished": true,
+     "templateSuffix": "page"
+    },
+    {
+     "id": "gid://shopify/Page/111498199240",
+     "handle": "on-bi̇lgilendirme-sozlesmesi",
+     "title": "Ön Bİlgilendirme Sözleşmesi",
+     "isPublished": true,
+     "templateSuffix": "page"
+    },
+    {
+     "id": "gid://shopify/Page/111498264776",
+     "handle": "i̇ade-ve-i̇ptal-politikasi",
+     "title": "İade ve İptal Politikası",
+     "isPublished": true,
+     "templateSuffix": "page"
+    },
+    {
+     "id": "gid://shopify/Page/111498297544",
+     "handle": "sikca-sorulan-sorular",
+     "title": "Sıkça Sorulan Sorular",
+     "isPublished": true,
+     "templateSuffix": "faq"
+    }
+   ]
+  },
+  "urlRedirects": {
+   "nodes": [
+    {
+     "id": "gid://shopify/UrlRedirect/342726672584",
+     "path": "/pages/about-us",
+     "target": "/pages/hakkimizda"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/354250227912",
+     "path": "/s/ff4b3a",
+     "target": "https://celikkasaci.com/?utm_campaign=ff4b3a&utm_source=shareable_link"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/354542059720",
+     "path": "/products/85-cm-zirhli-kasa-500-kg",
+     "target": "/products/85-cm-zirhli-kasa-450-kg"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/354587771080",
+     "path": "/products/200-cm-yuksek-guvenlikli-banko-mucevher-kasasi",
+     "target": "/products/200-cm-mucevher-guvenli"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/360645591240",
+     "path": "/products/55cm-celik-kasa-metalik-gri",
+     "target": "/products/55cm-celik-kasa"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/360645656776",
+     "path": "/products/55cm-celik-kasa-metalik-gri-sifreli",
+     "target": "/products/55cm-celik-kasa-sifreli"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/360646770888",
+     "path": "/products/70cm-celik-kasa-metalik-gri",
+     "target": "/products/70cm-celik-kasa"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/360646836424",
+     "path": "/products/70cm-celik-kasa-metalik-gri-sifreli",
+     "target": "/products/70cm-celik-kasa-sifreli"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/360647065800",
+     "path": "/products/85cm-celik-kasa-metalik-gri",
+     "target": "/products/85cm-celik-kasa"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/360647098568",
+     "path": "/products/85cm-celik-kasa-metalik-gri-sifreli",
+     "target": "/products/85cm-celik-kasa-sifreli"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/360647327944",
+     "path": "/products/105cm-celik-kasa-metalik-gri",
+     "target": "/products/105cm-celik-kasa"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/360647360712",
+     "path": "/products/105cm-celik-kasa-metalik-gri-sifreli",
+     "target": "/products/105cm-celik-kasa-sifreli"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/361162113224",
+     "path": "/products/105-cm-zirhli-kasa-600-kg",
+     "target": "/products/105-cm-zirhli-kasa"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/361163522248",
+     "path": "/products/85-cm-zirhli-kasa-450-kg",
+     "target": "/products/85-cm-zirhli-kasa"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/364646432968",
+     "path": "/s/34c378",
+     "target": "https://celikkasaci.com/?utm_campaign=34c378&utm_source=shareable_link"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/372522516680",
+     "path": "/pages/contact",
+     "target": "/pages/i%CC%87letisim"
+    },
+    {
+     "id": "gid://shopify/UrlRedirect/382648877256",
+     "path": "/collections/all",
+     "target": "/collections/celik-kasa"
+    }
+   ]
+  },
+  "menus": {
+   "nodes": [
+    {
+     "id": "gid://shopify/Menu/216099881160",
+     "handle": "main-menu",
+     "title": "Main menu",
+     "items": [
+      {
+       "id": "gid://shopify/MenuItem/513933246664",
+       "title": "Ana sayfa",
+       "type": "FRONTPAGE",
+       "url": "/",
+       "resourceId": null,
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/527628468424",
+       "title": "ev ofis kasasi",
+       "type": "COLLECTION",
+       "url": "/collections/ev-ofis-kasasi",
+       "resourceId": "gid://shopify/Collection/629252391112",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/527628501192",
+       "title": "premium ev ofis kasasi",
+       "type": "COLLECTION",
+       "url": "/collections/premium-ev-ofis-kasasi",
+       "resourceId": "gid://shopify/Collection/629252489416",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/527628533960",
+       "title": "zirhli celik kasa",
+       "type": "COLLECTION",
+       "url": "/collections/zirhli-celik-kasa",
+       "resourceId": "gid://shopify/Collection/629252718792",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/527628566728",
+       "title": "kuyumcu kasalari",
+       "type": "COLLECTION",
+       "url": "/collections/kuyumcu-kasalari",
+       "resourceId": "gid://shopify/Collection/629252522184",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/513944879304",
+       "title": "Hakkımızda",
+       "type": "PAGE",
+       "url": "/pages/hakkimizda",
+       "resourceId": "gid://shopify/Page/107052040392",
+       "items": [
+        {
+         "id": "gid://shopify/MenuItem/513933312200",
+         "title": "bize Ulaşın",
+         "type": "PAGE",
+         "url": "/pages/i%CC%87letisim",
+         "resourceId": "gid://shopify/Page/106592272584",
+         "items": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gid://shopify/Menu/216099913928",
+     "handle": "footer",
+     "title": "FOOTER -MR -KURUMSAL",
+     "items": [
+      {
+       "id": "gid://shopify/MenuItem/528521593032",
+       "title": "Hakkımızda",
+       "type": "PAGE",
+       "url": "/pages/hakkimizda",
+       "resourceId": "gid://shopify/Page/107052040392",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521625800",
+       "title": "Kişisel Verilerin Korunması Kanunu",
+       "type": "PAGE",
+       "url": "/pages/kisisel-veirlerin-korunmasi-kanunu",
+       "resourceId": "gid://shopify/Page/111498133704",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521658568",
+       "title": "Mesafeli Satış Sözleşmesi",
+       "type": "PAGE",
+       "url": "/pages/mesafeli-satis-sozlesmesi",
+       "resourceId": "gid://shopify/Page/111498100936",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521691336",
+       "title": "Web Site Kullanım Koşulları",
+       "type": "PAGE",
+       "url": "/pages/web-site-kullanim-kosullari",
+       "resourceId": "gid://shopify/Page/111498166472",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521724104",
+       "title": "Ön Bİlgilendirme Sözleşmesi",
+       "type": "PAGE",
+       "url": "/pages/on-bi%CC%87lgilendirme-sozlesmesi",
+       "resourceId": "gid://shopify/Page/111498199240",
+       "items": []
+      }
+     ]
+    },
+    {
+     "id": "gid://shopify/Menu/216099946696",
+     "handle": "customer-account-main-menu",
+     "title": "ACCOUNT- MR",
+     "items": [
+      {
+       "id": "gid://shopify/MenuItem/513933410504",
+       "title": "Siparişlerim",
+       "type": "CUSTOMER_ACCOUNT_PAGE",
+       "url": "https://hesap.celikkasaci.com/orders",
+       "resourceId": "gid://shopify/CustomerAccountPage/54925689032",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/525405323464",
+       "title": "Hesabım",
+       "type": "CUSTOMER_ACCOUNT_PAGE",
+       "url": "https://hesap.celikkasaci.com/profile",
+       "resourceId": "gid://shopify/CustomerAccountPage/54925721800",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521855176",
+       "title": "Sıkça Sorulan Sorular",
+       "type": "PAGE",
+       "url": "/pages/sikca-sorulan-sorular",
+       "resourceId": "gid://shopify/Page/111498297544",
+       "items": []
+      }
+     ]
+    },
+    {
+     "id": "gid://shopify/Menu/216104730824",
+     "handle": "quick-links",
+     "title": "Policy",
+     "items": [
+      {
+       "id": "gid://shopify/MenuItem/513944289480",
+       "title": "Gizlilik Politikası",
+       "type": "SHOP_POLICY",
+       "url": "/policies/privacy-policy",
+       "resourceId": "gid://shopify/ShopPolicy/30256201928",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/513944322248",
+       "title": "Kargo Politikası",
+       "type": "HTTP",
+       "url": "#",
+       "resourceId": null,
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/513944355016",
+       "title": "Hizmet Şartları",
+       "type": "HTTP",
+       "url": "#",
+       "resourceId": null,
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/513944387784",
+       "title": "İade ve Geri Ödeme Politikası",
+       "type": "SHOP_POLICY",
+       "url": "/policies/refund-policy",
+       "resourceId": "gid://shopify/ShopPolicy/30622482632",
+       "items": []
+      }
+     ]
+    },
+    {
+     "id": "gid://shopify/Menu/216104763592",
+     "handle": "quick-links-1",
+     "title": "Quick Links",
+     "items": [
+      {
+       "id": "gid://shopify/MenuItem/513944420552",
+       "title": "Ana sayfa",
+       "type": "FRONTPAGE",
+       "url": "/",
+       "resourceId": null,
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/513944453320",
+       "title": "mağaza",
+       "type": "COLLECTIONS",
+       "url": "/collections",
+       "resourceId": null,
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/513944486088",
+       "title": "Hakkımızda",
+       "type": "PAGE",
+       "url": "/pages/hakkimizda",
+       "resourceId": "gid://shopify/Page/107052040392",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/513944518856",
+       "title": "bize Ulaşın",
+       "type": "PAGE",
+       "url": "/pages/i%CC%87letisim",
+       "resourceId": "gid://shopify/Page/106592272584",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/513944551624",
+       "title": "Bloglar",
+       "type": "BLOG",
+       "url": "/blogs/bloglar",
+       "resourceId": "gid://shopify/Blog/90071105736",
+       "items": []
+      }
+     ]
+    },
+    {
+     "id": "gid://shopify/Menu/220302311624",
+     "handle": "collection",
+     "title": "COLLECTIONS-MR",
+     "items": [
+      {
+       "id": "gid://shopify/MenuItem/527643902152",
+       "title": "Çelik Kasa",
+       "type": "COLLECTION",
+       "url": "/collections/celik-kasa",
+       "resourceId": "gid://shopify/Collection/629252358344",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/527643934920",
+       "title": "Ev ve Ofis Kasası",
+       "type": "COLLECTION",
+       "url": "/collections/ev-ofis-kasasi",
+       "resourceId": "gid://shopify/Collection/629252391112",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/527643967688",
+       "title": "Premium Çelik Kasa",
+       "type": "COLLECTION",
+       "url": "/collections/premium-ev-ofis-kasasi",
+       "resourceId": "gid://shopify/Collection/629252489416",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/527644000456",
+       "title": "Zırhlı Çelik Kasa",
+       "type": "COLLECTION",
+       "url": "/collections/zirhli-celik-kasa",
+       "resourceId": "gid://shopify/Collection/629252718792",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/527644033224",
+       "title": "Kuyumcu Kasası ",
+       "type": "COLLECTION",
+       "url": "/collections/kuyumcu-kasalari",
+       "resourceId": "gid://shopify/Collection/629252522184",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521920712",
+       "title": "Ön Bİlgilendirme Sözleşmesi",
+       "type": "PAGE",
+       "url": "/pages/on-bi%CC%87lgilendirme-sozlesmesi",
+       "resourceId": "gid://shopify/Page/111498199240",
+       "items": []
+      }
+     ]
+    },
+    {
+     "id": "gid://shopify/Menu/220422897864",
+     "handle": "heder-men-mr",
+     "title": "HEDER MENÜ -MR",
+     "items": [
+      {
+       "id": "gid://shopify/MenuItem/528521330888",
+       "title": "Asansörlü Kuyumcu Vitrin Kasası",
+       "type": "COLLECTION",
+       "url": "/collections/asansorlu-kuyumcu-kasasi",
+       "resourceId": "gid://shopify/Collection/629252653256",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521363656",
+       "title": "Büyük Boy Profesyonel Güvenlik Kasası",
+       "type": "COLLECTION",
+       "url": "/collections/105cm-celik-kasa",
+       "resourceId": "gid://shopify/Collection/629252587720",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521396424",
+       "title": "Dosya, Evrak Kasası",
+       "type": "COLLECTION",
+       "url": "/collections/dosya-kasalari",
+       "resourceId": "gid://shopify/Collection/629252620488",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521429192",
+       "title": "Ev Tipi Şifreli Güvenlik Kasası",
+       "type": "COLLECTION",
+       "url": "/collections/70-celik-kasa",
+       "resourceId": "gid://shopify/Collection/629252423880",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521461960",
+       "title": "Ev ve Ofis Tipi Çelik Kasaları",
+       "type": "COLLECTION",
+       "url": "/collections/ev-ofis-kasasi",
+       "resourceId": "gid://shopify/Collection/629252391112",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521494728",
+       "title": "Kompakt Para ve Belge Kasası",
+       "type": "COLLECTION",
+       "url": "/collections/55cm-celik-kasa",
+       "resourceId": "gid://shopify/Collection/629252456648",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521527496",
+       "title": "Kuyumcu Kasası",
+       "type": "COLLECTION",
+       "url": "/collections/banko-kuyumcu-kasalari",
+       "resourceId": "gid://shopify/Collection/629252686024",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521560264",
+       "title": "Parmak İzli ve Şifreli Çelik Kasa",
+       "type": "COLLECTION",
+       "url": "/collections/premium-ev-ofis-kasasi",
+       "resourceId": "gid://shopify/Collection/629252489416",
+       "items": []
+      }
+     ]
+    },
+    {
+     "id": "gid://shopify/Menu/220422930632",
+     "handle": "footer-mr-help",
+     "title": "FOOTER -MR- HELP",
+     "items": [
+      {
+       "id": "gid://shopify/MenuItem/528521887944",
+       "title": "İletişim",
+       "type": "PAGE",
+       "url": "/pages/i%CC%87letisim",
+       "resourceId": "gid://shopify/Page/106592272584",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521756872",
+       "title": "Aynı Gün Hemen Teslimat",
+       "type": "PAGE",
+       "url": "/pages/istanbul-celik-kasa",
+       "resourceId": "gid://shopify/Page/110425866440",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521789640",
+       "title": "İade ve İptal Politikası",
+       "type": "PAGE",
+       "url": "/pages/i%CC%87ade-ve-i%CC%87ptal-politikasi",
+       "resourceId": "gid://shopify/Page/111498264776",
+       "items": []
+      },
+      {
+       "id": "gid://shopify/MenuItem/528521822408",
+       "title": "Web Site Kullanım Koşulları",
+       "type": "PAGE",
+       "url": "/pages/web-site-kullanim-kosullari",
+       "resourceId": "gid://shopify/Page/111498166472",
+       "items": []
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

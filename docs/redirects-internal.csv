@@ -1,9 +1,9 @@
 old_path,new_path,reason,status
-/pages/i%CC%87letisim,/pages/iletisim,combining dot in handle,proposed (recreate page under new handle in the same change)
-/pages/i%CC%87ade-ve-i%CC%87ptal-politikasi,/pages/iade-ve-iptal,combining dot in handle,proposed
-/pages/on-bi%CC%87lgilendirme-sozlesmesi,/pages/on-bilgilendirme-formu,combining dot and wrong document name,proposed
-/pages/kisisel-veirlerin-korunmasi-kanunu,/pages/kvkk-aydinlatma-metni,typo in handle,proposed
-/pages/istanbul-celik-kasa,/pages/teslimat-ve-kurulum,title does not match handle; duplicates shipping policy,proposed
-/pages/celik-kasa,/collections/celik-kasa,cannibalises the hub collection,proposed
-/products/85-cm-zirhli-kasa-500-kg,/products/85-cm-zirhli-kasa,fix redirect chain (currently via 85-cm-zirhli-kasa-450-kg),proposed
-/collections/all,,"redirect never fires because the path exists; change hero links to /collections/celik-kasa instead",proposed
+/pages/i%CC%87letisim,/pages/iletisim,combining dot in handle,done 2026-10-04 (handle changed with automatic 301)
+/pages/i%CC%87ade-ve-i%CC%87ptal-politikasi,/pages/iade-ve-iptal,combining dot in handle,done 2026-10-04 (handle changed with automatic 301)
+/pages/on-bi%CC%87lgilendirme-sozlesmesi,/pages/on-bilgilendirme-formu,combining dot and wrong document name,done 2026-10-04 (handle changed with automatic 301)
+/pages/kisisel-veirlerin-korunmasi-kanunu,/pages/kvkk-aydinlatma-metni,typo in handle,done 2026-10-04 (handle changed with automatic 301)
+/pages/istanbul-celik-kasa,/pages/teslimat-ve-kurulum,title does not match handle; duplicates shipping policy,done 2026-10-04 (handle changed with automatic 301)
+/pages/celik-kasa,/collections/celik-kasa,cannibalises the hub collection,"done 2026-10-04 (page unpublished, not deleted; redirect created)"
+/products/85-cm-zirhli-kasa-500-kg,/products/85-cm-zirhli-kasa,fix redirect chain (currently via 85-cm-zirhli-kasa-450-kg),"done 2026-10-04 (existing redirect retargeted, chain removed)"
+/collections/all,,redirect never fires because the path exists; change hero links to /collections/celik-kasa instead,no change (redirect exists but the path is a live page; hero already links to /collections/celik-kasa)
