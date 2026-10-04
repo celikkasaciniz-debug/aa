@@ -25,3 +25,4 @@
 | 2026-10-04 | Add To Cart and Begin Checkout stay primary conversions (ads-02 dropped) | Owner | Owner: customers reach cart or checkout and then complete the order by phone. Graded values proposed instead of 1 TL (ads-03) |
 | 2026-10-04 | New Search campaign daily budget 1.500 TL | Owner | Owner answer |
 | 2026-10-04 | No data exclusion for the 25 September test orders (ads-01 dropped) | Owner | Owner: "deneme siparişleri öğrenme verisinde kalsın". Low impact while the new campaign runs on Maximise clicks |
+| 2026-10-04 | Prices are shown KDV included; list prices raised 20% so the amount paid stays the same | Owner | Checkout added 20% KDV on top of the shown price (test order #1075: 20.000 TL + 4.000 TL) |
