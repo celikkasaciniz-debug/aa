@@ -16,14 +16,14 @@
           "type": "question",
           "settings": {
             "question": "Kasalar nasıl teslim ediliyor, kurulum dahil mi?",
-            "answer": "<p>Evet, tüm kasalarımız İstanbul içi ücretsiz teslimat ve kurulum ile gönderilir. Kurulum ekibimiz kasayı belirlediğiniz noktaya taşır, sabitler ve kullanım eğitimi verir.</p>"
+            "answer": "<p>Evet, İstanbul içinde teslimat ve kurulum fiyata dahildir. Ekibimiz kasayı merdivenden taşır, istediğiniz yere yerleştirir ve ilk şifreyi sizinle birlikte belirler.</p>"
           }
         },
         "q2": {
           "type": "question",
           "settings": {
             "question": "İstanbul dışına teslimat yapıyor musunuz?",
-            "answer": "<p>Evet, Türkiye geneline teslimat yapıyoruz. İstanbul dışı teslimat ve kurulum ücretleri bölgeye göre değişiklik gösterebilir, sipariş öncesi bizi arayarak netleştirebilirsiniz.</p>"
+            "answer": "<p>Teslimat ve kurulum İstanbul içinde ücretsizdir. İstanbul dışı için sipariş vermeden önce 0541 445 15 48'i arayın; bölgenize göre fiyat ve süreyi bildirelim.</p>"
           }
         },
         "q3": {
@@ -33,18 +33,11 @@
             "answer": "<p>Şifrenizi unutmanız durumunda yetkili servisimiz kimlik doğrulaması sonrası kasanızı açar ve şifrenizi sıfırlar. Kullanıcı kaynaklı unutma durumunda bu hizmet ücretlidir; kilit arızasından kaynaklanan durumlarda garanti kapsamındadır.</p>"
           }
         },
-        "q4": {
-          "type": "question",
-          "settings": {
-            "question": "Kasalarınız yangına dayanıklı mı?",
-            "answer": "<p>Ürün serimize göre değişir — Premium ve Zırhlı seri modellerimiz yangına dayanıklı sertifikalıdır. Her ürün sayfasında yangın dayanım süresi belirtilir.</p>"
-          }
-        },
         "q5": {
           "type": "question",
           "settings": {
             "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
-            "answer": "<p>Kredi kartı (taksitli), havale/EFT ve kapıda ödeme seçenekleri sunuyoruz.</p>"
+            "answer": "<p>Kredi ve banka kartı (PayTR) ile kapıda ödeme.</p>"
           }
         },
         "q6": {
@@ -65,21 +58,14 @@
           "type": "question",
           "settings": {
             "question": "Kasa çok ağır, taşıma/montaj nasıl yapılıyor?",
-            "answer": "<p>Kurulum ekibimiz gerekli ekipmanla kasayı güvenli şekilde taşır ve yerleştirir — siz hiçbir fiziksel işlem yapmazsınız.</p>"
-          }
-        },
-        "q9": {
-          "type": "question",
-          "settings": {
-            "question": "Kasaları kendiniz mi üretiyorsunuz?",
-            "answer": "<p>Evet, İstanbul Avcılar'daki kendi tesisimizde, 15 yılı aşkın tecrübeyle üretim yapıyoruz.</p>"
+            "answer": "<p>Kurulum ekibimiz gerekli ekipmanla kasayı güvenli şekilde taşır ve yerleştirir; siz hiçbir fiziksel işlem yapmazsınız.</p>"
           }
         },
         "q10": {
           "type": "question",
           "settings": {
             "question": "Toplu/kurumsal alımlarda indirim var mı?",
-            "answer": "<p>Ofis, banka, kuyumcu gibi kurumsal toplu alımlarda özel fiyatlandırma sunuyoruz — 0541 445 15 48'den bize ulaşabilirsiniz.</p>"
+            "answer": "<p>Ofis, banka, kuyumcu gibi kurumsal toplu alımlarda özel fiyatlandırma sunuyoruz. 0541 445 15 48'den bize ulaşabilirsiniz.</p>"
           }
         }
       },
@@ -87,12 +73,10 @@
         "q1",
         "q2",
         "q3",
-        "q4",
         "q5",
         "q6",
         "q7",
         "q8",
-        "q9",
         "q10"
       ],
       "settings": {

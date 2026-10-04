@@ -62,7 +62,7 @@
             "content_position_vertical_mobile": "bottom",
             "content_position_horizontal_mobile": "left",
             "eyebrow": "Avcılar, İstanbul",
-            "heading": "İstanbul'a aynı gün çelik kasa: taşıma ve sabitleme dahil",
+            "heading": "İstanbul'a aynı gün çelik kasa: merdivenden taşıma dahil",
             "subheading": "",
             "button_label": "Modelleri gör",
             "button_link": "shopify://collections/celik-kasa",
@@ -521,7 +521,7 @@
           "type": "question",
           "settings": {
             "question": "Kasalar nasıl teslim ediliyor, kurulum dahil mi?",
-            "answer": "<p>Evet, tüm kasalarımız İstanbul içi ücretsiz teslimat ve kurulum ile gönderilir. Kurulum ekibimiz kasayı belirlediğiniz noktaya taşır, sabitler ve kullanım eğitimi verir.</p>"
+            "answer": "<p>Evet, İstanbul içinde teslimat ve kurulum fiyata dahildir. Ekibimiz kasayı merdivenden taşır, istediğiniz yere yerleştirir ve ilk şifreyi sizinle birlikte belirler.</p>"
           }
         },
         "question_WQaine": {

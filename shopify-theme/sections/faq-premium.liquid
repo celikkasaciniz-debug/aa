@@ -1,5 +1,5 @@
 {% comment %}
-  MR — Sıkça Sorulan Sorular
+  MR: Sıkça Sorulan Sorular
   Native <details>/<summary> accordion (SEO: içerik her zaman DOM'da) + FAQPage JSON-LD (AEO/GEO).
 {% endcomment %}
 {{ 'component-faq-premium.css' | asset_url | stylesheet_tag }}
@@ -44,7 +44,7 @@
   </div>
 </div>
 
-{%- comment -%} MR — Sıkça Sorulan Sorular / FAQPage JSON-LD (AEO + GEO) {%- endcomment -%}
+{%- comment -%} MR: Sıkça Sorulan Sorular / FAQPage JSON-LD (AEO + GEO) {%- endcomment -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -91,16 +91,14 @@
     {
       "name": "SSS",
       "blocks": [
-        { "type": "question", "settings": { "question": "Kasalar nasıl teslim ediliyor, kurulum dahil mi?", "answer": "<p>Evet, tüm kasalarımız İstanbul içi ücretsiz teslimat ve kurulum ile gönderilir. Kurulum ekibimiz kasayı belirlediğiniz noktaya taşır, sabitler ve kullanım eğitimi verir.</p>" } },
-        { "type": "question", "settings": { "question": "İstanbul dışına teslimat yapıyor musunuz?", "answer": "<p>Evet, Türkiye geneline teslimat yapıyoruz. İstanbul dışı teslimat ve kurulum ücretleri bölgeye göre değişiklik gösterebilir, sipariş öncesi bizi arayarak netleştirebilirsiniz.</p>" } },
-        { "type": "question", "settings": { "question": "Kasa şifresini unutursam ne olur?", "answer": "<p>Şifrenizi unutmanız durumunda yetkili servisimiz kimlik doğrulaması sonrası kasanızı açar ve şifrenizi sıfırlar. Kullanıcı kaynaklı unutma durumunda bu hizmet ücretlidir; kilit arızasından kaynaklanan durumlarda garanti kapsamındadır.</p>" } },
-        { "type": "question", "settings": { "question": "Kasalarınız yangına dayanıklı mı?", "answer": "<p>Ürün serimize göre değişir — Premium ve Zırhlı seri modellerimiz yangına dayanıklı sertifikalıdır. Her ürün sayfasında yangın dayanım süresi belirtilir.</p>" } },
-        { "type": "question", "settings": { "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?", "answer": "<p>Kredi kartı (taksitli), havale/EFT ve kapıda ödeme seçenekleri sunuyoruz.</p>" } },
-        { "type": "question", "settings": { "question": "Garanti süresi ne kadar?", "answer": "<p>Tüm kasalarımız 2 yıl garanti kapsamındadır; kilit mekanizması ve gövde kaynaklarını kapsar.</p>" } },
-        { "type": "question", "settings": { "question": "İade/değişim yapabilir miyim?", "answer": "<p>Detaylı bilgi için İade ve İptal Politikası sayfamızı inceleyebilirsiniz.</p>" } },
-        { "type": "question", "settings": { "question": "Kasa çok ağır, taşıma/montaj nasıl yapılıyor?", "answer": "<p>Kurulum ekibimiz gerekli ekipmanla kasayı güvenli şekilde taşır ve yerleştirir — siz hiçbir fiziksel işlem yapmazsınız.</p>" } },
-        { "type": "question", "settings": { "question": "Kasaları kendiniz mi üretiyorsunuz?", "answer": "<p>Evet, İstanbul Avcılar'daki kendi tesisimizde, 15 yılı aşkın tecrübeyle üretim yapıyoruz.</p>" } },
-        { "type": "question", "settings": { "question": "Toplu/kurumsal alımlarda indirim var mı?", "answer": "<p>Ofis, banka, kuyumcu gibi kurumsal toplu alımlarda özel fiyatlandırma sunuyoruz — 0541 445 15 48'den bize ulaşabilirsiniz.</p>" } }
+        { "type":  "question", "settings":  { "question":  "Kasalar nasıl teslim ediliyor, kurulum dahil mi?", "answer":  "<p>Evet, İstanbul içinde teslimat ve kurulum fiyata dahildir. Ekibimiz kasayı merdivenden taşır, istediğiniz yere yerleştirir ve ilk şifreyi sizinle birlikte belirler.</p>" }},
+        { "type":  "question", "settings":  { "question":  "İstanbul dışına teslimat yapıyor musunuz?", "answer":  "<p>Teslimat ve kurulum İstanbul içinde ücretsizdir. İstanbul dışı için sipariş vermeden önce 0541 445 15 48'i arayın; bölgenize göre fiyat ve süreyi bildirelim.</p>" }},
+        { "type":  "question", "settings":  { "question":  "Kasa şifresini unutursam ne olur?", "answer":  "<p>Şifrenizi unutmanız durumunda yetkili servisimiz kimlik doğrulaması sonrası kasanızı açar ve şifrenizi sıfırlar. Kullanıcı kaynaklı unutma durumunda bu hizmet ücretlidir; kilit arızasından kaynaklanan durumlarda garanti kapsamındadır.</p>" }},
+        { "type":  "question", "settings":  { "question":  "Hangi ödeme yöntemlerini kabul ediyorsunuz?", "answer":  "<p>Kredi ve banka kartı (PayTR) ile kapıda ödeme.</p>" }},
+        { "type":  "question", "settings":  { "question":  "Garanti süresi ne kadar?", "answer":  "<p>Tüm kasalarımız 2 yıl garanti kapsamındadır; kilit mekanizması ve gövde kaynaklarını kapsar.</p>" }},
+        { "type":  "question", "settings":  { "question":  "İade/değişim yapabilir miyim?", "answer":  "<p>Detaylı bilgi için İade ve İptal Politikası sayfamızı inceleyebilirsiniz.</p>" }},
+        { "type":  "question", "settings":  { "question":  "Kasa çok ağır, taşıma/montaj nasıl yapılıyor?", "answer":  "<p>Kurulum ekibimiz gerekli ekipmanla kasayı güvenli şekilde taşır ve yerleştirir; siz hiçbir fiziksel işlem yapmazsınız.</p>" }},
+        { "type":  "question", "settings":  { "question":  "Toplu/kurumsal alımlarda indirim var mı?", "answer":  "<p>Ofis, banka, kuyumcu gibi kurumsal toplu alımlarda özel fiyatlandırma sunuyoruz. 0541 445 15 48'den bize ulaşabilirsiniz.</p>" }}
       ]
     }
   ]

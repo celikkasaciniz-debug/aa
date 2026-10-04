@@ -40,7 +40,7 @@ Edit in `shopify-theme/`, push only to the development theme with `themeFilesUps
 
 ## Voice (MASTER_PROMPT 3)
 
-- Positioning: heavy, floor-fixed steel safes in İstanbul; same-day delivery, stair carrying and installation included.
+- Positioning: heavy steel safes in İstanbul; same-day delivery and stair carrying included. No floor or wall fixing is offered: never claim "sabitleme". Shop open 24 hours.
 - Plain Turkish, "siz", short sentences, the number first ("300 kg, 6 mm gövde sacı").
 - Calm about crime; never frighten.
 - Sentence case. No ALL CAPS labels.
