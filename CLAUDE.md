@@ -13,10 +13,11 @@ Shopify store for a steel safe seller in Avcılar, İstanbul. The full brief is 
 
 | Role | Name | Id |
 | --- | --- | --- |
-| Live (MAIN) | Celik Kasaci - calisma kopyasi | 142814806216 |
-| Development (unpublished) | Celik Kasaci - gelistirme | 142814871752 |
+| Live (MAIN), published by the owner 4 October 2026 | Celik Kasaci - gelistirme | 142814871752 |
+| Previous live, kept for rollback (unpublished) | Celik Kasaci - calisma kopyasi | 142814806216 |
+| Development | none yet: the owner duplicates the live theme in Shopify, then this row gets its id | |
 
-Edit in `shopify-theme/`, push only to the development theme with `themeFilesUpsert`, send the preview link `https://celikkasaci.com/?preview_theme_id=142814871752`. Publishing is the owner's step. JSON templates and `config/settings_data.json` are also changed by the theme editor: re-export them from the live theme before editing.
+Edit in `shopify-theme/`, push only to an unpublished development theme with `themeFilesUpsert`, send the preview link `https://celikkasaci.com/?preview_theme_id=<dev id>`. Never write to 142814871752 while it is live. Publishing is the owner's step. JSON templates and `config/settings_data.json` are also changed by the theme editor: re-export them from the live theme before editing.
 
 ## Tools
 
